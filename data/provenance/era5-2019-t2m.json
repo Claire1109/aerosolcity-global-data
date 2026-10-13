@@ -1,0 +1,29 @@
+{
+  "record_id": "ATM-010-ERA5-T2M-2019",
+  "record_type": "public provenance summary",
+  "source": {
+    "product": "ERA5 monthly averaged data on single levels from 1940 to present",
+    "provider": "Copernicus Climate Change Service (C3S), ECMWF",
+    "dataset_doi": "10.24381/cds.f17050d7",
+    "citation": "Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Horányi, A., Muñoz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I., Schepers, D., Simmons, A., Soci, C., Dee, D., Thépaut, J-N. (2023): ERA5 monthly averaged data on single levels from 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS), DOI: 10.24381/cds.f17050d7 (Accessed on 11-Oct-2026).",
+    "input_filename": "monthly_single_levels.grib",
+    "input_bytes": 224271504,
+    "input_sha256": "eae5219346d507379d57c2a7d1db3efc15d7f64bcc0500548a0183cb943afdb0"
+  },
+  "operation": "Select ERA5 GRIB fields with shortName=2t for 2019-01 through 2019-12 and serialize as NetCDF. No resampling, coordinate reordering, reprojection, or unit conversion.",
+  "output": {
+    "filename": "era5_t2m_2019_monthly.nc",
+    "bytes": 49875989,
+    "sha256": "b2fa58a00b3bba4d3304896246cc11cf476e4f7ada9c452338d47c24a22858da",
+    "variable": "2 m air temperature (2t)",
+    "units": "K",
+    "time_support": "12 monthly means, 2019-01 to 2019-12",
+    "grid": "Regular latitude/longitude, 0.25 degree, 721 x 1440; source coordinate order preserved"
+  },
+  "validation": "Readback comparison verified 12 monthly fields, values, coordinates, and missing-value counts against the selected source fields.",
+  "license_and_attribution": "CC BY 4.0 under applicable CDS terms. Cite DOI 10.24381/cds.f17050d7 and use the Copernicus attribution/disclaimer shown in the product record.",
+  "limitations": [
+    "This is a single-variable processed subset, not the original nine-variable GRIB.",
+    "It has not been matched to any aerosol pH model or other scientific input."
+  ]
+}

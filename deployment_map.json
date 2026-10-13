@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "release": "D031 v5.1 self-contained migration candidate (2026-10-13)",
+  "deployment_status": "local_candidate_not_deployed",
+  "instruction": "Static root is site/. Eight reviewed binaries are included at relative paths. URB-041 remains a direct official Zenodo download and is not included.",
+  "assets": {
+    "ghap-2019-pm25": {
+      "filename": "ghap-2019-pm25-y1k.nc",
+      "url": "./data/files/ghap-2019-pm25-y1k.nc",
+      "bytes": 69398857,
+      "sha256": "4639191513c0da5ca8bc8dc08a2fbe6fbd00cf32269b13ad031c579868dabbdf",
+      "delivery_method": "bundled_static_file"
+    },
+    "era5-2019-t2m": {
+      "filename": "era5-2019-t2m-monthly.nc",
+      "url": "./data/files/era5-2019-t2m-monthly.nc",
+      "bytes": 49875989,
+      "sha256": "b2fa58a00b3bba4d3304896246cc11cf476e4f7ada9c452338d47c24a22858da",
+      "delivery_method": "bundled_static_file"
+    },
+    "gdp-ppp-total-2019": {
+      "filename": "gdp-ppp-total-2019.tif",
+      "url": "./data/files/gdp-ppp-total-2019.tif",
+      "bytes": 6632065,
+      "sha256": "e13750656a433f9160e916ba352e610285821366fc3cf63b2580c14160a09780",
+      "delivery_method": "bundled_static_file"
+    },
+    "gdp-ppp-per-capita-2019": {
+      "filename": "gdp-ppp-per-capita-2019.tif",
+      "url": "./data/files/gdp-ppp-per-capita-2019.tif",
+      "bytes": 4389936,
+      "sha256": "29881df9920b4900f3007d600f661e6e4393a21a4c1e1c40bef84bc510fa0469",
+      "delivery_method": "bundled_static_file"
+    },
+    "edgar-2019-nh3": {
+      "filename": "edgar-2019-nh3.zip",
+      "url": "./data/files/edgar-2019-nh3.zip",
+      "bytes": 16439850,
+      "sha256": "2def3020e25bb8a472a27c713450d5bdeb0e28b5130044b6f9b34b4dfdce03a2",
+      "delivery_method": "bundled_static_file"
+    },
+    "edgar-2019-nox": {
+      "filename": "edgar-2019-nox.zip",
+      "url": "./data/files/edgar-2019-nox.zip",
+      "bytes": 16147566,
+      "sha256": "4f860295b189cde225f5054e13bfb1a0ba563c88ffcf85023a602c14a382b192",
+      "delivery_method": "bundled_static_file"
+    },
+    "edgar-2019-so2": {
+      "filename": "edgar-2019-so2.zip",
+      "url": "./data/files/edgar-2019-so2.zip",
+      "bytes": 15886397,
+      "sha256": "77db865d6751726b4facd8d42031ab9bf9edf6e85a254d47993c0557e5028929",
+      "delivery_method": "bundled_static_file"
+    },
+    "wri-gppd-v130": {
+      "filename": "wri-global-power-plant-database-v1.3.0.csv",
+      "url": "./data/files/wri-global-power-plant-database-v1.3.0.csv",
+      "bytes": 11973385,
+      "sha256": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+      "delivery_method": "bundled_static_file"
+    }
+  },
+  "external_sources": {
+    "urb-041-zip": {
+      "product_id": "URB-041",
+      "filename": "global_pv_inventory_all.zip",
+      "bytes": 82539694,
+      "sha256": "c97a488e65921e90d9776f73ad52f35b46997b28455d37c38af69c1e67f2bb01",
+      "url": "https://zenodo.org/api/records/5005868/files/global_pv_inventory_all.zip/content",
+      "record_url": "https://zenodo.org/records/5005868",
+      "hosted_by": "Zenodo",
+      "hosted_by_this_site": false
+    }
+  },
+  "provenance": {
+    "era5-2019-t2m": {
+      "url": "./data/provenance/era5-2019-t2m.json",
+      "bytes": 1971,
+      "sha256": "78f27b68c96e50f5a16424f467aca8d2a1e11a346b2202f39adb6ff19e0c1568",
+      "record_id": "ATM-010-ERA5-T2M-2019",
+      "record_type": "public provenance summary",
+      "product_id": "ERA5-2019-T2M-MONTHLY",
+      "source_file": "work/WEB/website_D029_20261013/dist_public_reviewed/data/provenance/era5-2019-t2m.json",
+      "staged_file": "site/data/provenance/era5-2019-t2m.json",
+      "output_bytes": 49875989,
+      "output_sha256": "b2fa58a00b3bba4d3304896246cc11cf476e4f7ada9c452338d47c24a22858da"
+    },
+    "gdp-ppp-total-2019": {
+      "url": "./data/provenance/gdp-ppp-total-2019.json",
+      "bytes": 1692,
+      "sha256": "3fd460471b8da0cfdb75666f6f6a16f71c341217e5721da8fd7db92e4af3c148",
+      "record_id": "URB-031-GDP-PPP-TOTAL-2019",
+      "record_type": "public provenance summary",
+      "product_id": "KUMMU-GDP-PPP-TOTAL-2019",
+      "source_file": "work/WEB/website_D029_20261013/dist_public_reviewed/data/provenance/gdp-ppp-total-2019.json",
+      "staged_file": "site/data/provenance/gdp-ppp-total-2019.json",
+      "output_bytes": 6632065,
+      "output_sha256": "e13750656a433f9160e916ba352e610285821366fc3cf63b2580c14160a09780"
+    },
+    "gdp-ppp-per-capita-2019": {
+      "url": "./data/provenance/gdp-ppp-per-capita-2019.json",
+      "bytes": 1702,
+      "sha256": "27ecfab70af127097583609156149611518dd193f0d27a3dfb39edaab29c875a",
+      "record_id": "URB-032-GDP-PPP-PER-CAPITA-2019",
+      "record_type": "public provenance summary",
+      "product_id": "KUMMU-GDP-PPP-PER-CAPITA-2019",
+      "source_file": "work/WEB/website_D029_20261013/dist_public_reviewed/data/provenance/gdp-ppp-per-capita-2019.json",
+      "staged_file": "site/data/provenance/gdp-ppp-per-capita-2019.json",
+      "output_bytes": 4389936,
+      "output_sha256": "29881df9920b4900f3007d600f661e6e4393a21a4c1e1c40bef84bc510fa0469"
+    }
+  }
+}

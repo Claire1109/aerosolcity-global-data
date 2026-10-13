@@ -1,0 +1,28 @@
+{
+  "record_id": "URB-031-GDP-PPP-TOTAL-2019",
+  "record_type": "public provenance summary",
+  "source": {
+    "product": "A high-resolution dataset of global economic activity: GDP and GDP per capita, 1990–2024",
+    "citation": "Kummu, M., Kosonen, M. & Masoumzadeh Sayyar, S. 2025. Downscaled gridded global dataset for gross domestic product (GDP) per capita PPP over 1990–2022. Scientific Data 12:178. https://doi.org/10.1038/s41597-025-04487-x",
+    "dataset_doi": "10.5281/zenodo.18429133",
+    "input_filename": "rast_gdpTot_1990_2024_5arcmin.tif",
+    "input_bytes": 184157771,
+    "input_sha256": "3e11f274d342a0af6a81385ca749b6712aea0f0102f353f05c6edbc6c02ef366"
+  },
+  "operation": "Copy verified source band 30 (2019) to a single-band GeoTIFF; no resampling, reprojection, interpolation, unit conversion, or value adjustment.",
+  "output": {
+    "filename": "gdp_tot_2019.tif",
+    "bytes": 6632065,
+    "sha256": "e13750656a433f9160e916ba352e610285821366fc3cf63b2580c14160a09780",
+    "variable": "GDP total, 2019",
+    "units": "2021 international dollars (PPP)",
+    "grid": "5 arc-minute, 4320 x 2160, EPSG:4326",
+    "missing_values": "Source mask and NaN NODATA metadata preserved"
+  },
+  "validation": "Readback verification compared CRS, transform, dimensions, mask, and all pixel values with the selected source band.",
+  "license": "CC BY 4.0; cite the source paper and dataset DOI.",
+  "limitations": [
+    "The source estimates gridded economic activity using subnational statistics and spatial allocation; it is not direct local accounting or direct observation.",
+    "This product has not been matched to any aerosol pH model or other scientific input."
+  ]
+}
