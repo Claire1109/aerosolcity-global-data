@@ -1,5 +1,5 @@
 {
-  "version": "d041-v1",
+  "version": "d043-v1",
   "products": {
     "ATM-005": {
       "frequency": "monthly",
@@ -78,19 +78,20 @@
       "frequency_original": "daily",
       "spatial_form": "grid",
       "scale_group": "km",
-      "scale_original": "1 km sinusoidal grid",
+      "scale_original": "1 km，正弦投影格网",
       "access": [
-        "page"
+        "request"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
-          "range": null,
-          "qualifier": "2000–present product family",
-          "basis": "unknown"
+          "range": {
+            "start": 2000,
+            "end": 2026
+          },
+          "qualifier": "GEE目录观测2000-02-24至2026-10-09；不代表未来持续更新已核验",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -116,9 +117,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -144,6 +143,78 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
+    "ATM-013-V6GL0204": {
+      "frequency": "mixed",
+      "frequency_original": "monthly and annual",
+      "scale_original": "0.01°经纬度格网（作者WGS84说明）",
+      "formats": [
+        "NetCDF"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1998,
+            "end": 2023
+          },
+          "qualifier": "来源元数据声明；科学文件未读",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得科学文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "page"
+      ]
+    },
+    "ATM-013-V5GL0502": {
+      "frequency": "mixed",
+      "frequency_original": "monthly and annual",
+      "scale_original": "0.01°经纬度格网（作者WGS84说明）",
+      "formats": [
+        "NetCDF"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1998,
+            "end": 2023
+          },
+          "qualifier": "来源元数据声明；科学文件未读",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得科学文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "page"
+      ]
+    },
     "ATM-031": {
       "frequency": "annual",
       "frequency_original": "annual mean for 2019 file",
@@ -154,7 +225,7 @@
         "site"
       ],
       "formats": [
-        "NETCDF"
+        "NC"
       ],
       "years": {
         "source_years": {
@@ -182,90 +253,17 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "ATM-021": {
-      "frequency": "daily",
-      "frequency_original": "daily",
-      "spatial_form": "grid",
-      "scale_group": "native-grid",
-      "scale_original": "0.25° × 0.25°",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [
-            2004
-          ],
-          "range": null,
-          "qualifier": "2004 onward; confirm current end date per collection",
-          "basis": "explicit"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "none acquired",
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
-    "ATM-023": {
-      "frequency": "mixed",
-      "frequency_original": "orbit/daily",
-      "spatial_form": "mixed",
-      "scale_group": "native-grid",
-      "scale_original": "few-km native pixel, varies with product/version",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [
-            2018,
-            2019
-          ],
-          "range": null,
-          "qualifier": "2018 onward; NO2 archive starts 2018-05; exact SO2 2019 streams need checking",
-          "basis": "explicit"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "none acquired",
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "ATM-026": {
       "frequency": "monthly",
-      "frequency_original": "monthly (time_coverage_resolution=P1D within monthly composite)",
+      "frequency_original": "monthly composite",
       "spatial_form": "grid",
       "scale_group": "native-grid",
       "scale_original": "0.2° × 0.2°",
       "access": [
-        "unknown"
+        "official"
       ],
       "formats": [
-        "NETCDF"
+        "NC"
       ],
       "years": {
         "source_years": {
@@ -293,42 +291,6 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "ATM-034": {
-      "frequency": "daily",
-      "frequency_original": "daily",
-      "spatial_form": "grid",
-      "scale_group": "native-grid",
-      "scale_original": "0.25° × 0.25° (CMR collection metadata)",
-      "access": [
-        "unknown"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [
-            2019
-          ],
-          "range": null,
-          "qualifier": null,
-          "basis": "explicit"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "ATM-032": {
       "frequency": "annual",
       "frequency_original": "annual",
@@ -340,7 +302,7 @@
       ],
       "formats": [
         "RAR",
-        "GEOTIFF"
+        "TIF"
       ],
       "years": {
         "source_years": {
@@ -382,8 +344,7 @@
         "site"
       ],
       "formats": [
-        "GRIB",
-        "NETCDF"
+        "GRIB"
       ],
       "years": {
         "source_years": {
@@ -413,16 +374,14 @@
     },
     "URB-005": {
       "frequency": "monthly",
-      "frequency_original": "月",
+      "frequency_original": "月度",
       "spatial_form": "grid",
       "scale_group": "native-grid",
-      "scale_original": "0.05 degree CMG",
+      "scale_original": "0.05°CMG，3600×7200",
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -447,35 +406,28 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "URB-016": {
+    "URB-005-MOD11A2": {
       "frequency": "mixed",
-      "frequency_original": "annual mean and monthly means; companion hourly-representative layers",
-      "spatial_form": "grid",
-      "scale_group": "km",
-      "scale_original": "1 km",
-      "access": [
-        "page"
-      ],
+      "frequency_original": "8日合成；白天/夜间",
+      "scale_original": "全球1km分块，1200×1200km瓦片；非月度0.05°CMG",
       "formats": [
-        "UNKNOWN"
+        "Earth Engine ImageCollection；原生MODIS产品获取见官方记录"
       ],
       "years": {
         "source_years": {
-          "explicit": [
-            2010,
-            2050
-          ],
-          "range": null,
-          "qualifier": "2010s annual/monthly; 2050s scenario annual/monthly",
-          "basis": "explicit"
+          "explicit": [],
+          "range": {
+            "start": 2000,
+            "end": 2026
+          },
+          "qualifier": "GEE目录2000-02-18至2026-09-30；动态末期仅来源目录声明",
+          "basis": "declared_range"
         },
         "local_years": {
-          "explicit": [
-            2010
-          ],
+          "explicit": [],
           "range": null,
-          "qualifier": "2010s annual mean (AHE_2010_year)",
-          "basis": "explicit"
+          "qualifier": "本轮仅来源元数据核验，未取得科学栅格",
+          "basis": "unknown"
         },
         "hosted_years": {
           "explicit": [],
@@ -484,10 +436,14 @@
           "basis": "unknown"
         }
       },
-      "format_basis": "native_formats only; no URL inference"
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "request"
+      ]
     },
     "LEG-001": {
-      "frequency": "mixed",
+      "frequency": "annual",
       "frequency_original": "5年",
       "spatial_form": "polygon",
       "scale_group": "aggregate",
@@ -495,9 +451,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -535,9 +489,7 @@
       "access": [
         "official"
       ],
-      "formats": [
-        "ZIP"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -572,9 +524,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -600,25 +550,23 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-036": {
-      "frequency": "mixed",
-      "frequency_original": "Single annual map",
+      "frequency": "static",
+      "frequency_original": "单年土地覆被分类",
       "spatial_form": "grid",
       "scale_group": "sub-km",
-      "scale_original": "10 m; 2,651 3° tiles",
+      "scale_original": "10m（发布方说明；本轮未读原始栅格）",
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
             2020
           ],
           "range": null,
-          "qualifier": "v100 的2020产品范围",
-          "basis": "reviewed_version"
+          "qualifier": "精确发布产品年份，不把2020与2021并入一个version",
+          "basis": "explicit"
         },
         "local_years": {
           "explicit": [],
@@ -636,25 +584,23 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-006": {
-      "frequency": "mixed",
-      "frequency_original": "2年版本",
+      "frequency": "static",
+      "frequency_original": "单年土地覆被分类",
       "spatial_form": "grid",
       "scale_group": "sub-km",
-      "scale_original": "10 m; 2,651 3° × 3° tiles; 18 Zenodo 60° macrotile archives",
+      "scale_original": "10m（发布方说明；本轮未读原始栅格）",
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
             2021
           ],
           "range": null,
-          "qualifier": "v200 的2021产品范围；旧记录2020/2021为家族范围，原对象保留。",
-          "basis": "reviewed_version"
+          "qualifier": "精确发布产品年份，不把2020与2021并入一个version",
+          "basis": "explicit"
         },
         "local_years": {
           "explicit": [],
@@ -680,9 +626,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -699,43 +643,6 @@
           "range": null,
           "qualifier": null,
           "basis": "explicit"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
-    "URB-023": {
-      "frequency": "mixed",
-      "frequency_original": "monthly history; annual/summary layers",
-      "spatial_form": "grid",
-      "scale_group": "sub-km",
-      "scale_original": "30 m",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": {
-            "start": 1984,
-            "end": 2024
-          },
-          "qualifier": "1984–2024 (release/layer-specific); legacy v1.4 ends 2021",
-          "basis": "declared_range"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
         },
         "hosted_years": {
           "explicit": [],
@@ -785,7 +692,7 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-030": {
-      "frequency": "static",
+      "frequency": "annual",
       "frequency_original": "static compiled inventory; no annual series",
       "spatial_form": "grid",
       "scale_group": "native-grid",
@@ -793,9 +700,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -820,92 +725,35 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "URB-035": {
-      "frequency": "annual",
-      "frequency_original": "Annual composite (A2019001 is the year composite label, not January monthly data)",
-      "spatial_form": "grid",
-      "scale_group": "native-grid",
-      "scale_original": "15 arc-second geographic grid",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "2012–present; 2019 tile inventory verified at LAADS",
-          "basis": "unknown"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "URB-007": {
       "frequency": "mixed",
-      "frequency_original": "5年/投影",
-      "spatial_form": "grid",
+      "frequency_original": "五年期",
+      "spatial_form": "mixed",
       "scale_group": "multiple",
-      "scale_original": "100 m Mollweide / 1 km / geographic 3 arcsec or 30 arcsec variants",
+      "scale_original": "产品提供100m/1km World Mollweide EPSG:54009；3/30角秒WGS84 EPSG:4326；当前未选择/取得具体网格",
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
-          "explicit": [],
+          "explicit": [
+            1975,
+            1980,
+            1985,
+            1990,
+            1995,
+            2000,
+            2005,
+            2010,
+            2015,
+            2020,
+            2025,
+            2030
+          ],
           "range": null,
-          "qualifier": "1975–2020五年观测/模型；2025/2030 projection",
-          "basis": "unknown"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
-    "LEG-003": {
-      "frequency": "unknown",
-      "frequency_original": "",
-      "spatial_form": "grid",
-      "scale_group": "multiple",
-      "scale_original": "官方提供100m/1km及其他版本；当前未取栅格",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "1975-2020 estimates every 5 years; 2025/2030 projections",
-          "basis": "unknown"
+          "qualifier": "1975–2020每5年估计；2025、2030为投影，非实测完整年度",
+          "basis": "explicit"
         },
         "local_years": {
           "explicit": [],
@@ -923,7 +771,7 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-002": {
-      "frequency": "mixed",
+      "frequency": "annual",
       "frequency_original": "5年",
       "spatial_form": "grid",
       "scale_group": "km",
@@ -931,9 +779,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -975,7 +821,7 @@
       ],
       "formats": [
         "CSV",
-        "GEOPARQUET",
+        "GeoParquet",
         "PDF"
       ],
       "years": {
@@ -1013,9 +859,7 @@
         "site",
         "official"
       ],
-      "formats": [
-        "GEOTIFF"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1055,9 +899,7 @@
         "site",
         "official"
       ],
-      "formats": [
-        "GEOTIFF"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1220,9 +1062,7 @@
       "access": [
         "site"
       ],
-      "formats": [
-        "ZIP"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1251,43 +1091,6 @@
         }
       },
       "format_basis": "native_formats plus manually reviewed approved asset labels"
-    },
-    "ATM-002": {
-      "frequency": "monthly",
-      "frequency_original": "monthly",
-      "spatial_form": "grid",
-      "scale_group": "native-grid",
-      "scale_original": "0.1°",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": {
-            "start": 2000,
-            "end": 2022
-          },
-          "qualifier": "2000–2022；EDGAR月度部门家族2000–2022，不能借用年度1970起范围",
-          "basis": "declared_range"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "none acquired",
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
     },
     "ATM-025": {
       "frequency": "annual",
@@ -1336,7 +1139,7 @@
         "page"
       ],
       "formats": [
-        "NETCDF"
+        "NC"
       ],
       "years": {
         "source_years": {
@@ -1375,7 +1178,7 @@
         "page"
       ],
       "formats": [
-        "NETCDF"
+        "NC"
       ],
       "years": {
         "source_years": {
@@ -1413,9 +1216,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1441,29 +1242,27 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "ATM-004": {
-      "frequency": "annual",
-      "frequency_original": "annual/sectors in archive",
-      "spatial_form": "grid",
-      "scale_group": "native-grid",
-      "scale_original": "0.1°",
-      "access": [
-        "page"
-      ],
+    "ATM-001-IND_COMBUSTION-SOURCE": {
+      "frequency": "monthly",
+      "frequency_original": "monthly",
+      "scale_original": "0.1° × 0.1°",
       "formats": [
-        "UNKNOWN"
+        "NetCDF（来源声明）"
       ],
       "years": {
         "source_years": {
           "explicit": [],
-          "range": null,
-          "qualifier": "1980–2019 (0.1°); alternate 0.5° product covers 1750–2019",
-          "basis": "unknown"
+          "range": {
+            "start": 2000,
+            "end": 2022
+          },
+          "qualifier": "来源月度部门家族声明，未核逐文件年份",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
           "range": null,
-          "qualifier": "none acquired",
+          "qualifier": "本部门文件未取得",
           "basis": "unknown"
         },
         "hosted_years": {
@@ -1473,7 +1272,47 @@
           "basis": "unknown"
         }
       },
-      "format_basis": "native_formats only; no URL inference"
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "page"
+      ]
+    },
+    "ATM-001-IND_PROCESSES-SOURCE": {
+      "frequency": "monthly",
+      "frequency_original": "monthly",
+      "scale_original": "0.1° × 0.1°",
+      "formats": [
+        "NetCDF（来源声明）"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2000,
+            "end": 2022
+          },
+          "qualifier": "来源月度部门家族声明，未核逐文件年份",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "本部门文件未取得",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "page"
+      ]
     },
     "HUM-002": {
       "frequency": "static",
@@ -1552,46 +1391,6 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "HUM-007": {
-      "frequency": "annual",
-      "frequency_original": "annual",
-      "spatial_form": "aggregate",
-      "scale_group": "aggregate",
-      "scale_original": "国家/实体",
-      "access": [
-        "repository"
-      ],
-      "formats": [
-        "CSV"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": {
-            "start": 1880,
-            "end": 2023
-          },
-          "qualifier": "1880–2023；各实体缺失范围不同",
-          "basis": "declared_range"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": {
-            "start": 1880,
-            "end": 2023
-          },
-          "qualifier": "已取得1880–2023原始CSV；各实体缺年不同",
-          "basis": "declared_range"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "HUM-009": {
       "frequency": "mixed",
       "frequency_original": "来源日期不一",
@@ -1602,7 +1401,7 @@
         "repository"
       ],
       "formats": [
-        "GPKG",
+        "GeoPackage",
         "PDF"
       ],
       "years": {
@@ -1638,9 +1437,7 @@
       "access": [
         "site"
       ],
-      "formats": [
-        "CSV"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1676,7 +1473,7 @@
       ],
       "formats": [
         "ZIP",
-        "GEOJSON"
+        "GeoJSON"
       ],
       "years": {
         "source_years": {
@@ -1711,11 +1508,9 @@
       "scale_group": "aggregate",
       "scale_original": "country/economy",
       "access": [
-        "unknown"
+        "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -1782,43 +1577,6 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "ATM-014": {
-      "frequency": "mixed",
-      "frequency_original": "monthly plus higher-frequency scaling data in some versions",
-      "spatial_form": "mixed",
-      "scale_group": "unknown",
-      "scale_original": "0.25° nominal product grid; verify per version",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": {
-            "start": 1997,
-            "end": 2020
-          },
-          "qualifier": "GFED4s core historical period includes 1997–2020; GFED5 newer period/version requires mapping",
-          "basis": "declared_range"
-        },
-        "local_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "none acquired",
-          "basis": "unknown"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "URB-033": {
       "frequency": "annual",
       "frequency_original": "annual",
@@ -1828,9 +1586,7 @@
       "access": [
         "official"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1868,9 +1624,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -1907,9 +1661,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -1945,9 +1697,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -1983,9 +1733,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [
@@ -2012,42 +1760,6 @@
       },
       "format_basis": "native_formats only; no URL inference"
     },
-    "URB-026": {
-      "frequency": "static",
-      "frequency_original": "static/climatological predictor surface",
-      "spatial_form": "grid",
-      "scale_group": "sub-km",
-      "scale_original": "250 m",
-      "access": [
-        "page"
-      ],
-      "formats": [
-        "UNKNOWN"
-      ],
-      "years": {
-        "source_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": "static prediction surface/version 2.0",
-          "basis": "unknown"
-        },
-        "local_years": {
-          "explicit": [
-            2020
-          ],
-          "range": null,
-          "qualifier": "Static v2.0 model prediction; model output uses March 2020 WISE snapshot (per VRT metadata)",
-          "basis": "explicit"
-        },
-        "hosted_years": {
-          "explicit": [],
-          "range": null,
-          "qualifier": null,
-          "basis": "unknown"
-        }
-      },
-      "format_basis": "native_formats only; no URL inference"
-    },
     "ATM-008": {
       "frequency": "monthly",
       "frequency_original": "monthly averaged",
@@ -2057,9 +1769,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -2086,7 +1796,7 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-024": {
-      "frequency": "mixed",
+      "frequency": "annual",
       "frequency_original": "annual change year",
       "spatial_form": "grid",
       "scale_group": "sub-km",
@@ -2094,9 +1804,7 @@
       "access": [
         "page"
       ],
-      "formats": [
-        "UNKNOWN"
-      ],
+      "formats": [],
       "years": {
         "source_years": {
           "explicit": [],
@@ -2123,7 +1831,7 @@
       "format_basis": "native_formats only; no URL inference"
     },
     "URB-042": {
-      "frequency": "mixed",
+      "frequency": "annual",
       "spatial_form": "grid",
       "scale_group": "sub-km",
       "frequency_original": "单波段形成时期类别：七个五年区间及1985年前类别",
@@ -2195,8 +1903,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2212,8 +1920,8 @@
             "start": 2001,
             "end": 2021
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2238,8 +1946,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2255,8 +1963,8 @@
             "start": 2003,
             "end": 2021
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2281,8 +1989,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2298,8 +2006,8 @@
             "start": 2001,
             "end": 2020
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2324,8 +2032,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2341,8 +2049,8 @@
             "start": 2003,
             "end": 2020
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2367,8 +2075,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2384,8 +2092,8 @@
             "start": 2001,
             "end": 2020
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2410,8 +2118,8 @@
       "frequency": "monthly",
       "spatial_form": "aggregate",
       "scale_group": "aggregate",
-      "frequency_original": "月；另有季/年平均编码说明",
-      "scale_original": "城市统计；另有1km格网渠道",
+      "frequency_original": "月度；昼夜分列",
+      "scale_original": "当前列示文件为城市统计包；另述1km渠道不等于这些文件",
       "formats": [
         "RAR",
         "CSV",
@@ -2427,8 +2135,8 @@
             "start": 2001,
             "end": 2020
           },
-          "qualifier": "社区目录分源表；未核RAR内部覆盖；不是RAR已核验覆盖",
-          "basis": "community_source_group_declaration"
+          "qualifier": "该温度源范围来自已取得社区目录，作者文件正文未读",
+          "basis": "declared_range"
         },
         "local_years": {
           "explicit": [],
@@ -2448,7 +2156,310 @@
         "day",
         "night"
       ]
+    },
+    "HUM-012-NV.AGR.TOTL.ZS": {
+      "frequency": "annual",
+      "frequency_original": "年度",
+      "scale_original": "全球国家/经济体与地区汇总；无局地坐标",
+      "formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "三份原件实际非空年度1960–2025；各实体缺失范围不同",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "原件实际非空1960–2025，实体缺失不一",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "aggregate",
+      "scale_group": "aggregate",
+      "access": [
+        "official"
+      ]
+    },
+    "HUM-012-NV.IND.TOTL.ZS": {
+      "frequency": "annual",
+      "frequency_original": "年度",
+      "scale_original": "全球国家/经济体与地区汇总；无局地坐标",
+      "formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "三份原件实际非空年度1960–2025；各实体缺失范围不同",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "原件实际非空1960–2025，实体缺失不一",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "aggregate",
+      "scale_group": "aggregate",
+      "access": [
+        "official"
+      ]
+    },
+    "HUM-012-NV.IND.MANF.ZS": {
+      "frequency": "annual",
+      "frequency_original": "年度",
+      "scale_original": "全球国家/经济体与地区汇总；无局地坐标",
+      "formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "三份原件实际非空年度1960–2025；各实体缺失范围不同",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 1960,
+            "end": 2025
+          },
+          "qualifier": "原件实际非空1960–2025，实体缺失不一",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "aggregate",
+      "scale_group": "aggregate",
+      "access": [
+        "official"
+      ]
+    },
+    "URB-043": {
+      "frequency": "annual",
+      "frequency_original": "年度；白天/夜间分列",
+      "scale_original": "全球超过10000城市集群；下推后的300m像元，非300m卫星原生测温",
+      "formats": [
+        "Earth Engine ImageCollection"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2003,
+            "end": 2018
+          },
+          "qualifier": "该annual pixel v4资产2003–2018；不是月度或夏冬资产",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "本轮仅来源元数据核验，未取得科学栅格",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "sub-km",
+      "access": [
+        "request"
+      ],
+      "heat_type": "clear-sky-surface",
+      "diurnal": [
+        "day",
+        "night"
+      ]
+    },
+    "ATM-041": {
+      "frequency": "annual",
+      "frequency_original": "annual",
+      "scale_original": "国家/地区及部分次国家统计单元，不是格网",
+      "formats": [
+        "GBD Results Tool export;本轮未核文件格式"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 1990,
+            "end": 2023
+          },
+          "qualifier": "来源元数据声明；科学文件未读",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得科学文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "aggregate",
+      "scale_group": "aggregate",
+      "access": [
+        "request"
+      ]
+    },
+    "ATM-042": {
+      "frequency": "mixed",
+      "frequency_original": "24小时滤膜，每三天采样，约1700样本",
+      "scale_original": "站点滤膜样品；站点坐标未由原件核验",
+      "formats": [],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2013,
+            "end": 2018
+          },
+          "qualifier": "期间15组全年采样序列，14站；不是连续15年",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未申请或取得原始数据",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "point",
+      "scale_group": "object",
+      "access": [
+        "request"
+      ]
+    },
+    "ATM-043-GEE-NO2": {
+      "frequency": "mixed",
+      "frequency_original": "per-orbit;目录重访2天，非固定日均",
+      "scale_original": "0.01°派生格网，目录标称1113.2 m；不是传感器原生分辨率",
+      "formats": [
+        "Earth Engine ImageCollection"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2018,
+            "end": 2026
+          },
+          "qualifier": "来源元数据声明；科学文件未读",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得科学文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "request"
+      ]
+    },
+    "ATM-043-GEE-SO2": {
+      "frequency": "mixed",
+      "frequency_original": "per-orbit;目录重访2天，非固定日均",
+      "scale_original": "0.01°派生格网，目录标称1113.2 m；不是传感器原生分辨率",
+      "formats": [
+        "Earth Engine ImageCollection"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2018,
+            "end": 2026
+          },
+          "qualifier": "来源元数据声明；科学文件未读",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得科学文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "spatial_form": "grid",
+      "scale_group": "native-grid",
+      "access": [
+        "request"
+      ]
     }
   },
-  "year_filter_note": "年份范围表示记录覆盖，不证明每个中间年有完整或已核验文件；组合条件须在同一版本成立。"
+  "year_filter_note": "来源声明不证明每年完整文件；同一版本满足全部条件。"
 }

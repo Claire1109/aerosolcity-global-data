@@ -61,6 +61,7 @@
     return "\uFEFF"+rows.map(r=>r.map(csvCell).join(",")).join("\r\n");
   }
   function viewRecord(variant) {
+    if(variant.current_view)return variant.current_view;
     const p=variant.original_record,o=variant.approved_overlay||{};
     const record={...p,publisher_author:p.publisher_author||o.publisher||'',
       source_page:o.source_override_url?{url:o.source_override_url,label:'精确来源记录（补充核验）'}:p.source_page?.url?p.source_page:o.source_url?{url:o.source_url,label:'来源记录（补充核验）'}:p.source_page};
@@ -81,9 +82,11 @@
     const q=text(String(query).trim()),legacy=Object.keys(catalog.migration||{}).find(id=>text(id)===q);
     if(legacy)return catalog.migration[legacy].action!=='archive'&&catalog.migration[legacy].variantID===variant.variant_id?250:0;
     const names=v=>(viewRecord(v).variables||[]).flatMap(x=>typeof x==='string'?[text(x)]:[text(x.name),text(x.label)]).filter(Boolean);
-    const exactVariable=catalog.products.some(g=>g.variants.some(v=>names(v).includes(q)));
+    const exactVariable=catalog.products.some(g=>g.variants.some(v=>names(v).some(n=>n.includes(q))));
+    const classic=(catalog.classic_index?.indicators||[]).filter(i=>text(i.name_zh).includes(q)||text(i.slug)===q);
+    if(!exactVariable&&classic.length)return classic.some(i=>i.sources.some(s=>s.canonicalID===group.dataset_id&&s.variantID===variant.variant_id))?150:0;
     // An exact variable query cannot be satisfied merely by the parent family title.
-    if(exactVariable&&!names(variant).includes(q))return 0;
+    if(exactVariable&&!names(variant).some(n=>n.includes(q)))return 0;
     const p=viewRecord(variant),vm={products:{[p.dataset_id]:mapping.products[group.dataset_id]}};
     const individual=score(p,query,vm,taxonomy),family=text([group.display_name,...(group.aliases||[])].join(' '));
     const overlay=text(JSON.stringify(variant.approved_overlay?.approved_facts||{}));
@@ -110,7 +113,7 @@
     return catalog.products.map((group,i)=>{
       if(!groupPathMatch(group,state,mapping))return null;
       const matches=group.variants.map(v=>({v,score:variantScore(v,group,state.q||'',catalog,mapping,taxonomy)}))
-        .filter(x=>x.score>0&&variantMatches(x.v,state)).sort((a,b)=>b.score-a.score);
+        .filter(x=>x.score>0&&variantMatches(x.v,state)&&(!state.indicator||catalog.classic_index?.indicators.find(i=>i.slug===state.indicator)?.sources.some(s=>s.canonicalID===group.dataset_id&&s.variantID===x.v.variant_id))).sort((a,b)=>b.score-a.score);
       return matches.length?{group,matched_variant_ids:matches.map(x=>x.v.variant_id),score:matches[0].score,i}:null;
     }).filter(Boolean).sort((a,b)=>state.sort==='name'?a.group.display_name.localeCompare(b.group.display_name,'zh-CN'):b.score-a.score||a.i-b.i);
   }
@@ -121,6 +124,7 @@
     let path=route.path;const params=new URLSearchParams(route.params),parts=path.split('/').filter(Boolean);
     if(parts[0]==='datasets') {
       let id;try{id=decodeURIComponent(parts[1]||'');}catch{return {path:'/missing',params};}
+      const explicit=catalog.variant_migration?.[id+'?variant='+params.get('variant')];if(explicit){const target=parseRoute('#'+explicit.route);path=target.path;params.delete('variant');for(const [k,v] of target.params)params.set(k,v);return {path,params};}
       const m=catalog.migration[id];
       if(m?.action==='archive')path='/archive/'+id;
       else if(m){path='/datasets/'+m.canonicalID;if(!params.has('variant'))params.set('variant',m.variantID);}

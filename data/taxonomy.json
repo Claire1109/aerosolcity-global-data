@@ -1,5 +1,5 @@
 {
-  "version": "d041-v1",
+  "version": "d043-v1",
   "themes": [
     {
       "id": "atmosphere-health",
@@ -59,6 +59,16 @@
             "composition",
             "reanalysis"
           ]
+        },
+        {
+          "id": "health-burden",
+          "label": "空气污染健康负担",
+          "aliases": []
+        },
+        {
+          "id": "oxidative-potential",
+          "label": "颗粒物氧化潜势",
+          "aliases": []
         }
       ]
     },
@@ -238,6 +248,11 @@
             "public",
             "services"
           ]
+        },
+        {
+          "id": "sector-value-added",
+          "label": "产业增加值",
+          "aliases": []
         }
       ]
     },
