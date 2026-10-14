@@ -320,7 +320,7 @@
       "scale_group": "object",
       "scale_original": "设施点位",
       "access": [
-        "repository"
+        "mirror"
       ],
       "formats": [
         "XLSX"

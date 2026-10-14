@@ -7,7 +7,7 @@
     frequency: {hourly:'小时（含多小时）', daily:'日', monthly:'月', annual:'年', static:'静态/快照', mixed:'混合/多期', unknown:'未知'},
     spatial_form: {grid:'格网', point:'点', line:'线', polygon:'面', aggregate:'城市/行政区汇总', mixed:'混合', unknown:'未知'},
     scale_group: {'sub-km':'已声明亚公里尺度', km:'约1公里（来源声明）', 'native-grid':'原生角度/模式/投影格网', object:'设施/对象几何', aggregate:'城市/行政区域', multiple:'多尺度版本', unknown:'未知'},
-    access: {site:'本站文件', official:'官方直链/生成文件', repository:'作者/发布者仓库', page:'仅官方产品页', request:'登录/申请', unknown:'待核'}
+    access: {site:'本站文件', official:'官方直链/生成文件', repository:'作者/发布者仓库', mirror:'镜像文件', page:'仅官方产品页', request:'登录/申请', unknown:'待核'}
   };
   const clean = v => typeof v === 'string' && !['unknown','not verified','see release metadata'].includes(v.trim().toLowerCase()) ? v.trim() : '';
   const unique = values => [...new Set(values.map(clean).filter(Boolean))];
