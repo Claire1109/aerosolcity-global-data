@@ -3,149 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f2f1e9">
-  <meta name="description" content="AerosolCity 全球环境数据目录，按来源、范围、质量、许可和获取方式检索。">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="按官方名称、年份、空间尺度与已核实获取入口检索全球环境数据。">
   <title>AerosolCity · 全球数据目录</title>
-  <link rel="stylesheet" href="./styles.css?v=d033-d032-r04-r02">
-  <script src="./app.js?v=d033-d032-r04-r02" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=d034-r02">
+  <script src="./app.js?v=d034-r02" defer></script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="AerosolCity 首页">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>AerosolCity<span class="brand-sub">GLOBAL DATA ATLAS</span></span>
-      </a>
-      <nav class="topnav" aria-label="页面导航">
-        <a href="#catalog">数据目录</a>
-        <a href="#about">范围说明</a>
-      </nav>
-    </header>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AerosolCity 全球数据目录首页">
+      <span class="brand-name">AerosolCity</span>
+      <span class="brand-divider" aria-hidden="true">/</span>
+      <span class="brand-subtitle">全球数据目录</span>
+    </a>
+    <a class="header-link" href="#catalog">浏览目录 <span aria-hidden="true">↓</span></a>
+  </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-rule"></span>全球环境数据 · 可核查目录</p>
-          <h1 id="page-title">让每一份数据，<br><em>都有清楚的来处。</em></h1>
-          <p class="hero-intro">从大气组成到城市空间，检索产品实际支持的年份、范围、质量与获取方式。每条记录都保留自己的边界。</p>
-          <div class="hero-stats" aria-label="目录概况">
-            <div><strong id="stat-products">—</strong><span>登记产品</span></div>
-            <div><strong id="stat-lines">—</strong><span>可增补主线</span></div>
-            <div><strong id="stat-assets">—</strong><span>目录下载入口</span></div>
-          </div>
+  <main id="top" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">全球环境数据</p>
+      <h1 id="page-title">按数据实际范围检索</h1>
+      <p class="intro-note">来源记录、本地取得范围与本站文件范围分别说明。未核实的身份与入口会明确标出。</p>
+    </section>
+
+    <section id="catalog" class="catalog" aria-label="全球数据产品目录">
+      <form id="filters" class="filter-panel" role="search" autocomplete="off">
+        <div class="search-field">
+          <label for="search-input">搜索</label>
+          <input id="search-input" type="search" placeholder="产品名、变量、年份…" aria-describedby="search-help">
+          <span id="search-help" class="visually-hidden">搜索会匹配产品名称、用途、变量、来源记录和稳定键。</span>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="orbit orbit-three"></div>
-          <div class="art-core"><span>DATA<br>IN<br>CONTEXT</span><b></b></div>
-          <span class="art-label label-top">ATMOSPHERE</span>
-          <span class="art-label label-right">LAND · CITY</span>
-          <span class="art-label label-bottom">2018 — 2024+</span>
-        </div>
-      </section>
-
-      <section class="scope-banner" id="about" aria-label="目录范围说明">
-        <span class="scope-icon" aria-hidden="true">↗</span>
-        <div>
-          <strong>登记不等于齐备，入口不等于整档案。</strong>
-          <p>每条产品分别说明来源范围、本地取得范围与本站文件范围。局部范围按原 scope 展示；未知值不会推算成完整覆盖。</p>
-        </div>
-        <span class="scope-count" id="scope-count">84 条记录</span>
-      </section>
-
-      <section class="catalog-layout" id="catalog" aria-label="全球数据目录">
-        <aside class="filters-panel" aria-label="筛选目录">
-          <div class="filter-heading">
-            <div><p class="eyebrow">FIND YOUR DATA</p><h2>筛选目录</h2></div>
-            <button class="text-button" id="clear-filters" type="button">清除</button>
-          </div>
-          <label class="search-label" for="search-input">关键词</label>
-          <div class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="产品、变量、DOI、单位…" autocomplete="off"></div>
-
+        <div class="primary-filters">
           <fieldset class="line-fieldset">
-            <legend>研究主线 <span>可多选</span></legend>
+            <legend>研究主线</legend>
             <div id="line-filters" class="line-filters"></div>
           </fieldset>
+          <div class="access-filter">
+            <label for="access-filter">获取方式</label>
+            <select id="access-filter"><option value="">全部方式</option></select>
+          </div>
+          <button id="clear-filters" class="reset-button" type="button">重置筛选</button>
+        </div>
+        <details id="advanced-filters" class="advanced-filters">
+          <summary>更多筛选</summary>
+          <div class="advanced-grid">
+            <div class="filter-control"><label for="source-year">来源年份</label><select id="source-year"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="local-year">本地取得年份</label><select id="local-year"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="hosted-year">本站文件年份</label><select id="hosted-year"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="source-frequency">来源时间步长</label><select id="source-frequency"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="native-resolution">原生空间尺度</label><select id="native-resolution"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="type-filter">数据类型</label><select id="type-filter"><option value="">不限</option></select></div>
+            <div class="filter-control"><label for="format-filter">原始格式</label><select id="format-filter"><option value="">不限</option></select></div>
+          </div>
+          <p class="filter-note">三个年份条件彼此独立；筛选使用记录中的明确年份，不从其他范围推算。</p>
+        </details>
+      </form>
 
-          <div class="filter-group">
-            <label for="source-year">来源年份</label>
-            <select id="source-year"><option value="">不限</option></select>
-          </div>
-          <div class="filter-group">
-            <label for="local-year">本地取得年份</label>
-            <select id="local-year"><option value="">不限</option></select>
-          </div>
-          <div class="filter-group">
-            <label for="hosted-year">本站文件年份</label>
-            <select id="hosted-year"><option value="">不限</option></select>
-          </div>
-
-          <div class="filter-grid">
-            <div class="filter-group">
-              <label for="completeness-filter">本地完整度</label>
-              <select id="completeness-filter"><option value="">不限</option></select>
-            </div>
-            <div class="filter-group">
-              <label for="quality-filter">质量</label>
-              <select id="quality-filter"><option value="">不限</option></select>
-            </div>
-            <div class="filter-group">
-              <label for="reuse-filter">许可 / 再用</label>
-              <select id="reuse-filter"><option value="">不限</option></select>
-            </div>
-            <div class="filter-group">
-              <label for="access-filter">获取方式</label>
-              <select id="access-filter"><option value="">不限</option></select>
-            </div>
-            <div class="filter-group">
-              <label for="type-filter">数据类型</label>
-              <select id="type-filter"><option value="">不限</option></select>
-            </div>
-            <div class="filter-group">
-              <label for="format-filter">原始格式</label>
-              <select id="format-filter"><option value="">不限</option></select>
-            </div>
-          </div>
-          <details class="filter-more" id="advanced-filters">
-            <summary>时间频率与原生分辨率</summary>
-            <div class="filter-grid">
-              <div class="filter-group">
-                <label for="source-frequency">来源时间频率</label>
-                <select id="source-frequency"><option value="">不限</option></select>
-              </div>
-              <div class="filter-group">
-                <label for="native-resolution">原生空间分辨率</label>
-                <select id="native-resolution"><option value="">不限</option></select>
-              </div>
-            </div>
-          </details>
-          <p class="filter-footnote">年份分别按来源、本地取得与本站文件范围筛选；来源频率和原生分辨率按登记原值精确筛选。未核实值标为“未核实”，不推算或换算。</p>
-        </aside>
-
-        <div class="results-column">
-          <div class="results-head">
-            <div><p class="eyebrow">CATALOGUE / 2026</p><h2>数据产品</h2></div>
-            <div class="result-count"><strong id="result-count">—</strong><span>匹配记录</span></div>
-          </div>
-          <div class="active-filter-row" id="active-filters" aria-live="polite"></div>
-          <div id="catalog-error" class="error-panel" hidden></div>
-          <div id="product-list" class="product-list" aria-live="polite"></div>
-          <div id="empty-state" class="empty-state" hidden>
-            <span class="empty-mark" aria-hidden="true">⌕</span>
-            <h3>没有找到匹配记录</h3>
-            <p>试着减少筛选条件，或换一个变量、产品名或来源关键词。</p>
-            <button class="button button-dark" id="empty-clear" type="button">清除全部筛选</button>
-          </div>
+      <section class="results" aria-labelledby="results-title">
+        <div class="results-heading">
+          <h2 id="results-title">数据产品</h2>
+          <p class="match-count" aria-live="polite"><strong id="result-count">—</strong><span>条匹配记录</span></p>
+        </div>
+        <div id="active-filters" class="active-filters" aria-live="polite"></div>
+        <div id="catalog-error" class="message error-message" role="alert" hidden></div>
+        <div id="product-list" class="product-list" aria-live="polite"></div>
+        <div id="empty-state" class="message empty-state" hidden>
+          <h3>没有找到匹配记录</h3>
+          <p>减少筛选条件，或换一个产品名、变量名或稳定键。</p>
+          <button id="empty-clear" class="reset-button" type="button">清除筛选</button>
         </div>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-mark"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>AerosolCity</div>
-      <p>科研数据目录 · 元数据、文件与科学解释各有边界</p>
-      <a href="#top">回到顶部 ↑</a>
-    </footer>
-  </div>
+  <footer class="site-footer">
+    <p>获取入口只表示记录中已核实的访问方式；不代表质量或许可已全面通过。</p>
+    <a href="#top">返回顶部 ↑</a>
+  </footer>
 </body>
 </html>
