@@ -1,864 +1,1405 @@
 {
-  "version": "d039-v1",
+  "version": "d041-v1",
   "products": {
-    "HUM-002": {
+    "ATM-005": {
       "primary": [
-        "industry-energy",
-        "steel"
+        "atmosphere-health",
+        "aerosol-composition"
       ],
-      "secondary": [],
-      "review_note": "设施位置、炼钢工艺与产能，钢铁设施主路径。"
+      "secondary": []
     },
-    "HUM-006": {
+    "ATM-006": {
       "primary": [
-        "industry-energy",
-        "cement"
+        "atmosphere-health",
+        "aerosol-composition"
       ],
-      "secondary": [],
-      "review_note": "水泥设施或国家水泥生产/工艺CO2，水泥主路径；设施与国家汇总不混为同一尺度。"
+      "secondary": []
     },
-    "HUM-007": {
+    "ATM-012": {
       "primary": [
-        "industry-energy",
-        "cement"
+        "atmosphere-health",
+        "aerosol-optical-depth"
       ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "emissions"
-        ]
-      ],
-      "review_note": "水泥设施或国家水泥生产/工艺CO2，水泥主路径；设施与国家汇总不混为同一尺度。"
+      "secondary": []
     },
-    "HUM-009": {
+    "ATM-013": {
       "primary": [
-        "industry-energy",
-        "oil-gas"
+        "atmosphere-health",
+        "surface-pm25"
       ],
-      "secondary": [],
-      "review_note": "OGIM油气基础设施点线面；不是燃油燃气电厂。"
+      "secondary": []
     },
-    "URB-013": {
+    "ATM-031": {
       "primary": [
-        "industry-energy",
-        "power"
+        "atmosphere-health",
+        "surface-pm25"
       ],
-      "secondary": [],
-      "review_note": "电厂/机组设施位置、燃料与容量字段。"
+      "secondary": []
     },
-    "URB-020": {
+    "ATM-021": {
       "primary": [
-        "industry-energy",
-        "power"
+        "atmosphere-health",
+        "satellite-gas-columns"
       ],
-      "secondary": [],
-      "review_note": "电厂/机组设施位置、燃料与容量字段。"
+      "secondary": []
     },
-    "URB-041": {
+    "ATM-023": {
       "primary": [
-        "industry-energy",
-        "renewables"
+        "atmosphere-health",
+        "satellite-gas-columns"
       ],
-      "secondary": [],
-      "review_note": "光伏发电设施预测多边形，静态快照。"
+      "secondary": []
     },
-    "URB-028": {
+    "ATM-026": {
       "primary": [
-        "industry-energy",
-        "consumption"
+        "atmosphere-health",
+        "satellite-gas-columns"
       ],
-      "secondary": [],
-      "review_note": "国家经济体人均用电量。"
+      "secondary": []
     },
-    "LEG-001": {
+    "ATM-034": {
       "primary": [
-        "urban-transport",
-        "boundaries"
+        "atmosphere-health",
+        "satellite-gas-columns"
       ],
-      "secondary": [
-        [
-          "population-economy",
-          "population"
-        ],
-        [
-          "urban-transport",
-          "built"
-        ]
-      ],
-      "review_note": "UCDB城市中心多边形，LEG002的NOx是城市边界统计属性；不将实体主归排放格网。"
+      "secondary": []
     },
-    "LEG-002": {
+    "ATM-032": {
       "primary": [
-        "urban-transport",
-        "boundaries"
+        "atmosphere-health",
+        "nitrogen-deposition"
       ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "emissions"
-        ]
-      ],
-      "review_note": "UCDB城市中心多边形，LEG002的NOx是城市边界统计属性；不将实体主归排放格网。"
+      "secondary": []
     },
-    "LEG-004": {
+    "ATM-010": {
       "primary": [
-        "urban-transport",
-        "built"
+        "climate-urban-heat",
+        "reanalysis"
       ],
-      "secondary": [],
-      "review_note": "建成面积/体积或不透水面变化年份。"
+      "secondary": []
     },
-    "URB-008": {
+    "URB-005": {
       "primary": [
-        "urban-transport",
-        "built"
+        "climate-urban-heat",
+        "land-surface-temperature"
       ],
-      "secondary": [],
-      "review_note": "建成面积/体积或不透水面变化年份。"
-    },
-    "URB-015": {
-      "primary": [
-        "urban-transport",
-        "built"
-      ],
-      "secondary": [],
-      "review_note": "建成面积/体积或不透水面变化年份。"
-    },
-    "URB-024": {
-      "primary": [
-        "urban-transport",
-        "built"
-      ],
-      "secondary": [],
-      "review_note": "建成面积/体积或不透水面变化年份。"
-    },
-    "URB-017": {
-      "primary": [
-        "urban-transport",
-        "buildings"
-      ],
-      "secondary": [],
-      "review_note": "建筑轮廓/高度与SSP屋顶面积，保留单体和网格的区别。"
-    },
-    "URB-021": {
-      "primary": [
-        "urban-transport",
-        "buildings"
-      ],
-      "secondary": [],
-      "review_note": "建筑轮廓/高度与SSP屋顶面积，保留单体和网格的区别。"
-    },
-    "URB-029": {
-      "primary": [
-        "urban-transport",
-        "roads"
-      ],
-      "secondary": [],
-      "review_note": "OSM对象标签与GRIP道路密度，点线面对象和栅格分别记录。"
-    },
-    "URB-030": {
-      "primary": [
-        "urban-transport",
-        "roads"
-      ],
-      "secondary": [],
-      "review_note": "OSM对象标签与GRIP道路密度，点线面对象和栅格分别记录。"
-    },
-    "HUM-003": {
-      "primary": [
-        "urban-transport",
-        "airports"
-      ],
-      "secondary": [],
-      "review_note": "机场设施点；非客流统计，含关闭机场与直升机坪。"
-    },
-    "URB-009": {
-      "primary": [
-        "urban-transport",
-        "night-lights"
-      ],
-      "secondary": [],
-      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
+      "secondary": []
     },
     "URB-016": {
       "primary": [
-        "urban-transport",
-        "morphology"
+        "climate-urban-heat",
+        "anthropogenic-heat"
       ],
-      "secondary": [],
-      "review_note": "夜间灯光或人为热通量，按已登记城市环境图层归入城市形态，未推断城市经济值。"
+      "secondary": []
     },
-    "URB-035": {
+    "LEG-001": {
       "primary": [
-        "urban-transport",
-        "night-lights"
-      ],
-      "secondary": [],
-      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
-    },
-    "URB-039": {
-      "primary": [
-        "urban-transport",
-        "night-lights"
-      ],
-      "secondary": [],
-      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
-    },
-    "HUM-001": {
-      "primary": [
-        "population-economy",
-        "population"
-      ],
-      "secondary": [],
-      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
-    },
-    "HUM-005": {
-      "primary": [
-        "population-economy",
-        "population"
+        "urban-land-ecology",
+        "urban-centres"
       ],
       "secondary": [
         [
-          "urban-transport",
-          "boundaries"
+          "population-economy-industry",
+          "urban-demography"
         ]
-      ],
-      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+      ]
     },
-    "LEG-003": {
+    "LEG-004": {
       "primary": [
-        "population-economy",
-        "population"
+        "urban-land-ecology",
+        "built-surface"
       ],
-      "secondary": [],
-      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+      "secondary": []
     },
-    "URB-002": {
+    "URB-004": {
       "primary": [
-        "population-economy",
-        "population"
+        "urban-land-ecology",
+        "land-cover"
       ],
-      "secondary": [],
-      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+      "secondary": []
+    },
+    "URB-036": {
+      "primary": [
+        "urban-land-ecology",
+        "land-cover"
+      ],
+      "secondary": []
+    },
+    "URB-034": {
+      "primary": [
+        "urban-land-ecology",
+        "vegetation"
+      ],
+      "secondary": []
+    },
+    "URB-023": {
+      "primary": [
+        "urban-land-ecology",
+        "surface-water"
+      ],
+      "secondary": []
+    },
+    "HUM-003": {
+      "primary": [
+        "urban-land-ecology",
+        "transport"
+      ],
+      "secondary": []
+    },
+    "URB-030": {
+      "primary": [
+        "urban-land-ecology",
+        "transport"
+      ],
+      "secondary": []
+    },
+    "URB-035": {
+      "primary": [
+        "urban-land-ecology",
+        "nighttime-lights"
+      ],
+      "secondary": []
     },
     "URB-007": {
       "primary": [
-        "population-economy",
-        "population"
+        "population-economy-industry",
+        "population-grid"
       ],
-      "secondary": [],
-      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+      "secondary": []
     },
-    "URB-003": {
+    "URB-002": {
       "primary": [
-        "population-economy",
-        "gdp"
+        "population-economy-industry",
+        "population-grid"
       ],
-      "secondary": [],
-      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+      "secondary": []
     },
-    "URB-011": {
+    "HUM-005": {
       "primary": [
-        "population-economy",
-        "gdp"
+        "population-economy-industry",
+        "urban-demography"
       ],
-      "secondary": [],
-      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+      "secondary": [
+        [
+          "urban-land-ecology",
+          "urban-centres"
+        ]
+      ]
     },
     "URB-031": {
       "primary": [
-        "population-economy",
+        "population-economy-industry",
         "gdp"
       ],
-      "secondary": [],
-      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
-    },
-    "URB-032": {
-      "primary": [
-        "population-economy",
-        "gdp"
-      ],
-      "secondary": [],
-      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+      "secondary": []
     },
     "HUM-008": {
       "primary": [
-        "population-economy",
+        "population-economy-industry",
         "employment"
       ],
       "secondary": [
         [
-          "industry-energy",
+          "energy-industry-emissions",
           "industrial-employment"
         ],
         [
-          "agriculture-livestock",
+          "agriculture-natural-resources",
           "agricultural-employment"
         ]
-      ],
-      "review_note": "ILO模型估计农业/工业就业占比；国家经济体汇总。"
+      ]
     },
     "HUM-010": {
       "primary": [
-        "population-economy",
-        "services"
+        "population-economy-industry",
+        "public-services"
       ],
-      "secondary": [],
-      "review_note": "JMP基本饮水/卫生人口比例；国家经济体及汇总。"
-    },
-    "ATM-005": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "composition"
-        ]
-      ],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-007": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-008": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [
-        [
-          "meteorology-climate",
-          "reanalysis"
-        ]
-      ],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-012": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-013": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-018": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "deposition"
-        ],
-        [
-          "atmosphere-emissions",
-          "composition"
-        ]
-      ],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-020": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "composition"
-        ]
-      ],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-031": {
-      "primary": [
-        "atmosphere-emissions",
-        "aerosols"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
-    },
-    "ATM-019": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-028": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-029": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-030": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-036": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-037": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-038": {
-      "primary": [
-        "atmosphere-emissions",
-        "composition"
-      ],
-      "secondary": [],
-      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
-    },
-    "ATM-021": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "ATM-022": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "ATM-023": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "ATM-024": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "ATM-026": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "ATM-034": {
-      "primary": [
-        "atmosphere-emissions",
-        "gases"
-      ],
-      "secondary": [],
-      "review_note": "遥感气态污染物柱浓度，非排放通量。"
-    },
-    "LEG-005": {
-      "primary": [
-        "atmosphere-emissions",
-        "emissions"
-      ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
     "ATM-001": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "anthropogenic-emissions"
       ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
-    },
-    "ATM-002": {
-      "primary": [
-        "atmosphere-emissions",
-        "emissions"
-      ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
-    },
-    "ATM-003": {
-      "primary": [
-        "atmosphere-emissions",
-        "emissions"
-      ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": [
+        [
+          "agriculture-natural-resources",
+          "agricultural-emissions"
+        ]
+      ]
     },
     "ATM-004": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "anthropogenic-emissions"
       ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
-    "ATM-009": {
+    "HUM-002": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "steel"
       ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
-    "ATM-025": {
+    "HUM-006": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "cement"
       ],
-      "secondary": [],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
-    "ATM-033": {
+    "HUM-007": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "cement"
       ],
       "secondary": [
         [
-          "agriculture-livestock",
-          "agricultural-emissions"
+          "energy-industry-emissions",
+          "anthropogenic-emissions"
         ]
-      ],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      ]
     },
-    "ATM-035": {
+    "HUM-009": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "oil-gas"
       ],
-      "secondary": [
-        [
-          "industry-energy",
-          "power-emissions"
-        ]
-      ],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
-    "ATM-039": {
+    "URB-020": {
       "primary": [
-        "atmosphere-emissions",
-        "emissions"
+        "energy-industry-emissions",
+        "power-plants"
       ],
-      "secondary": [
-        [
-          "urban-transport",
-          "transport-emissions"
-        ]
-      ],
-      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+      "secondary": []
     },
-    "ATM-014": {
+    "URB-041": {
       "primary": [
-        "atmosphere-emissions",
-        "fire"
+        "energy-industry-emissions",
+        "renewable-energy"
       ],
-      "secondary": [],
-      "review_note": "火灾排放；ATM027全球与14区域汇总，不伪造格网。"
+      "secondary": []
+    },
+    "URB-028": {
+      "primary": [
+        "energy-industry-emissions",
+        "energy-consumption"
+      ],
+      "secondary": []
     },
     "ATM-027": {
       "primary": [
-        "atmosphere-emissions",
-        "fire"
+        "agriculture-natural-resources",
+        "fire-emissions"
       ],
-      "secondary": [],
-      "review_note": "火灾排放；ATM027全球与14区域汇总，不伪造格网。"
-    },
-    "ATM-006": {
-      "primary": [
-        "atmosphere-emissions",
-        "deposition"
-      ],
-      "secondary": [
-        [
-          "atmosphere-emissions",
-          "emissions"
-        ]
-      ],
-      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
-    },
-    "ATM-015": {
-      "primary": [
-        "atmosphere-emissions",
-        "deposition"
-      ],
-      "secondary": [],
-      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
-    },
-    "ATM-016": {
-      "primary": [
-        "atmosphere-emissions",
-        "deposition"
-      ],
-      "secondary": [],
-      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
-    },
-    "ATM-017": {
-      "primary": [
-        "atmosphere-emissions",
-        "deposition"
-      ],
-      "secondary": [],
-      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
-    },
-    "ATM-032": {
-      "primary": [
-        "atmosphere-emissions",
-        "deposition"
-      ],
-      "secondary": [],
-      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
-    },
-    "ATM-010": {
-      "primary": [
-        "meteorology-climate",
-        "reanalysis"
-      ],
-      "secondary": [
-        [
-          "meteorology-climate",
-          "temperature-wind"
-        ],
-        [
-          "meteorology-climate",
-          "precipitation"
-        ]
-      ],
-      "review_note": "气象再分析；源月平均频率，温湿风降水交叉入口。"
-    },
-    "ATM-011": {
-      "primary": [
-        "meteorology-climate",
-        "reanalysis"
-      ],
-      "secondary": [
-        [
-          "meteorology-climate",
-          "temperature-wind"
-        ],
-        [
-          "meteorology-climate",
-          "precipitation"
-        ]
-      ],
-      "review_note": "气象再分析；源月平均频率，温湿风降水交叉入口。"
-    },
-    "URB-004": {
-      "primary": [
-        "land-ecology",
-        "cover"
-      ],
-      "secondary": [],
-      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
-    },
-    "URB-006": {
-      "primary": [
-        "land-ecology",
-        "cover"
-      ],
-      "secondary": [],
-      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
-    },
-    "URB-019": {
-      "primary": [
-        "land-ecology",
-        "cover"
-      ],
-      "secondary": [],
-      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
-    },
-    "URB-036": {
-      "primary": [
-        "land-ecology",
-        "cover"
-      ],
-      "secondary": [],
-      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
-    },
-    "URB-022": {
-      "primary": [
-        "land-ecology",
-        "vegetation"
-      ],
-      "secondary": [],
-      "review_note": "NDVI/EVI植被指数，十日或月合成。"
-    },
-    "URB-034": {
-      "primary": [
-        "land-ecology",
-        "vegetation"
-      ],
-      "secondary": [],
-      "review_note": "NDVI/EVI植被指数，十日或月合成。"
-    },
-    "URB-023": {
-      "primary": [
-        "land-ecology",
-        "water"
-      ],
-      "secondary": [],
-      "review_note": "地表水历史、季节性与发生率。"
-    },
-    "URB-026": {
-      "primary": [
-        "land-ecology",
-        "soil"
-      ],
-      "secondary": [],
-      "review_note": "土壤水浸提pH，真实变量保留。"
-    },
-    "URB-014": {
-      "primary": [
-        "land-ecology",
-        "terrain"
-      ],
-      "secondary": [],
-      "review_note": "全球陆地高程和海底地形。"
-    },
-    "URB-005": {
-      "primary": [
-        "land-ecology",
-        "surface"
-      ],
-      "secondary": [],
-      "review_note": "陆表温度/发射率或反照率，不归常规气温。"
-    },
-    "URB-025": {
-      "primary": [
-        "land-ecology",
-        "surface"
-      ],
-      "secondary": [],
-      "review_note": "陆表温度/发射率或反照率，不归常规气温。"
-    },
-    "URB-010": {
-      "primary": [
-        "agriculture-livestock",
-        "livestock"
-      ],
-      "secondary": [],
-      "review_note": "家畜每像元数量或密度，原单位分别保留。"
-    },
-    "URB-038": {
-      "primary": [
-        "agriculture-livestock",
-        "livestock"
-      ],
-      "secondary": [],
-      "review_note": "家畜每像元数量或密度，原单位分别保留。"
-    },
-    "URB-040": {
-      "primary": [
-        "agriculture-livestock",
-        "livestock"
-      ],
-      "secondary": [],
-      "review_note": "家畜每像元数量或密度，原单位分别保留。"
-    },
-    "URB-012": {
-      "primary": [
-        "agriculture-livestock",
-        "inputs"
-      ],
-      "secondary": [],
-      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
-    },
-    "URB-027": {
-      "primary": [
-        "agriculture-livestock",
-        "inputs"
-      ],
-      "secondary": [
-        [
-          "agriculture-livestock",
-          "crops"
-        ],
-        [
-          "agriculture-livestock",
-          "livestock"
-        ],
-        [
-          "population-economy",
-          "population"
-        ]
-      ],
-      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+      "secondary": []
     },
     "URB-033": {
       "primary": [
-        "agriculture-livestock",
-        "inputs"
+        "agriculture-natural-resources",
+        "fertilizer"
       ],
-      "secondary": [
-        [
-          "agriculture-livestock",
-          "crops"
-        ]
-      ],
-      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+      "secondary": []
     },
     "URB-037": {
       "primary": [
-        "agriculture-livestock",
-        "inputs"
+        "agriculture-natural-resources",
+        "fertilizer"
       ],
-      "secondary": [],
-      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+      "secondary": []
     },
-    "URB-018": {
+    "URB-038": {
       "primary": [
-        "unclassified"
+        "agriculture-natural-resources",
+        "livestock"
       ],
-      "secondary": [],
-      "review_note": "仓库候选真实名称与内容仍待核，urban footprints字段不足以确认城市三十年产品含义，留内部审核队列。"
+      "secondary": []
+    },
+    "URB-014": {
+      "primary": [
+        "agriculture-natural-resources",
+        "terrain"
+      ],
+      "secondary": []
+    },
+    "URB-026": {
+      "primary": [
+        "agriculture-natural-resources",
+        "soil"
+      ],
+      "secondary": []
+    },
+    "ATM-008": {
+      "primary": [
+        "atmosphere-health",
+        "composition-reanalysis"
+      ],
+      "secondary": [
+        [
+          "climate-urban-heat",
+          "reanalysis"
+        ]
+      ]
+    },
+    "URB-024": {
+      "primary": [
+        "urban-land-ecology",
+        "impervious-evolution"
+      ],
+      "secondary": []
+    },
+    "URB-042": {
+      "primary": [
+        "urban-land-ecology",
+        "impervious-evolution"
+      ],
+      "secondary": []
+    },
+    "HUM-011": {
+      "primary": [
+        "population-economy-industry",
+        "industry-value-added"
+      ],
+      "secondary": []
+    },
+    "ATM-040": {
+      "primary": [
+        "climate-urban-heat",
+        "urban-heat-island"
+      ],
+      "secondary": []
     }
   },
-  "unclassified": [
-    "URB-018"
-  ]
+  "category_migrations": {
+    "industry-energy": {
+      "label": "工业与能源",
+      "group_ids": [
+        "HUM-002",
+        "HUM-006",
+        "HUM-007",
+        "HUM-009",
+        "URB-020",
+        "URB-041",
+        "URB-028",
+        "HUM-008",
+        "ATM-001"
+      ],
+      "archive_ids": [
+        "URB-013"
+      ]
+    },
+    "industry-energy/steel": {
+      "label": "工业与能源 / 钢铁",
+      "group_ids": [
+        "HUM-002"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/cement": {
+      "label": "工业与能源 / 水泥",
+      "group_ids": [
+        "HUM-006",
+        "HUM-007"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/oil-gas": {
+      "label": "工业与能源 / 油气设施",
+      "group_ids": [
+        "HUM-009"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/power": {
+      "label": "工业与能源 / 电厂与能源设施",
+      "group_ids": [
+        "URB-020"
+      ],
+      "archive_ids": [
+        "URB-013"
+      ]
+    },
+    "industry-energy/renewables": {
+      "label": "工业与能源 / 可再生能源",
+      "group_ids": [
+        "URB-041"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/consumption": {
+      "label": "工业与能源 / 能源消费",
+      "group_ids": [
+        "URB-028"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/industrial-employment": {
+      "label": "工业与能源 / 工业就业",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/power-emissions": {
+      "label": "工业与能源 / 电力部门排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport": {
+      "label": "城市与交通",
+      "group_ids": [
+        "LEG-001",
+        "LEG-004",
+        "URB-024",
+        "URB-030",
+        "HUM-003",
+        "URB-016",
+        "URB-035",
+        "HUM-005",
+        "ATM-001"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "URB-008",
+        "URB-015",
+        "URB-017",
+        "URB-021",
+        "URB-029",
+        "URB-009",
+        "URB-039"
+      ]
+    },
+    "urban-transport/boundaries": {
+      "label": "城市与交通 / 城市边界",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005"
+      ],
+      "archive_ids": [
+        "LEG-002"
+      ]
+    },
+    "urban-transport/built": {
+      "label": "城市与交通 / 建成区与不透水面",
+      "group_ids": [
+        "LEG-001",
+        "LEG-004",
+        "URB-024"
+      ],
+      "archive_ids": [
+        "URB-008",
+        "URB-015"
+      ]
+    },
+    "urban-transport/buildings": {
+      "label": "城市与交通 / 建筑物与屋顶",
+      "group_ids": [],
+      "archive_ids": [
+        "URB-017",
+        "URB-021"
+      ]
+    },
+    "urban-transport/roads": {
+      "label": "城市与交通 / 道路与交通网络",
+      "group_ids": [
+        "URB-030"
+      ],
+      "archive_ids": [
+        "URB-029"
+      ]
+    },
+    "urban-transport/airports": {
+      "label": "城市与交通 / 机场",
+      "group_ids": [
+        "HUM-003"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/morphology": {
+      "label": "城市与交通 / 城市形态",
+      "group_ids": [
+        "URB-016"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/transport-emissions": {
+      "label": "城市与交通 / 交通部门排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/night-lights": {
+      "label": "城市与交通 / 夜间灯光",
+      "group_ids": [
+        "URB-035"
+      ],
+      "archive_ids": [
+        "URB-009",
+        "URB-039"
+      ]
+    },
+    "population-economy": {
+      "label": "人口与社会经济",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005",
+        "URB-007",
+        "URB-002",
+        "URB-031",
+        "HUM-008",
+        "HUM-010"
+      ],
+      "archive_ids": [
+        "HUM-001",
+        "URB-003",
+        "URB-011",
+        "URB-027"
+      ]
+    },
+    "population-economy/population": {
+      "label": "人口与社会经济 / 人口分布与结构",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005",
+        "URB-007",
+        "URB-002"
+      ],
+      "archive_ids": [
+        "HUM-001",
+        "URB-027"
+      ]
+    },
+    "population-economy/gdp": {
+      "label": "人口与社会经济 / GDP与收入",
+      "group_ids": [
+        "URB-031"
+      ],
+      "archive_ids": [
+        "URB-003",
+        "URB-011"
+      ]
+    },
+    "population-economy/employment": {
+      "label": "人口与社会经济 / 就业与产业结构",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "population-economy/services": {
+      "label": "人口与社会经济 / 社会发展与公共服务",
+      "group_ids": [
+        "HUM-010"
+      ],
+      "archive_ids": []
+    },
+    "atmosphere-emissions": {
+      "label": "大气污染与排放",
+      "group_ids": [
+        "HUM-007",
+        "ATM-005",
+        "ATM-008",
+        "ATM-012",
+        "ATM-013",
+        "ATM-031",
+        "ATM-021",
+        "ATM-023",
+        "ATM-026",
+        "ATM-034",
+        "ATM-001",
+        "ATM-004",
+        "ATM-027",
+        "ATM-006",
+        "ATM-032"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "ATM-007",
+        "ATM-018",
+        "ATM-020",
+        "ATM-019",
+        "ATM-028",
+        "ATM-029",
+        "ATM-030",
+        "ATM-036",
+        "ATM-037",
+        "ATM-038",
+        "ATM-022",
+        "ATM-024",
+        "ATM-003",
+        "ATM-009",
+        "ATM-015",
+        "ATM-016",
+        "ATM-017"
+      ]
+    },
+    "atmosphere-emissions/aerosols": {
+      "label": "大气污染与排放 / 颗粒物与气溶胶",
+      "group_ids": [
+        "ATM-005",
+        "ATM-008",
+        "ATM-012",
+        "ATM-013",
+        "ATM-031"
+      ],
+      "archive_ids": [
+        "ATM-007",
+        "ATM-018",
+        "ATM-020"
+      ]
+    },
+    "atmosphere-emissions/gases": {
+      "label": "大气污染与排放 / 气态污染物",
+      "group_ids": [
+        "ATM-021",
+        "ATM-023",
+        "ATM-026",
+        "ATM-034"
+      ],
+      "archive_ids": [
+        "ATM-022",
+        "ATM-024"
+      ]
+    },
+    "atmosphere-emissions/composition": {
+      "label": "大气污染与排放 / 化学组成",
+      "group_ids": [
+        "ATM-005"
+      ],
+      "archive_ids": [
+        "ATM-018",
+        "ATM-020",
+        "ATM-019",
+        "ATM-028",
+        "ATM-029",
+        "ATM-030",
+        "ATM-036",
+        "ATM-037",
+        "ATM-038"
+      ]
+    },
+    "atmosphere-emissions/emissions": {
+      "label": "大气污染与排放 / 人为排放",
+      "group_ids": [
+        "HUM-007",
+        "ATM-001",
+        "ATM-004",
+        "ATM-006"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "ATM-003",
+        "ATM-009"
+      ]
+    },
+    "atmosphere-emissions/fire": {
+      "label": "大气污染与排放 / 生物质燃烧",
+      "group_ids": [
+        "ATM-027"
+      ],
+      "archive_ids": []
+    },
+    "atmosphere-emissions/deposition": {
+      "label": "大气污染与排放 / 大气沉降",
+      "group_ids": [
+        "ATM-006",
+        "ATM-032"
+      ],
+      "archive_ids": [
+        "ATM-018",
+        "ATM-015",
+        "ATM-016",
+        "ATM-017"
+      ]
+    },
+    "meteorology-climate": {
+      "label": "气象与气候",
+      "group_ids": [
+        "ATM-008",
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "meteorology-climate/reanalysis": {
+      "label": "气象与气候 / 再分析",
+      "group_ids": [
+        "ATM-008",
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "meteorology-climate/temperature-wind": {
+      "label": "气象与气候 / 温湿风",
+      "group_ids": [
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "meteorology-climate/precipitation": {
+      "label": "气象与气候 / 降水",
+      "group_ids": [
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "land-ecology": {
+      "label": "土地与生态",
+      "group_ids": [
+        "URB-004",
+        "URB-036",
+        "URB-034",
+        "URB-023",
+        "URB-026",
+        "URB-014",
+        "URB-005"
+      ],
+      "archive_ids": [
+        "URB-019",
+        "URB-022",
+        "URB-025"
+      ]
+    },
+    "land-ecology/cover": {
+      "label": "土地与生态 / 土地覆被",
+      "group_ids": [
+        "URB-004",
+        "URB-036"
+      ],
+      "archive_ids": [
+        "URB-019"
+      ]
+    },
+    "land-ecology/vegetation": {
+      "label": "土地与生态 / 植被",
+      "group_ids": [
+        "URB-034"
+      ],
+      "archive_ids": [
+        "URB-022"
+      ]
+    },
+    "land-ecology/water": {
+      "label": "土地与生态 / 水体",
+      "group_ids": [
+        "URB-023"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/soil": {
+      "label": "土地与生态 / 土壤",
+      "group_ids": [
+        "URB-026"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/terrain": {
+      "label": "土地与生态 / 地形",
+      "group_ids": [
+        "URB-014"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/surface": {
+      "label": "土地与生态 / 地表温度与反照率",
+      "group_ids": [
+        "URB-005"
+      ],
+      "archive_ids": [
+        "URB-025"
+      ]
+    },
+    "agriculture-livestock": {
+      "label": "农业与畜牧",
+      "group_ids": [
+        "HUM-008",
+        "ATM-001",
+        "URB-038",
+        "URB-033",
+        "URB-037"
+      ],
+      "archive_ids": [
+        "URB-040",
+        "URB-012",
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/crops": {
+      "label": "农业与畜牧 / 农田与作物",
+      "group_ids": [
+        "URB-033"
+      ],
+      "archive_ids": [
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/inputs": {
+      "label": "农业与畜牧 / 肥料与农业投入",
+      "group_ids": [
+        "URB-033",
+        "URB-037"
+      ],
+      "archive_ids": [
+        "URB-012",
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/livestock": {
+      "label": "农业与畜牧 / 畜牧养殖",
+      "group_ids": [
+        "URB-038"
+      ],
+      "archive_ids": [
+        "URB-040",
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/activities": {
+      "label": "农业与畜牧 / 其他农业活动",
+      "group_ids": [],
+      "archive_ids": []
+    },
+    "agriculture-livestock/agricultural-employment": {
+      "label": "农业与畜牧 / 农业就业",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "agriculture-livestock/agricultural-emissions": {
+      "label": "农业与畜牧 / 农业排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    }
+  },
+  "old_themes": {
+    "industry-energy": {
+      "label": "工业与能源",
+      "group_ids": [
+        "HUM-002",
+        "HUM-006",
+        "HUM-007",
+        "HUM-009",
+        "URB-020",
+        "URB-041",
+        "URB-028",
+        "HUM-008",
+        "ATM-001"
+      ],
+      "archive_ids": [
+        "URB-013"
+      ]
+    },
+    "urban-transport": {
+      "label": "城市与交通",
+      "group_ids": [
+        "LEG-001",
+        "LEG-004",
+        "URB-024",
+        "URB-030",
+        "HUM-003",
+        "URB-016",
+        "URB-035",
+        "HUM-005",
+        "ATM-001"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "URB-008",
+        "URB-015",
+        "URB-017",
+        "URB-021",
+        "URB-029",
+        "URB-009",
+        "URB-039"
+      ]
+    },
+    "population-economy": {
+      "label": "人口与社会经济",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005",
+        "URB-007",
+        "URB-002",
+        "URB-031",
+        "HUM-008",
+        "HUM-010"
+      ],
+      "archive_ids": [
+        "HUM-001",
+        "URB-003",
+        "URB-011",
+        "URB-027"
+      ]
+    },
+    "atmosphere-emissions": {
+      "label": "大气污染与排放",
+      "group_ids": [
+        "HUM-007",
+        "ATM-005",
+        "ATM-008",
+        "ATM-012",
+        "ATM-013",
+        "ATM-031",
+        "ATM-021",
+        "ATM-023",
+        "ATM-026",
+        "ATM-034",
+        "ATM-001",
+        "ATM-004",
+        "ATM-027",
+        "ATM-006",
+        "ATM-032"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "ATM-007",
+        "ATM-018",
+        "ATM-020",
+        "ATM-019",
+        "ATM-028",
+        "ATM-029",
+        "ATM-030",
+        "ATM-036",
+        "ATM-037",
+        "ATM-038",
+        "ATM-022",
+        "ATM-024",
+        "ATM-003",
+        "ATM-009",
+        "ATM-015",
+        "ATM-016",
+        "ATM-017"
+      ]
+    },
+    "meteorology-climate": {
+      "label": "气象与气候",
+      "group_ids": [
+        "ATM-008",
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "land-ecology": {
+      "label": "土地与生态",
+      "group_ids": [
+        "URB-004",
+        "URB-036",
+        "URB-034",
+        "URB-023",
+        "URB-026",
+        "URB-014",
+        "URB-005"
+      ],
+      "archive_ids": [
+        "URB-019",
+        "URB-022",
+        "URB-025"
+      ]
+    },
+    "agriculture-livestock": {
+      "label": "农业与畜牧",
+      "group_ids": [
+        "HUM-008",
+        "ATM-001",
+        "URB-038",
+        "URB-033",
+        "URB-037"
+      ],
+      "archive_ids": [
+        "URB-040",
+        "URB-012",
+        "URB-027"
+      ]
+    }
+  },
+  "old_subthemes": {
+    "industry-energy/steel": {
+      "label": "工业与能源 / 钢铁",
+      "group_ids": [
+        "HUM-002"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/cement": {
+      "label": "工业与能源 / 水泥",
+      "group_ids": [
+        "HUM-006",
+        "HUM-007"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/oil-gas": {
+      "label": "工业与能源 / 油气设施",
+      "group_ids": [
+        "HUM-009"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/power": {
+      "label": "工业与能源 / 电厂与能源设施",
+      "group_ids": [
+        "URB-020"
+      ],
+      "archive_ids": [
+        "URB-013"
+      ]
+    },
+    "industry-energy/renewables": {
+      "label": "工业与能源 / 可再生能源",
+      "group_ids": [
+        "URB-041"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/consumption": {
+      "label": "工业与能源 / 能源消费",
+      "group_ids": [
+        "URB-028"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/industrial-employment": {
+      "label": "工业与能源 / 工业就业",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "industry-energy/power-emissions": {
+      "label": "工业与能源 / 电力部门排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/boundaries": {
+      "label": "城市与交通 / 城市边界",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005"
+      ],
+      "archive_ids": [
+        "LEG-002"
+      ]
+    },
+    "urban-transport/built": {
+      "label": "城市与交通 / 建成区与不透水面",
+      "group_ids": [
+        "LEG-001",
+        "LEG-004",
+        "URB-024"
+      ],
+      "archive_ids": [
+        "URB-008",
+        "URB-015"
+      ]
+    },
+    "urban-transport/buildings": {
+      "label": "城市与交通 / 建筑物与屋顶",
+      "group_ids": [],
+      "archive_ids": [
+        "URB-017",
+        "URB-021"
+      ]
+    },
+    "urban-transport/roads": {
+      "label": "城市与交通 / 道路与交通网络",
+      "group_ids": [
+        "URB-030"
+      ],
+      "archive_ids": [
+        "URB-029"
+      ]
+    },
+    "urban-transport/airports": {
+      "label": "城市与交通 / 机场",
+      "group_ids": [
+        "HUM-003"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/morphology": {
+      "label": "城市与交通 / 城市形态",
+      "group_ids": [
+        "URB-016"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/transport-emissions": {
+      "label": "城市与交通 / 交通部门排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    },
+    "urban-transport/night-lights": {
+      "label": "城市与交通 / 夜间灯光",
+      "group_ids": [
+        "URB-035"
+      ],
+      "archive_ids": [
+        "URB-009",
+        "URB-039"
+      ]
+    },
+    "population-economy/population": {
+      "label": "人口与社会经济 / 人口分布与结构",
+      "group_ids": [
+        "LEG-001",
+        "HUM-005",
+        "URB-007",
+        "URB-002"
+      ],
+      "archive_ids": [
+        "HUM-001",
+        "URB-027"
+      ]
+    },
+    "population-economy/gdp": {
+      "label": "人口与社会经济 / GDP与收入",
+      "group_ids": [
+        "URB-031"
+      ],
+      "archive_ids": [
+        "URB-003",
+        "URB-011"
+      ]
+    },
+    "population-economy/employment": {
+      "label": "人口与社会经济 / 就业与产业结构",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "population-economy/services": {
+      "label": "人口与社会经济 / 社会发展与公共服务",
+      "group_ids": [
+        "HUM-010"
+      ],
+      "archive_ids": []
+    },
+    "atmosphere-emissions/aerosols": {
+      "label": "大气污染与排放 / 颗粒物与气溶胶",
+      "group_ids": [
+        "ATM-005",
+        "ATM-008",
+        "ATM-012",
+        "ATM-013",
+        "ATM-031"
+      ],
+      "archive_ids": [
+        "ATM-007",
+        "ATM-018",
+        "ATM-020"
+      ]
+    },
+    "atmosphere-emissions/gases": {
+      "label": "大气污染与排放 / 气态污染物",
+      "group_ids": [
+        "ATM-021",
+        "ATM-023",
+        "ATM-026",
+        "ATM-034"
+      ],
+      "archive_ids": [
+        "ATM-022",
+        "ATM-024"
+      ]
+    },
+    "atmosphere-emissions/composition": {
+      "label": "大气污染与排放 / 化学组成",
+      "group_ids": [
+        "ATM-005"
+      ],
+      "archive_ids": [
+        "ATM-018",
+        "ATM-020",
+        "ATM-019",
+        "ATM-028",
+        "ATM-029",
+        "ATM-030",
+        "ATM-036",
+        "ATM-037",
+        "ATM-038"
+      ]
+    },
+    "atmosphere-emissions/emissions": {
+      "label": "大气污染与排放 / 人为排放",
+      "group_ids": [
+        "HUM-007",
+        "ATM-001",
+        "ATM-004",
+        "ATM-006"
+      ],
+      "archive_ids": [
+        "LEG-002",
+        "ATM-003",
+        "ATM-009"
+      ]
+    },
+    "atmosphere-emissions/fire": {
+      "label": "大气污染与排放 / 生物质燃烧",
+      "group_ids": [
+        "ATM-027"
+      ],
+      "archive_ids": []
+    },
+    "atmosphere-emissions/deposition": {
+      "label": "大气污染与排放 / 大气沉降",
+      "group_ids": [
+        "ATM-006",
+        "ATM-032"
+      ],
+      "archive_ids": [
+        "ATM-018",
+        "ATM-015",
+        "ATM-016",
+        "ATM-017"
+      ]
+    },
+    "meteorology-climate/reanalysis": {
+      "label": "气象与气候 / 再分析",
+      "group_ids": [
+        "ATM-008",
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "meteorology-climate/temperature-wind": {
+      "label": "气象与气候 / 温湿风",
+      "group_ids": [
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "meteorology-climate/precipitation": {
+      "label": "气象与气候 / 降水",
+      "group_ids": [
+        "ATM-010"
+      ],
+      "archive_ids": [
+        "ATM-011"
+      ]
+    },
+    "land-ecology/cover": {
+      "label": "土地与生态 / 土地覆被",
+      "group_ids": [
+        "URB-004",
+        "URB-036"
+      ],
+      "archive_ids": [
+        "URB-019"
+      ]
+    },
+    "land-ecology/vegetation": {
+      "label": "土地与生态 / 植被",
+      "group_ids": [
+        "URB-034"
+      ],
+      "archive_ids": [
+        "URB-022"
+      ]
+    },
+    "land-ecology/water": {
+      "label": "土地与生态 / 水体",
+      "group_ids": [
+        "URB-023"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/soil": {
+      "label": "土地与生态 / 土壤",
+      "group_ids": [
+        "URB-026"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/terrain": {
+      "label": "土地与生态 / 地形",
+      "group_ids": [
+        "URB-014"
+      ],
+      "archive_ids": []
+    },
+    "land-ecology/surface": {
+      "label": "土地与生态 / 地表温度与反照率",
+      "group_ids": [
+        "URB-005"
+      ],
+      "archive_ids": [
+        "URB-025"
+      ]
+    },
+    "agriculture-livestock/crops": {
+      "label": "农业与畜牧 / 农田与作物",
+      "group_ids": [
+        "URB-033"
+      ],
+      "archive_ids": [
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/inputs": {
+      "label": "农业与畜牧 / 肥料与农业投入",
+      "group_ids": [
+        "URB-033",
+        "URB-037"
+      ],
+      "archive_ids": [
+        "URB-012",
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/livestock": {
+      "label": "农业与畜牧 / 畜牧养殖",
+      "group_ids": [
+        "URB-038"
+      ],
+      "archive_ids": [
+        "URB-040",
+        "URB-027"
+      ]
+    },
+    "agriculture-livestock/activities": {
+      "label": "农业与畜牧 / 其他农业活动",
+      "group_ids": [],
+      "archive_ids": []
+    },
+    "agriculture-livestock/agricultural-employment": {
+      "label": "农业与畜牧 / 农业就业",
+      "group_ids": [
+        "HUM-008"
+      ],
+      "archive_ids": []
+    },
+    "agriculture-livestock/agricultural-emissions": {
+      "label": "农业与畜牧 / 农业排放",
+      "group_ids": [
+        "ATM-001"
+      ],
+      "archive_ids": []
+    }
+  }
 }

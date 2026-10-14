@@ -1,13 +1,254 @@
 {
-  "version": "d039-v1",
+  "version": "d041-v1",
   "themes": [
     {
-      "id": "industry-energy",
-      "label": "工业与能源",
-      "description": "产业设施、能源生产与消费。",
+      "id": "atmosphere-health",
+      "label": "大气环境与健康",
+      "description": "颗粒物、气体柱浓度、气溶胶组成与沉降。",
       "aliases": [
+        "atmosphere",
+        "health"
+      ],
+      "children": [
+        {
+          "id": "aerosol-composition",
+          "label": "气溶胶组成与沉降",
+          "aliases": [
+            "aerosol",
+            "composition"
+          ]
+        },
+        {
+          "id": "aerosol-optical-depth",
+          "label": "气溶胶光学厚度",
+          "aliases": [
+            "aerosol",
+            "optical",
+            "depth"
+          ]
+        },
+        {
+          "id": "surface-pm25",
+          "label": "地表颗粒物",
+          "aliases": [
+            "surface",
+            "pm25"
+          ]
+        },
+        {
+          "id": "satellite-gas-columns",
+          "label": "卫星气体柱浓度",
+          "aliases": [
+            "satellite",
+            "gas",
+            "columns"
+          ]
+        },
+        {
+          "id": "nitrogen-deposition",
+          "label": "氮沉降",
+          "aliases": [
+            "nitrogen",
+            "deposition"
+          ]
+        },
+        {
+          "id": "composition-reanalysis",
+          "label": "大气成分再分析",
+          "aliases": [
+            "composition",
+            "reanalysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate-urban-heat",
+      "label": "气象气候与城市热环境",
+      "description": "气象再分析、地表温度与城市热环境。",
+      "aliases": [
+        "meteorology",
+        "climate",
+        "urban",
+        "heat"
+      ],
+      "children": [
+        {
+          "id": "reanalysis",
+          "label": "气象再分析",
+          "aliases": [
+            "reanalysis"
+          ]
+        },
+        {
+          "id": "land-surface-temperature",
+          "label": "地表温度",
+          "aliases": [
+            "land",
+            "surface",
+            "temperature"
+          ]
+        },
+        {
+          "id": "anthropogenic-heat",
+          "label": "人为热通量",
+          "aliases": [
+            "anthropogenic",
+            "heat"
+          ]
+        },
+        {
+          "id": "urban-heat-island",
+          "label": "城市热岛",
+          "aliases": [
+            "urban",
+            "heat",
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urban-land-ecology",
+      "label": "城市空间与土地生态",
+      "description": "城市形态、土地覆被、植被与交通设施。",
+      "aliases": [
+        "urban",
+        "land",
+        "ecology"
+      ],
+      "children": [
+        {
+          "id": "urban-centres",
+          "label": "城市中心与边界",
+          "aliases": [
+            "urban",
+            "centres"
+          ]
+        },
+        {
+          "id": "built-surface",
+          "label": "建成面积",
+          "aliases": [
+            "built",
+            "surface"
+          ]
+        },
+        {
+          "id": "land-cover",
+          "label": "土地覆被",
+          "aliases": [
+            "land",
+            "cover"
+          ]
+        },
+        {
+          "id": "vegetation",
+          "label": "植被指数",
+          "aliases": [
+            "vegetation"
+          ]
+        },
+        {
+          "id": "surface-water",
+          "label": "地表水",
+          "aliases": [
+            "surface",
+            "water"
+          ]
+        },
+        {
+          "id": "transport",
+          "label": "交通设施与道路",
+          "aliases": [
+            "transport"
+          ]
+        },
+        {
+          "id": "nighttime-lights",
+          "label": "夜间灯光",
+          "aliases": [
+            "nighttime",
+            "lights"
+          ]
+        },
+        {
+          "id": "impervious-evolution",
+          "label": "不透水面演化",
+          "aliases": [
+            "impervious",
+            "evolution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "population-economy-industry",
+      "label": "人口经济与产业结构",
+      "description": "人口分布、GDP、就业及公共服务。",
+      "aliases": [
+        "population",
+        "economy",
+        "industry"
+      ],
+      "children": [
+        {
+          "id": "population-grid",
+          "label": "人口格网",
+          "aliases": [
+            "population",
+            "grid"
+          ]
+        },
+        {
+          "id": "gdp",
+          "label": "GDP与收入",
+          "aliases": [
+            "gdp"
+          ]
+        },
+        {
+          "id": "employment",
+          "label": "就业与产业结构",
+          "aliases": [
+            "employment"
+          ]
+        },
+        {
+          "id": "industry-value-added",
+          "label": "分行业增加值",
+          "aliases": [
+            "industry",
+            "value",
+            "added"
+          ]
+        },
+        {
+          "id": "urban-demography",
+          "label": "城市人口结构",
+          "aliases": [
+            "urban",
+            "demography"
+          ]
+        },
+        {
+          "id": "public-services",
+          "label": "公共服务",
+          "aliases": [
+            "public",
+            "services"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "energy-industry-emissions",
+      "label": "能源工业与排放",
+      "description": "能源产业设施、能源消费与部门排放。",
+      "aliases": [
+        "energy",
         "industry",
-        "energy"
+        "emissions"
       ],
       "children": [
         {
@@ -33,287 +274,77 @@
           ]
         },
         {
-          "id": "power",
-          "label": "电厂与能源设施",
+          "id": "power-plants",
+          "label": "电厂",
           "aliases": [
-            "power plant",
-            "electricity"
+            "power",
+            "plants"
           ]
         },
         {
-          "id": "renewables",
+          "id": "anthropogenic-emissions",
+          "label": "人为排放",
+          "aliases": [
+            "anthropogenic",
+            "emissions"
+          ]
+        },
+        {
+          "id": "renewable-energy",
           "label": "可再生能源",
           "aliases": [
-            "solar",
-            "photovoltaic"
+            "renewable",
+            "energy"
           ]
         },
         {
-          "id": "consumption",
+          "id": "energy-consumption",
           "label": "能源消费",
           "aliases": [
-            "energy consumption"
+            "energy",
+            "consumption"
           ]
         },
         {
           "id": "industrial-employment",
           "label": "工业就业",
           "aliases": [
-            "industrial employment"
-          ]
-        },
-        {
-          "id": "power-emissions",
-          "label": "电力部门排放",
-          "aliases": [
-            "power emissions"
+            "industrial",
+            "employment"
           ]
         }
       ]
     },
     {
-      "id": "urban-transport",
-      "label": "城市与交通",
-      "description": "城市空间、建成环境与交通网络。",
+      "id": "agriculture-natural-resources",
+      "label": "农业活动与自然资源",
+      "description": "农业投入、家畜、火灾、地形及土壤。",
       "aliases": [
-        "urban",
-        "transport"
+        "agriculture",
+        "natural",
+        "resources"
       ],
       "children": [
         {
-          "id": "boundaries",
-          "label": "城市边界",
+          "id": "fertilizer",
+          "label": "肥料与农业投入",
           "aliases": [
-            "urban boundary"
+            "fertilizer"
           ]
         },
         {
-          "id": "built",
-          "label": "建成区与不透水面",
+          "id": "livestock",
+          "label": "家畜数量",
           "aliases": [
-            "built-up",
-            "impervious"
+            "livestock"
           ]
         },
         {
-          "id": "buildings",
-          "label": "建筑物与屋顶",
+          "id": "fire-emissions",
+          "label": "火灾排放",
           "aliases": [
-            "building",
-            "rooftop"
-          ]
-        },
-        {
-          "id": "roads",
-          "label": "道路与交通网络",
-          "aliases": [
-            "road",
-            "transport"
-          ]
-        },
-        {
-          "id": "airports",
-          "label": "机场",
-          "aliases": [
-            "airport"
-          ]
-        },
-        {
-          "id": "morphology",
-          "label": "城市形态",
-          "aliases": [
-            "urban morphology",
-            "anthropogenic heat"
-          ]
-        },
-        {
-          "id": "transport-emissions",
-          "label": "交通部门排放",
-          "aliases": [
-            "transport emissions"
-          ]
-        },
-        {
-          "id": "night-lights",
-          "label": "夜间灯光",
-          "aliases": [
-            "nighttime lights"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "population-economy",
-      "label": "人口与社会经济",
-      "description": "人口、经济、就业与公共服务。",
-      "aliases": [
-        "population",
-        "economy"
-      ],
-      "children": [
-        {
-          "id": "population",
-          "label": "人口分布与结构",
-          "aliases": [
-            "population"
-          ]
-        },
-        {
-          "id": "gdp",
-          "label": "GDP与收入",
-          "aliases": [
-            "GDP",
-            "income",
-            "PPP",
-            "HDI"
-          ]
-        },
-        {
-          "id": "employment",
-          "label": "就业与产业结构",
-          "aliases": [
-            "employment",
-            "ILO"
-          ]
-        },
-        {
-          "id": "services",
-          "label": "社会发展与公共服务",
-          "aliases": [
-            "water",
-            "sanitation",
-            "JMP"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "atmosphere-emissions",
-      "label": "大气污染与排放",
-      "description": "大气浓度、组成、排放与沉降。",
-      "aliases": [
-        "atmosphere",
-        "emissions"
-      ],
-      "children": [
-        {
-          "id": "aerosols",
-          "label": "颗粒物与气溶胶",
-          "aliases": [
-            "aerosol",
-            "PM2.5",
-            "PM10",
-            "AOD"
-          ]
-        },
-        {
-          "id": "gases",
-          "label": "气态污染物",
-          "aliases": [
-            "NO2",
-            "SO2",
-            "NH3"
-          ]
-        },
-        {
-          "id": "composition",
-          "label": "化学组成",
-          "aliases": [
-            "NH4",
-            "NO3",
-            "SO4",
-            "BC"
-          ]
-        },
-        {
-          "id": "emissions",
-          "label": "人为排放",
-          "aliases": [
-            "emission",
-            "NOx"
-          ]
-        },
-        {
-          "id": "fire",
-          "label": "生物质燃烧",
-          "aliases": [
-            "fire"
-          ]
-        },
-        {
-          "id": "deposition",
-          "label": "大气沉降",
-          "aliases": [
-            "deposition"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "meteorology-climate",
-      "label": "气象与气候",
-      "description": "再分析及温度、湿度、风与降水。",
-      "aliases": [
-        "meteorology",
-        "climate"
-      ],
-      "children": [
-        {
-          "id": "reanalysis",
-          "label": "再分析",
-          "aliases": [
-            "reanalysis"
-          ]
-        },
-        {
-          "id": "temperature-wind",
-          "label": "温湿风",
-          "aliases": [
-            "temperature",
-            "humidity",
-            "wind"
-          ]
-        },
-        {
-          "id": "precipitation",
-          "label": "降水",
-          "aliases": [
-            "precipitation",
-            "rain"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "land-ecology",
-      "label": "土地与生态",
-      "description": "覆被、植被、水体、土壤与地形。",
-      "aliases": [
-        "land",
-        "ecology"
-      ],
-      "children": [
-        {
-          "id": "cover",
-          "label": "土地覆被",
-          "aliases": [
-            "land cover"
-          ]
-        },
-        {
-          "id": "vegetation",
-          "label": "植被",
-          "aliases": [
-            "vegetation",
-            "NDVI",
-            "EVI"
-          ]
-        },
-        {
-          "id": "water",
-          "label": "水体",
-          "aliases": [
-            "surface water"
+            "fire",
+            "emissions"
           ]
         },
         {
@@ -327,74 +358,23 @@
           "id": "terrain",
           "label": "地形",
           "aliases": [
-            "terrain",
-            "elevation"
-          ]
-        },
-        {
-          "id": "surface",
-          "label": "地表温度与反照率",
-          "aliases": [
-            "LST",
-            "albedo"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "agriculture-livestock",
-      "label": "农业与畜牧",
-      "description": "作物、农业投入与畜牧数据。",
-      "aliases": [
-        "agriculture",
-        "livestock"
-      ],
-      "children": [
-        {
-          "id": "crops",
-          "label": "农田与作物",
-          "aliases": [
-            "crop",
-            "cropland"
-          ]
-        },
-        {
-          "id": "inputs",
-          "label": "肥料与农业投入",
-          "aliases": [
-            "fertilizer",
-            "nitrogen",
-            "manure"
-          ]
-        },
-        {
-          "id": "livestock",
-          "label": "畜牧养殖",
-          "aliases": [
-            "livestock",
-            "animal"
-          ]
-        },
-        {
-          "id": "activities",
-          "label": "其他农业活动",
-          "aliases": [
-            "agriculture",
-            "employment"
+            "terrain"
           ]
         },
         {
           "id": "agricultural-employment",
           "label": "农业就业",
           "aliases": [
-            "agricultural employment"
+            "agricultural",
+            "employment"
           ]
         },
         {
           "id": "agricultural-emissions",
-          "label": "农业排放",
+          "label": "农业部门排放",
           "aliases": [
-            "agricultural emissions"
+            "agricultural",
+            "emissions"
           ]
         }
       ]

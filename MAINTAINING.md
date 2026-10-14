@@ -1,15 +1,13 @@
-# Static catalog maintenance
+# Core catalog maintenance
 
-`data/catalog.json` is the authoritative source. The D039 redesign preserves its exact bytes; human-indicators.json remains a separate historical indicator view and is not added to product counts.
+The D041 catalog is authoritative for active canonical products and their explicit variants. Six stable themes are defined in taxonomy.json. Original record objects are kept losslessly inside active variants; full exited records remain in the controller baseline backup. Public archives retain identity, reason, source, original file objects, licenses and proof references without being counted in core searches.
 
-For a future approved intake:
-1. Update the authoritative product and approved file records without changing existing stable IDs or binary paths.
-2. Read every new product name, variable, temporal/spatial scope and access evidence. Add one primary path and any justified secondary paths to product-taxonomy.json. Unknown semantics belong in the internal unclassified list; these records remain in all/search.
-3. Use the seven stable theme IDs; add only real nonempty subthemes. Secondary employment and sector-emission paths must not imply facilities or production. Keep product-specific acronyms in product metadata, not shared category aliases.
-4. Add a reviewed normalized-facets row. Preserve explicit years, range, qualifier and unknowns. A declared range is not a list of complete acquired annual files. Preserve original cadence and spatial descriptions. Never convert angular grids to a fixed global metre scale.
-5. Normalize formats only from declared native formats or approved explicit format evidence. Preserve unknowns; URL extension alone is insufficient. Keep access method separate from content-verification status.
-6. Run `node --test tests/*.test.cjs`, serve this directory locally, and run the controlled browser checks recorded in work/WEB/D039_redesign. Scientific/download requests must be intercepted during UI tests.
-7. For an authorized product intake, deliberately refresh tests/baseline.json after reviewing all identity and asset changes. UI-only changes must retain its catalog fingerprint unchanged.
-8. Commit a reviewed independent branch. D039 itself does not authorize push, merge or deployment.
+Reviewed intake is mandatory before changing records. Preserve stable legacy IDs and deterministic migration targets. A merged legacy ID resolves to one exact variant. Do not infer mergers from equal titles. Source-family or mixed-version declarations remain clearly identified and cannot prove a specific release, grid or file.
 
-Routes use hash navigation. Historical #top, #catalog and #product-ID links are compatible. All browsed paths share one #/datasets/ID detail. CSV export quotes every field and neutralizes spreadsheet formula prefixes. No external fonts, backend or new dependency is required.
+All search constraints and dimensional filters must match one variant simultaneously. CSV exports one row per matching variant, with canonical product ID, matched variant metadata and separate original-family year reference. Rows, variants, variables and product totals are different grains. File entrance counts deduplicate exact href or explicit canonical file identity; all historical asset objects remain preserved even when references repeat.
+
+Do not delete, move, rewrite or re-hash scientific/proof files for UI work. Compare their pinned Git object IDs. Preserve source/local/hosted year distinctions, units, missingness, licenses and request ceilings. Metadata listing, header/sample and full-file evidence are distinct from local acquisition and site hosting.
+
+Run `node --test tests/core.test.cjs tests/data.test.cjs` and the controlled browser checks in work/WEB/D041_core. UI checks must block source/scientific GETs. tests/baseline.json remains the historical93-ID/43-asset fixture; legacy-record-fingerprints.json binds exact active originals and archived backup identities. New intake must not update historical preservation fixtures to hide drift.
+
+Build and source-review evidence are maintained by WEB in its task directory. A reviewed exact candidate and controller release gate are required before a normal fast-forward push to the original main branch. No force push, new scientific upload, backend, permission change or paid service is needed.

@@ -60,5 +60,86 @@
     products.forEach(p=>rows.push([p.dataset_id,p.display_name,pathLabel(mapping.products[p.dataset_id].primary,taxonomy),mapping.products[p.dataset_id].secondary.map(x=>pathLabel(x,taxonomy)).join("；"),(p.variables||[]).map(v=>typeof v==="string"?v:[v.label||v.name,v.unit].filter(Boolean).join(" / ")).join("；"),JSON.stringify(p.source_years),JSON.stringify(p.local_years),JSON.stringify(p.hosted_years),p.native_spatial_unit_or_grid,p.native_spatial_resolution,p.downloads.map(a=>a.href).join("；")||p.primary_action?.url||"",p.source_page?.url||""]));
     return "\uFEFF"+rows.map(r=>r.map(csvCell).join(",")).join("\r\n");
   }
-  return {esc,safeHref,parseRoute,paths,pathLabel,score,yearMatches,selectProducts,csvCell,exportCsv};
+  function viewRecord(variant) {
+    const p=variant.original_record,o=variant.approved_overlay||{};
+    const record={...p,publisher_author:p.publisher_author||o.publisher||'',
+      source_page:o.source_override_url?{url:o.source_override_url,label:'精确来源记录（补充核验）'}:p.source_page?.url?p.source_page:o.source_url?{url:o.source_url,label:'来源记录（补充核验）'}:p.source_page};
+    for(const key of ['source_years','local_years','hosted_years']) {
+      const a=variant.facets?.years[key];if(a)record[key]={values:a.explicit?.length?a.explicit:null,range:a.range||null,qualifier:a.qualifier||p[key]?.qualifier};
+    }
+    if(o.exact_source_doi)record.references={...p.references,data_record_doi:o.exact_source_doi};
+    if(variant.source_group) {
+      const s=variant.source_group;record.version_label=p.version_label+' / '+s.variant_id;
+      record.short_use_zh=s.definition;record.source_temporal_resolution=s.temporal_resolution;
+      record.native_spatial_resolution='当前列示文件为城市统计包；另述1km渠道不等于这些文件';
+      record.variables=[{name:'UHII_'+s.variant_id,label:s.definition,unit:s.unit,period:s.years.start+'–'+s.years.end+'（社区分源声明）',definition:s.reference+'；日/夜；0.01存储比例仅社区说明，未读取RAR编码'}];
+    }
+    return record;
+  }
+  function variantScore(variant,group,query,catalog,mapping,taxonomy) {
+    if(!String(query||'').trim())return 1;
+    const q=text(String(query).trim()),legacy=Object.keys(catalog.migration||{}).find(id=>text(id)===q);
+    if(legacy)return catalog.migration[legacy].action!=='archive'&&catalog.migration[legacy].variantID===variant.variant_id?250:0;
+    const p=viewRecord(variant),vm={products:{[p.dataset_id]:mapping.products[group.dataset_id]}};
+    const individual=score(p,query,vm,taxonomy),family=text([group.display_name,...(group.aliases||[])].join(' '));
+    const overlay=text(JSON.stringify(variant.approved_overlay?.approved_facts||{}));
+    return Math.max(individual,family.includes(q)?70:0,overlay.includes(q)?30:0,text([variant.variant_id,variant.label,variant.facets.heat_type,...(variant.facets.diurnal||[])].join(' ')).includes(q)?85:0);
+  }
+  function groupPathMatch(group,state,mapping) {
+    const id=group.dataset_id,ps=paths(id,mapping);
+    if(list(state.scope).length&&!state.scope.includes(id))return false;
+    const themes=list(state.theme),oldThemes=list(state.legacy_theme);
+    if((themes.length||oldThemes.length)&&!ps.some(p=>themes.includes(p[0]))&&!oldThemes.some(t=>mapping.old_themes?.[t]?.group_ids.includes(id)))return false;
+    const subs=list(state.sub),oldSubs=list(state.legacy_sub);
+    return !(subs.length||oldSubs.length)||ps.some(p=>subs.includes(p.join('/')))||oldSubs.some(t=>mapping.old_subthemes?.[t]?.group_ids.includes(id));
+  }
+  function variantMatches(variant,state) {
+    const f=variant.facets;
+    for(const k of ['frequency','spatial_form','scale_group'])if(state[k]&&f[k]!==state[k])return false;
+    if(list(state.access).length&&!f.access.some(v=>state.access.includes(v)))return false;
+    if(list(state.format).length&&!f.formats.some(v=>state.format.includes(v)))return false;
+    if(state.heat_type&&f.heat_type!==state.heat_type)return false;
+    if(list(state.diurnal).length&&!list(f.diurnal).some(v=>state.diurnal.includes(v)))return false;
+    return ['source_years','local_years','hosted_years'].every(k=>yearMatches(f.years[k],state[k]));
+  }
+  function selectGroups(catalog,state,mapping,taxonomy) {
+    return catalog.products.map((group,i)=>{
+      if(!groupPathMatch(group,state,mapping))return null;
+      const matches=group.variants.map(v=>({v,score:variantScore(v,group,state.q||'',catalog,mapping,taxonomy)}))
+        .filter(x=>x.score>0&&variantMatches(x.v,state)).sort((a,b)=>b.score-a.score);
+      return matches.length?{group,matched_variant_ids:matches.map(x=>x.v.variant_id),score:matches[0].score,i}:null;
+    }).filter(Boolean).sort((a,b)=>state.sort==='name'?a.group.display_name.localeCompare(b.group.display_name,'zh-CN'):b.score-a.score||a.i-b.i);
+  }
+  function uniqueAssets(assets) {
+    const rows=new Map();for(const a of assets){const key=a.canonical_asset_id||a.href||a.asset_id;if(!rows.has(key))rows.set(key,a);}return [...rows.values()];
+  }
+  function migrateRoute(route,catalog,mapping,taxonomy) {
+    let path=route.path;const params=new URLSearchParams(route.params),parts=path.split('/').filter(Boolean);
+    if(parts[0]==='datasets') {
+      let id;try{id=decodeURIComponent(parts[1]||'');}catch{return {path:'/missing',params};}
+      const m=catalog.migration[id];
+      if(m?.action==='archive')path='/archive/'+id;
+      else if(m){path='/datasets/'+m.canonicalID;if(!params.has('variant'))params.set('variant',m.variantID);}
+    }
+    if(parts[0]==='categories'&&!taxonomy.themes.some(t=>t.id===parts[1])) {
+      const key=parts.slice(1).join('/'),m=mapping.category_migrations[key];
+      if(m){params.set('legacy_path',key);if(m.group_ids.length){path='/all';params.delete('scope');m.group_ids.forEach(id=>params.append('scope',id));}else{path='/archive';params.delete('archive_scope');(m.archive_ids.length?m.archive_ids:['__none__']).forEach(id=>params.append('archive_scope',id));}}
+    }
+    for(const [key,oldKey,index]of [['theme','legacy_theme',mapping.old_themes],['sub','legacy_sub',mapping.old_subthemes]]) {
+      const values=params.getAll(key);params.delete(key);
+      values.forEach(value=>params.append(index?.[value]?oldKey:key,value));
+    }
+    return {path,params};
+  }
+  function exportGroupsCsv(results,mapping,taxonomy,base='') {
+    const rows=[['核心产品ID','产品名称','匹配版本ID','原记录ID','主分类','变量与单位','来源年份及说明','本地年份及说明','本站年份及说明','原生空间单位','原生尺度','当前版本文件入口','来源记录','版本详情链接','匹配版本标签','温度类型','昼夜声明','原家族来源年份（仅参考）']];
+    results.forEach(({group,matched_variant_ids})=>group.variants.filter(v=>matched_variant_ids.includes(v.variant_id)).forEach(v=>{
+      const p=viewRecord(v);rows.push([group.dataset_id,group.display_name,v.variant_id,(v.legacy_record_ids||[]).join(';'),pathLabel(mapping.products[group.dataset_id].primary,taxonomy),
+      (p.variables||[]).map(x=>typeof x==='string'?x:[x.label||x.name,x.unit].filter(Boolean).join(' / ')).join(';'),
+      JSON.stringify(p.source_years),JSON.stringify(p.local_years),JSON.stringify(p.hosted_years),p.native_spatial_unit_or_grid,p.native_spatial_resolution,
+      (p.downloads||[]).map(a=>a.href).join(';')||p.primary_action?.url||'',p.source_page?.url||'',base+'#/datasets/'+group.dataset_id+'?variant='+encodeURIComponent(v.variant_id),v.label,v.facets.heat_type||'',(v.facets.diurnal||[]).join('/'),JSON.stringify(v.original_record.source_years)]);
+    }));
+    return '\uFEFF'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n');
+  }
+  return {esc,safeHref,parseRoute,paths,pathLabel,score,yearMatches,csvCell,viewRecord,variantScore,selectGroups,uniqueAssets,migrateRoute,exportGroupsCsv};
 });
