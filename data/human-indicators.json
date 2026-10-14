@@ -1,0 +1,417 @@
+{
+  "schema_version": "D036-human-indicators-draft-v1",
+  "baseline_commit": "52e7e88526e6af947da12d5afd37092cd0ed617f",
+  "phase": "offline_candidate_steel_gate_pass_other_new_sources_pending",
+  "scope_note": "列出数据定义、单位、原生空间支持、年份、覆盖、来源和核验状态。文件入口与实际下载状态分别记录。",
+  "indicators": [
+    {
+      "indicator_id": "HUM-POP-COUNT",
+      "name_zh": "全球2020模型人口总量",
+      "domain": "人口",
+      "definition": "模型人口count/每像元人口数；UN调整状态未验证",
+      "unit": "人/像元（发布方家族定义，未读TIFF属性）",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "发布方称约1km/30角秒；坐标/CRS/尺寸/仿射未读取",
+      "native_resolution": "约1km/30角秒（发布方说明，非原件核验）",
+      "coverage": "全球模型人口拼接（家族/发布方说明，不是本轮全球数值验收）",
+      "years_note": "2020，非2019；未声称UN adjusted",
+      "generation_method": "Global1 unconstrained top-down国家模型人口数据拼接；家族说明，未读文件值",
+      "limitations": "2020；869,715,253 B；仅响应头核验，内容、校验码与原生地理信息未验证；发布方称约1km/30角秒，未读取CRS；Range被忽略，正文0 B，3/3停止",
+      "source_relations": [
+        {
+          "source_id": "D036-WORLDPOP-GLOBAL1-2020",
+          "role": "native_input_header_only",
+          "gate": "GO_OFFICIAL_LINK_HEADER_VERIFIED_ONLY"
+        }
+      ],
+      "route_state": "official_header_only",
+      "generated_table": false,
+      "license_note": "WorldPop官方FAQ默认CC BY4.0，需署名；非逐文件内嵌条款，例外如有优先",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-GDP-TOTAL",
+      "name_zh": "GDP总量PPP",
+      "domain": "经济",
+      "definition": "年度GDP总量估计",
+      "unit": "USD (2021 international dollars) per grid cell",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "longitude/latitude raster cell",
+      "native_resolution": "5 arc-minute (0.0833333°)",
+      "coverage": "global; EPSG:4326 bounding box longitude −180° to 180°, latitude −90° to 90°",
+      "years_note": "1990–2024官方原件；本站2019",
+      "generation_method": "源说明：Admin-2下推人均GDP与格网人口相乘；年度波段不是每年流率单位",
+      "limitations": "总量值由人均 GDP 与人口下推推算，不是直接地方账户。",
+      "source_relations": [
+        {
+          "product_id": "URB-031",
+          "asset_id": "gdp-ppp-total-2019",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        },
+        {
+          "product_id": "URB-031",
+          "asset_id": "gdp-ppp-total-1990-2024",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-GDP-PC",
+      "name_zh": "人均GDP PPP",
+      "domain": "经济",
+      "definition": "下推人均GDP",
+      "unit": "2021国际美元/人",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "longitude/latitude raster cell",
+      "native_resolution": "5 arc-minute (0.0833333°)",
+      "coverage": "global; EPSG:4326 bounding box longitude −180° to 180°, latitude −90° to 90°",
+      "years_note": "1990–2024官方原件；本站2019",
+      "generation_method": "源说明：国家/次国家统计下推Admin-2人均GDP，空间分配模型",
+      "limitations": "人均值由行政区数据下推，存在空间分配不确定性；与总量变量分开。",
+      "source_relations": [
+        {
+          "product_id": "URB-032",
+          "asset_id": "gdp-ppp-per-capita-2019",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        },
+        {
+          "product_id": "URB-032",
+          "asset_id": "gdp-ppp-per-capita-1990-2024",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-POWER-CAP",
+      "name_zh": "电厂装机容量",
+      "domain": "能源",
+      "definition": "设施capacity_mw字段，汇总未实施",
+      "unit": "MW",
+      "measurement_type": "inventory",
+      "support_class": "point",
+      "native_support": "power plant point records",
+      "native_resolution": "point facilities",
+      "coverage": "global",
+      "years_note": "v1.3.0快照，非统一2019",
+      "generation_method": "全球设施资料汇编；具体估算/缺测补足方法当前目录未完整核实",
+      "limitations": "v1.3.0为电厂快照，不是完整的2019运营清单。",
+      "source_relations": [
+        {
+          "product_id": "URB-020",
+          "asset_id": "wri-gppd-v130",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-POWER-FUEL",
+      "name_zh": "电厂燃料类型",
+      "domain": "能源",
+      "definition": "可下载电厂原始primary_fuel分类字段；容量份额尚未生成",
+      "unit": "燃料类别（category）",
+      "measurement_type": "inventory",
+      "support_class": "point",
+      "native_support": "power plant point records",
+      "native_resolution": "point facilities",
+      "coverage": "global",
+      "years_note": "v1.3.0快照",
+      "generation_method": "WRI设施资料汇编中的primary_fuel原始字段；具体缺测补足方法当前目录未完整核实",
+      "limitations": "v1.3.0为电厂快照，不是完整的2019运营清单。",
+      "source_relations": [
+        {
+          "product_id": "URB-020",
+          "asset_id": "wri-gppd-v130",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-PV-CAP",
+      "name_zh": "光伏设施估计容量",
+      "domain": "能源",
+      "definition": "预测设施capacity_mw属性",
+      "unit": "MW",
+      "measurement_type": "model",
+      "support_class": "polygon",
+      "native_support": "Predicted PV generating unit",
+      "native_resolution": "Facility/polygon geometry; no regular raster grid",
+      "coverage": "Global predicted PV deployment (dataset extent: 68,661 polygons)",
+      "years_note": "2018年末预测快照",
+      "generation_method": "2018末光伏设施预测名录；具体识别/容量估算方法当前目录未完整核实",
+      "limitations": "2018年末模型预测，不是2019实测普查；不完整涵盖分布式屋顶设施。",
+      "source_relations": [
+        {
+          "product_id": "URB-041",
+          "asset_id": "urb-041-zip",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-NOX",
+      "name_zh": "NOₓ年排放总量",
+      "domain": "排放数据",
+      "definition": "2019 EDGAR年度TOTALS",
+      "unit": "Tonnes（源属性；不擅加分母）",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "lat-lon grid cell",
+      "native_resolution": "0.1°",
+      "coverage": "global",
+      "years_note": "2019年度",
+      "generation_method": "EDGAR年度排放清单估计；具体分配方法当前目录未完整核实",
+      "limitations": "排放清单估算不等于环境浓度；PM₂.₅多年份档案不提供下载入口。",
+      "source_relations": [
+        {
+          "product_id": "ATM-001",
+          "asset_id": "edgar-2019-nox",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-SO2",
+      "name_zh": "SO₂年排放总量",
+      "domain": "排放数据",
+      "definition": "2019 EDGAR年度TOTALS",
+      "unit": "Tonnes（源属性；不擅加分母）",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "lat-lon grid cell",
+      "native_resolution": "0.1°",
+      "coverage": "global",
+      "years_note": "2019年度",
+      "generation_method": "EDGAR年度排放清单估计；具体分配方法当前目录未完整核实",
+      "limitations": "排放清单估算不等于环境浓度；PM₂.₅多年份档案不提供下载入口。",
+      "source_relations": [
+        {
+          "product_id": "ATM-001",
+          "asset_id": "edgar-2019-so2",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "indicator_id": "HUM-NH3",
+      "name_zh": "NH₃年排放总量",
+      "domain": "排放数据",
+      "definition": "2019 EDGAR NH3 TOTALS",
+      "unit": "Tonnes NH3/像元/年",
+      "measurement_type": "model",
+      "support_class": "native_grid",
+      "native_support": "原生经纬网格",
+      "native_resolution": "0.1°",
+      "coverage": "全球",
+      "years_note": "2019年度",
+      "generation_method": "EDGAR年度排放清单估计；具体分配方法当前目录未完整核实",
+      "limitations": "年度排放总量，不是月排放或环境浓度。",
+      "source_relations": [
+        {
+          "product_id": "LEG-005",
+          "asset_id": "edgar-2019-nh3",
+          "role": "native_input",
+          "gate": "reused_published_qualified_asset"
+        }
+      ],
+      "route_state": "reused_qualified_source",
+      "generated_table": false,
+      "license_note": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "domain": "产业",
+      "measurement_type": "inventory",
+      "support_class": "point",
+      "native_support": "Coordinates组合latitude,longitude；设施点位，准确性含exact/approximate/unknown",
+      "native_resolution": "设施坐标，非规则格网",
+      "coverage": "89个Country-Area标签；全球大型设施名录，规模门槛≥0.5 MTPA，非全部工业",
+      "years_note": "2024-04 V1状态快照；2019生产列不完整",
+      "generation_method": "GEM设施跟踪名录，Zenodo镜像；上载者官方身份未认证",
+      "limitations": "2024-04 V1；≥0.5MTPA收录门槛；1,848状态行/1,163唯一PlantID，1,846行坐标可解析、2缺失；同PlantID可能多状态行；产能ttpa倍率未明；2019生产列缺失较多",
+      "source_relations": [
+        {
+          "source_id": "D036-STEEL-MIRROR-16893375",
+          "role": "native_input",
+          "gate": "GO_STEEL_MIRROR_LINK_WITH_ATTRIBUTION"
+        }
+      ],
+      "route_state": "new_qualified_source",
+      "generated_table": false,
+      "license_note": "CC BY 4.0，精确工作簿About B3",
+      "indicator_id": "HUM-STEEL-STATUS",
+      "name_zh": "大型钢铁设施位置与运营状态",
+      "definition": "Plant ID、Coordinates与Capacity operating status原始分类记录；同PlantID可能多状态行",
+      "unit": "坐标度；状态类别（非产能求和）",
+      "data_state": "原始来源数据；未生成聚合表"
+    },
+    {
+      "domain": "产业",
+      "measurement_type": "inventory",
+      "support_class": "point",
+      "native_support": "Coordinates组合latitude,longitude；设施点位，准确性含exact/approximate/unknown",
+      "native_resolution": "设施坐标，非规则格网",
+      "coverage": "89个Country-Area标签；全球大型设施名录，规模门槛≥0.5 MTPA，非全部工业",
+      "years_note": "2024-04 V1状态快照；2019生产列不完整",
+      "generation_method": "GEM设施跟踪名录，Zenodo镜像；上载者官方身份未认证",
+      "limitations": "2024-04 V1；≥0.5MTPA收录门槛；1,848状态行/1,163唯一PlantID，1,846行坐标可解析、2缺失；同PlantID可能多状态行；产能ttpa倍率未明；2019生产列缺失较多",
+      "source_relations": [
+        {
+          "source_id": "D036-STEEL-MIRROR-16893375",
+          "role": "native_input",
+          "gate": "GO_STEEL_MIRROR_LINK_WITH_ATTRIBUTION"
+        }
+      ],
+      "route_state": "new_qualified_source",
+      "generated_table": false,
+      "license_note": "CC BY 4.0，精确工作簿About B3",
+      "indicator_id": "HUM-STEEL-PROCESS",
+      "name_zh": "炼钢工艺类型",
+      "definition": "Main production process原始类别，如electric、integrated(BF/DRI)、oxygen；非工业结构占比",
+      "unit": "工艺类别（category）",
+      "data_state": "原始来源数据；未生成聚合表"
+    }
+  ],
+  "gaps": [
+    {
+      "domain": "人口",
+      "name_zh": "人口密度与变化",
+      "note": "未生成",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "经济",
+      "name_zh": "就业数据",
+      "note": "未添加/待核验",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "能源",
+      "name_zh": "终端用电与能源结构",
+      "note": "未添加",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "产业",
+      "name_zh": "钢铁产能单位倍率",
+      "note": "未核验",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "交通",
+      "name_zh": "道路与交通可达性",
+      "note": "文件未核验",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "建成环境",
+      "name_zh": "建成密度与体量",
+      "note": "文件入口未核验",
+      "route_state": "pending_source_gate",
+      "href": null
+    },
+    {
+      "domain": "公共服务",
+      "name_zh": "医疗旅行时间",
+      "note": "文件未核验",
+      "route_state": "pending_source_gate",
+      "href": null
+    }
+  ],
+  "metrics": {
+    "indicator_views": 11,
+    "new_products": 2,
+    "new_files": 2,
+    "reused_products": 6,
+    "reused_assets": 9,
+    "new_full_verified_files": 1,
+    "new_header_only_not_downloaded": 1
+  },
+  "new_sources": [
+    {
+      "source_id": "D036-STEEL-MIRROR-16893375",
+      "title": "Global Steel Plant Tracker April 2024 V1",
+      "publisher": "Global Energy Monitor",
+      "host_role": "Zenodo镜像，非原发布者网站；上载者未认证为GEM",
+      "href": "https://zenodo.org/api/records/16893375/files/Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx/content",
+      "source_url": "https://zenodo.org/records/16893375",
+      "filename": "Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx",
+      "format": "XLSX",
+      "bytes": 842098,
+      "md5": "724612100d1ed0404efaca1d7364f272",
+      "sha256": "f8acee2cfe36ba65ff2f7b691426ee2be58da5b3261e5c3d39575da404805066",
+      "checked_at": "2026-10-14T05:16:53.966801+00:00",
+      "verification": "匿名完整文件GET/MD5/SHA/ZIP CRC及字段QC；不等于坐标实地验证",
+      "license": "CC BY 4.0，精确工作簿About B3",
+      "citation": "Recommended Citation: \"Global Energy Monitor, Global Steel Plant Tracker, April 2024 (V1) release.\" (See the CC license for attribution requirements if sharing or adapting the data set.)",
+      "gate": "GO_STEEL_MIRROR_LINK_WITH_ATTRIBUTION",
+      "coverage": "89个Country-Area标签；全球大型设施名录，规模门槛≥0.5 MTPA，非全部工业",
+      "years": "2024-04 V1状态快照；2019生产列不完整",
+      "counts": "1,848状态行 / 1,163唯一设施ID；1,846行坐标可解析、2行缺失；范围检查不等于实地验证"
+    },
+    {
+      "source_id": "D036-WORLDPOP-GLOBAL1-2020",
+      "title": "WorldPop Global1 2020 模型人口数",
+      "publisher": "WorldPop / University of Southampton",
+      "host_role": "官方数据站点；仅跳转，不本站镜像",
+      "href": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/0_Mosaicked/ppp_2020_1km_Aggregated.tif",
+      "source_url": "https://www.worldpop.org/faq/",
+      "filename": "ppp_2020_1km_Aggregated.tif",
+      "format": "TIFF（响应头image/tiff，未读文件头）",
+      "bytes": 869715253,
+      "checked_at": "2026-10-14T05:21:09.357884+00:00",
+      "verification": "官方HTTP200整件响应头；Range被忽略，正文0 B，原FAIL_STOP保持，3/3停止",
+      "license": "WorldPop官方FAQ默认CC BY4.0，需署名；非逐文件内嵌条款，例外如有优先",
+      "citation": "WorldPop, University of Southampton；按产品原作者要求署名",
+      "gate": "GO_OFFICIAL_LINK_HEADER_VERIFIED_ONLY",
+      "coverage": "全球模型人口拼接（家族/发布方说明，不是本轮全球数值验收）",
+      "years": "2020模型人口数，文件修改日期不代表参考年",
+      "counts": "869,715,253 B；内容、校验码与原生地理信息未验证；发布方称约1km/30角秒，未读取CRS",
+      "download_label": "官方TIFF链接（仅响应头核验）"
+    }
+  ]
+}
