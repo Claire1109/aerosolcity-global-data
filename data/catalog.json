@@ -1,6 +1,6 @@
 {
   "schema_version": "aerosolcity-compact-catalog-v1",
-  "catalog_version": "D034 compact list candidate r02",
+  "catalog_version": "D035 enabled candidate r02; publication HOLD",
   "themes": [
     {
       "id": "atmospheric_pollution_composition",
@@ -2575,7 +2575,7 @@
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "ESA CCI IASI/Metop-B 月度 NH₃ 总柱格网。",
-      "main_limitation_zh": "NH₃是总柱量（mol m⁻²），不是地表浓度或排放。",
+      "main_limitation_zh": "本地仅2019年1/4/7/10月四幅图；NH₃为总柱量，非地表浓度或排放。",
       "main_lines": [
         "大气污染与组成"
       ],
@@ -2622,7 +2622,7 @@
           "definition": "Separate morning and afternoon IASI retrieval composites."
         }
       ],
-      "local_scope_note_zh": "本地仅有2019年1、4、7、10月四幅全球0.2°月图。",
+      "local_scope_note_zh": "本地仅有2019年1、4、7、10月四幅全球0.2°月图。 本地范围仅2019年1、4、7、10月四幅图，不代表全年或完整季节。",
       "quality_note_zh": "NH₃是总柱量（mol m⁻²），不是地表浓度或排放。",
       "license_note_zh": "许可记录：ESA CCI Data Policy: free and open access",
       "source_page": null,
@@ -6077,7 +6077,7 @@
       },
       "primary_action": {
         "kind": "site_asset_list",
-        "label": "本站文件清单",
+        "label": "下载文件清单",
         "url": null,
         "asset_count": 1,
         "scope_label": "本站文件范围"
@@ -6115,6 +6115,36 @@
             "content_type": null,
             "content_length": 6632065,
             "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+          }
+        },
+        {
+          "asset_id": "gdp-ppp-total-1990-2024",
+          "label": "PPP GDP 总量多年原件",
+          "filename": "rast_gdpTot_1990_2024_5arcmin.tif",
+          "bytes": 184157771,
+          "sha256": "3e11f274d342a0af6a81385ca749b6712aea0f0102f353f05c6edbc6c02ef366",
+          "publisher_checksum": {
+            "algorithm": "md5",
+            "value": "25b38c030acb6c528bfb9c72970c2876",
+            "basis": "historical publisher record metadata"
+          },
+          "scope_label": "1990–2024 · 35 年度波段 · 全球 5 角分 · GDP 总量",
+          "access_method": "official_direct_file",
+          "publication_status": "verified",
+          "access_note_zh": "匿名Range文件头核验；未做当日全件checksum；TIFF可能在浏览器内打开，可另存为文件",
+          "checked_at": "2026-10-14T03:18:31.052744+00:00",
+          "href": "https://zenodo.org/api/records/18429133/files/rast_gdpTot_1990_2024_5arcmin.tif/content",
+          "record_doi": "10.5281/zenodo.18429133",
+          "license_note_zh": "CC BY 4.0；请注明来源与改动",
+          "endpoint_evidence": {
+            "checked_at": "2026-10-14T03:18:31.052744+00:00",
+            "http_status": 206,
+            "body_bytes": 8,
+            "content_range_total": 184157771,
+            "anonymous": true,
+            "redirects": false,
+            "full_checksum_checked_today": false,
+            "filename_basis": "exact request URL/publisher record; response inline without filename"
           }
         }
       ],
@@ -6177,7 +6207,7 @@
       },
       "primary_action": {
         "kind": "site_asset_list",
-        "label": "本站文件清单",
+        "label": "下载文件清单",
         "url": null,
         "asset_count": 1,
         "scope_label": "本站文件范围"
@@ -6215,6 +6245,36 @@
             "content_type": null,
             "content_length": 4389936,
             "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+          }
+        },
+        {
+          "asset_id": "gdp-ppp-per-capita-1990-2024",
+          "label": "PPP GDP 人均多年原件",
+          "filename": "rast_adm2_gdp_perCapita_1990_2024.tif",
+          "bytes": 130266414,
+          "sha256": "f1fcea7226e558442801fe3f938a6afe32845587444b078fd45756a7e6c682f6",
+          "publisher_checksum": {
+            "algorithm": "md5",
+            "value": "0aedd8d85b682f5ee84bf286300f39bb",
+            "basis": "historical publisher record metadata"
+          },
+          "scope_label": "1990–2024 · 35 年度波段 · 全球 5 角分 · GDP 人均",
+          "access_method": "official_direct_file",
+          "publication_status": "verified",
+          "access_note_zh": "匿名Range文件头核验；未做当日全件checksum；TIFF可能在浏览器内打开，可另存为文件",
+          "checked_at": "2026-10-14T03:18:32.548114+00:00",
+          "href": "https://zenodo.org/api/records/18429133/files/rast_adm2_gdp_perCapita_1990_2024.tif/content",
+          "record_doi": "10.5281/zenodo.18429133",
+          "license_note_zh": "CC BY 4.0；请注明来源与改动",
+          "endpoint_evidence": {
+            "checked_at": "2026-10-14T03:18:32.548114+00:00",
+            "http_status": 206,
+            "body_bytes": 8,
+            "content_range_total": 130266414,
+            "anonymous": true,
+            "redirects": false,
+            "full_checksum_checked_today": false,
+            "filename_basis": "exact request URL/publisher record; response inline without filename"
           }
         }
       ],
@@ -6296,19 +6356,50 @@
         "url": "https://zenodo.org/records/21364978"
       },
       "primary_action": {
-        "kind": "official_product_page",
-        "label": "官方产品页",
-        "url": "https://zenodo.org/records/21364978",
-        "asset_count": 0,
-        "scope_label": "产品记录范围"
+        "kind": "official_file",
+        "label": "官方文件：水稻",
+        "url": "https://zenodo.org/api/records/21364978/files/HaNi-Crop-Rice.nc/content",
+        "asset_count": 1,
+        "scope_label": "官方文件范围"
       },
       "references": {
         "citation": "",
         "data_record_doi": "",
         "article_doi": ""
       },
-      "downloads": [],
-      "action_scope_text": "1961–2023 · global 0.1° EPSG:4326 grid · 0.1°"
+      "downloads": [
+        {
+          "asset_id": "hani-crop-rice-1961-2023",
+          "label": "HaNi-Crop 水稻氮投入原件",
+          "filename": "HaNi-Crop-Rice.nc",
+          "bytes": 46168898,
+          "sha256": "b4ec2715a70275ae5e4addc6b02f00616085ce36b6ba5a1fb83118fc83249313",
+          "publisher_checksum": {
+            "algorithm": "md5",
+            "value": "eaba2069096b4af6aa442ecbe32d5701",
+            "basis": "historical publisher record metadata"
+          },
+          "scope_label": "仅水稻 · 1961–2023 年度序列 · 全球 0.1° · 四类氮投入变量",
+          "access_method": "official_direct_file",
+          "publication_status": "verified",
+          "access_note_zh": "匿名Range文件头核验；未做当日全件checksum",
+          "checked_at": "2026-10-14T03:18:29.144689+00:00",
+          "href": "https://zenodo.org/api/records/21364978/files/HaNi-Crop-Rice.nc/content",
+          "record_doi": "10.5281/zenodo.21364978",
+          "license_note_zh": "CC BY 4.0；请注明来源与改动",
+          "endpoint_evidence": {
+            "checked_at": "2026-10-14T03:18:29.144689+00:00",
+            "http_status": 206,
+            "body_bytes": 8,
+            "content_range_total": 46168898,
+            "anonymous": true,
+            "redirects": false,
+            "full_checksum_checked_today": false,
+            "filename_basis": "Content-Disposition attachment filename"
+          }
+        }
+      ],
+      "action_scope_text": "仅水稻 · 1961–2023年度序列 · 46.2 MB"
     },
     {
       "dataset_id": "URB-034",
@@ -6489,7 +6580,7 @@
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "FAOSTAT 国家和地区年度肥料使用量。",
-      "main_limitation_zh": "无机肥统计不含粪肥；国家与区域汇总须按分类分别处理。",
+      "main_limitation_zh": "派生CSV仍quality_hold；无机肥统计不含粪肥，国家与区域须分开。",
       "main_lines": [
         "人类活动"
       ],
@@ -6543,7 +6634,7 @@
         }
       ],
       "local_scope_note_zh": "本地保留全时序数据；2019含236条氮肥农业使用记录。",
-      "quality_note_zh": "无机肥统计不含粪肥；国家与区域汇总须按分类分别处理。",
+      "quality_note_zh": "无机肥统计不含粪肥；国家与区域汇总须按分类分别处理。 派生CSV仍为quality_hold（质量保留）：去引号/换行处理与builder空间支持问题未闭合，不提供该派生CSV下载。",
       "license_note_zh": "记录标注 CC BY-NC-SA 3.0 IGO，含非商业及相同方式共享条件。",
       "source_page": {
         "label": "官方产品/数据记录页",

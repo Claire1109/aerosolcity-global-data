@@ -225,20 +225,21 @@
   }
 
   function assetRows(product) {
-    const assets = product.downloads || [];
+    const assets = [...(product.downloads || []), ...(product.pending_downloads || [])];
     if (!assets.length) return "";
     const assetIds = new Set(assets.map((asset) => asset.asset_id));
     const provenance = (catalogue.provenance || []).filter((entry) => assetIds.has(entry.asset_id));
     const provenanceById = new Map(provenance.map((entry) => [entry.asset_id, entry]));
     return `<section class="detail-section"><h4>文件与证明</h4><div class="asset-list">${assets.map((asset) => {
-      const href = safeHref(asset.href);
+      const pending = asset.publication_status === "pending";
+      const href = pending ? "" : safeHref(asset.href);
       const title = asset.label || asset.filename || asset.asset_id;
       const method = asset.access_method === "official_direct_file" ? "官方文件" : asset.access_method === "site_hosted" ? "本站文件" : "目录文件";
       const checksum = asset.publisher_checksum;
       const publisherValue = checksum && checksum.value ? `${checksum.algorithm || "校验值"}：${checksum.value}` : "无可用发布方校验值记录";
       const prov = provenanceById.get(asset.asset_id);
       const provHref = prov ? safeHref(prov.href) : "";
-      return `<article class="asset-item"><div class="asset-heading"><strong>${esc(title)}</strong>${href ? `<a href="${esc(href)}"${externalAttrs(href)}>打开文件</a>` : `<span class="quiet">无可用文件链接</span>`}</div><p class="asset-meta">${esc(method)}${asset.filename ? ` · ${esc(asset.filename)}` : ""}${Number.isFinite(asset.bytes) ? ` · ${esc(bytesLabel(asset.bytes))}` : ""}</p><dl class="asset-facts"><dt>资产键</dt><dd><code>${esc(asset.asset_id)}</code></dd>${asset.sha256 ? `<dt>本地 SHA-256</dt><dd><code class="hash-value">${esc(asset.sha256)}</code></dd>` : ""}<dt>发布方校验</dt><dd>${esc(publisherValue)}</dd>${provHref ? `<dt>来源证明</dt><dd><a href="${esc(provHref)}">${esc(prov.record_id || "查看公开来源证明")}</a></dd>` : ""}</dl></article>`;
+      return `<article class="asset-item${pending ? " pending-asset" : ""}"><div class="asset-heading"><strong>${esc(title)}</strong>${href ? `<a href="${esc(href)}"${externalAttrs(href)}>打开文件</a>` : pending ? `<button class="action-button" type="button" disabled>官方原件入口待核</button>` : `<span class="quiet">无可用文件链接</span>`}</div><p class="asset-meta">${esc(method)}${asset.filename ? ` · ${esc(asset.filename)}` : ""}${Number.isFinite(asset.bytes) ? ` · ${esc(bytesLabel(asset.bytes))}` : ""}</p>${asset.scope_label ? `<p class="asset-meta">${esc(asset.scope_label)}</p>` : ""}${asset.access_note_zh ? `<p class="asset-meta">${esc(asset.access_note_zh)} · ${asset.checked_at ? `核验：${esc(asset.checked_at)}` : "本轮尚未核验"}</p>` : ""}${asset.record_doi ? `<p class="asset-meta">${esc(asset.license_note_zh)} · <a href="https://doi.org/${esc(asset.record_doi)}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(asset.record_doi)}</a></p>` : ""}<dl class="asset-facts"><dt>资产键</dt><dd><code>${esc(asset.asset_id)}</code></dd>${asset.sha256 ? `<dt>本地 SHA-256</dt><dd><code class="hash-value">${esc(asset.sha256)}</code></dd>` : ""}<dt>发布方校验</dt><dd>${esc(publisherValue)}</dd>${provHref ? `<dt>来源证明</dt><dd><a href="${esc(provHref)}">${esc(prov.record_id || "查看公开来源证明")}</a></dd>` : ""}</dl></article>`;
     }).join("")}</div></section>`;
   }
 
@@ -347,14 +348,14 @@
 
   async function init() {
     try {
-      const response = await fetch("./data/catalog.json?v=d034-r02", { cache: "no-store" });
+      const response = await fetch("./data/catalog.json?v=d035-r03", { cache: "no-store" });
       if (!response.ok) throw new Error(`目录数据读取失败（HTTP ${response.status}）`);
       catalogue = await response.json();
       products = Array.isArray(catalogue.products) ? catalogue.products : [];
       const ids = products.map((product) => product.dataset_id);
       if (products.length !== 84 || new Set(ids).size !== 84) throw new Error("目录键检查未通过，请重新加载页面。");
       const assetCount = products.reduce((sum, product) => sum + (product.downloads || []).length, 0);
-      if (assetCount !== 23) throw new Error("文件清单与冻结基线不一致，页面已停止渲染。");
+      if (assetCount !== 26) throw new Error("文件清单与冻结基线不一致，页面已停止渲染。");
       setupFilters();
       wireEvents();
       render();
