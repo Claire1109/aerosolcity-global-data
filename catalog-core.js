@@ -80,6 +80,10 @@
     if(!String(query||'').trim())return 1;
     const q=text(String(query).trim()),legacy=Object.keys(catalog.migration||{}).find(id=>text(id)===q);
     if(legacy)return catalog.migration[legacy].action!=='archive'&&catalog.migration[legacy].variantID===variant.variant_id?250:0;
+    const names=v=>(viewRecord(v).variables||[]).flatMap(x=>typeof x==='string'?[text(x)]:[text(x.name),text(x.label)]).filter(Boolean);
+    const exactVariable=catalog.products.some(g=>g.variants.some(v=>names(v).includes(q)));
+    // An exact variable query cannot be satisfied merely by the parent family title.
+    if(exactVariable&&!names(variant).includes(q))return 0;
     const p=viewRecord(variant),vm={products:{[p.dataset_id]:mapping.products[group.dataset_id]}};
     const individual=score(p,query,vm,taxonomy),family=text([group.display_name,...(group.aliases||[])].join(' '));
     const overlay=text(JSON.stringify(variant.approved_overlay?.approved_facts||{}));
