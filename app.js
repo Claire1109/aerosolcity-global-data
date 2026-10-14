@@ -4,6 +4,9 @@
   const ACTION_LABELS = {
     site_asset_list: "本站文件清单",
     official_file: "官方文件",
+    repository_file: "作者/发布者仓库文件",
+    mirror_file: "镜像文件",
+    source_file_list: "原始文件清单",
     official_product_page: "官方产品页",
     login_or_request: "登录/申请入口",
     no_verified_entry: "暂无已核实入口",
@@ -12,6 +15,7 @@
   const controls = {
     search: $("#search-input"),
     action: $("#access-filter"),
+    domain: $("#domain-filter"),
     sourceYear: $("#source-year"),
     localYear: $("#local-year"),
     hostedYear: $("#hosted-year"),
@@ -119,6 +123,7 @@
 
     const actions = unique(products.map((product) => product.primary_action?.kind));
     fillSelect(controls.action, actions.map((kind) => [kind, ACTION_LABELS[kind] || kind]), "全部方式");
+    fillSelect(controls.domain, unique(products.flatMap(p => p.indicator_domains || [])).map(x => [x,x]), "全部领域");
     fillYearSelect(controls.sourceYear, "source_years");
     fillYearSelect(controls.localYear, "local_years");
     fillYearSelect(controls.hostedYear, "hosted_years");
@@ -143,6 +148,7 @@
     return products.filter((product) => {
       if (term && !searchableText(product).includes(term)) return false;
       if (lineSelection.size && !(product.main_lines || []).some((line) => lineSelection.has(line))) return false;
+      if (controls.domain.value && !(product.indicator_domains || []).includes(controls.domain.value)) return false;
       if (controls.action.value && product.primary_action?.kind !== controls.action.value) return false;
       if (!matchesYear(product, "source_years", controls.sourceYear.value)) return false;
       if (!matchesYear(product, "local_years", controls.localYear.value)) return false;
@@ -214,14 +220,17 @@
   function sourceBlock(product) {
     const page = product.source_page;
     const links = page && safeHref(page.url) ? `<a href="${esc(page.url)}" target="_blank" rel="noopener noreferrer">${esc(page.label || "官方产品/数据记录页")}</a>` : "";
+    const extraLinks = (product.additional_source_urls || []).filter(safeHref).map(url=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">来源记录</a>`).join("");
     const refs = product.references || {};
     const typedDois = [
       refs.data_record_doi ? `<a href="https://doi.org/${esc(refs.data_record_doi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(refs.data_record_doi)}</a>` : "",
       refs.article_doi ? `<a href="https://doi.org/${esc(refs.article_doi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">论文 DOI：${esc(refs.article_doi)}</a>` : "",
     ].filter(Boolean).join("");
     const citation = clean(refs.citation);
-    if (!links && !typedDois && !citation) return "";
-    return `<section class="detail-section"><h4>来源与引用</h4>${links ? `<p class="source-link-list">${links}</p>` : ""}${typedDois ? `<p class="source-link-list">${typedDois}</p>` : ""}${citation ? `<p class="citation">${esc(citation)}</p>` : ""}</section>`;
+    const publisher = clean(product.publisher_author);
+    const method = clean(product.source_method);
+    if (!links && !typedDois && !citation && !publisher && !method) return "";
+    return `<section class="detail-section"><h4>来源与引用</h4>${publisher ? `<p>发布者 / 作者：${esc(publisher)}</p>` : ""}${method ? `<p>来源方法：${esc(method)}</p>` : ""}${links || extraLinks ? `<p class="source-link-list">${links}${extraLinks}</p>` : ""}${typedDois ? `<p class="source-link-list">${typedDois}</p>` : ""}${citation ? `<p class="citation">${esc(citation)}</p>` : ""}</section>`;
   }
 
   function assetRows(product) {
@@ -234,12 +243,12 @@
       const pending = asset.publication_status === "pending";
       const href = pending ? "" : safeHref(asset.href);
       const title = asset.label || asset.filename || asset.asset_id;
-      const method = asset.access_method === "official_direct_file" ? "官方文件" : asset.access_method === "site_hosted" ? "本站文件" : "目录文件";
+      const method = asset.access_method === "official_generated_file" ? "官方生成链接" : asset.access_method === "official_direct_file" ? "官方文件" : asset.access_method === "site_hosted" ? "本站文件" : asset.access_method === "repository_file" ? "作者/发布者仓库文件" : asset.access_method === "mirror_file" ? "镜像文件" : "目录文件";
       const checksum = asset.publisher_checksum;
       const publisherValue = checksum && checksum.value ? `${checksum.algorithm || "校验值"}：${checksum.value}` : "无可用发布方校验值记录";
       const prov = provenanceById.get(asset.asset_id);
       const provHref = prov ? safeHref(prov.href) : "";
-      return `<article class="asset-item${pending ? " pending-asset" : ""}"><div class="asset-heading"><strong>${esc(title)}</strong>${href ? `<a href="${esc(href)}"${externalAttrs(href)}>打开文件</a>` : pending ? `<button class="action-button" type="button" disabled>官方原件入口待核</button>` : `<span class="quiet">无可用文件链接</span>`}</div><p class="asset-meta">${esc(method)}${asset.filename ? ` · ${esc(asset.filename)}` : ""}${Number.isFinite(asset.bytes) ? ` · ${esc(bytesLabel(asset.bytes))}` : ""}</p>${asset.scope_label ? `<p class="asset-meta">${esc(asset.scope_label)}</p>` : ""}${asset.access_note_zh ? `<p class="asset-meta">${esc(asset.access_note_zh)} · ${asset.checked_at ? `核验：${esc(asset.checked_at)}` : "本轮尚未核验"}</p>` : ""}${asset.record_doi ? `<p class="asset-meta">${esc(asset.license_note_zh)} · <a href="https://doi.org/${esc(asset.record_doi)}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(asset.record_doi)}</a></p>` : ""}<dl class="asset-facts"><dt>资产键</dt><dd><code>${esc(asset.asset_id)}</code></dd>${asset.sha256 ? `<dt>本地 SHA-256</dt><dd><code class="hash-value">${esc(asset.sha256)}</code></dd>` : ""}<dt>发布方校验</dt><dd>${esc(publisherValue)}</dd>${provHref ? `<dt>来源证明</dt><dd><a href="${esc(provHref)}">${esc(prov.record_id || "查看公开来源证明")}</a></dd>` : ""}</dl></article>`;
+      return `<article class="asset-item${pending ? " pending-asset" : ""}"><div class="asset-heading"><strong>${esc(title)}</strong>${href ? `<a href="${esc(href)}"${externalAttrs(href)}>打开文件</a>` : pending ? `<button class="action-button" type="button" disabled>官方原件入口待核</button>` : `<span class="quiet">无可用文件链接</span>`}</div><p class="asset-meta">${esc(method)}${asset.filename ? ` · ${esc(asset.filename)}` : ""}${Number.isFinite(asset.bytes) ? ` · ${esc(bytesLabel(asset.bytes))}` : ""}</p>${asset.scope_label ? `<p class="asset-meta">${esc(asset.scope_label)}</p>` : ""}${asset.access_note_zh ? `<p class="asset-meta">${esc(asset.access_note_zh)}${asset.checked_at ? ` · 核验：${esc(asset.checked_at)}` : ""}</p>` : ""}${asset.record_doi ? `<p class="asset-meta">${esc(asset.license_note_zh)} · <a href="https://doi.org/${esc(asset.record_doi)}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(asset.record_doi)}</a></p>` : ""}<dl class="asset-facts"><dt>资产键</dt><dd><code>${esc(asset.asset_id)}</code></dd>${asset.sha256 ? `<dt>本地 SHA-256</dt><dd><code class="hash-value">${esc(asset.sha256)}</code></dd>` : ""}<dt>发布方校验</dt><dd>${esc(publisherValue)}</dd>${provHref ? `<dt>来源证明</dt><dd><a href="${esc(provHref)}">${esc(prov.record_id || "查看公开来源证明")}</a></dd>` : ""}</dl></article>`;
     }).join("")}</div></section>`;
   }
 
@@ -264,7 +273,7 @@
       `<section class="detail-section"><h4>记录身份</h4>${keyline}${version}</section>`,
       variables ? `<section class="detail-section"><h4>变量与单位</h4>${variables}</section>` : "",
       `<section class="detail-section"><h4>年份与原生尺度</h4>${yearAxes ? `<dl class="axis-grid">${yearAxes}</dl>` : ""}${facts ? `<div class="scope-facts">${facts}</div>` : ""}${localNote ? `<p class="inline-note">${esc(localNote)}</p>` : ""}</section>`,
-      quality || license ? `<section class="detail-section"><h4>科学限制与许可</h4>${quality ? `<p class="inline-note">${esc(quality)}</p>` : ""}${license ? `<p>${esc(license)}</p>` : ""}</section>` : "",
+      quality || license ? `<section class="detail-section"><h4>覆盖限制与许可</h4>${quality ? `<p class="inline-note">${esc(quality)}</p>` : ""}${license ? `<p>${esc(license)}</p>` : ""}</section>` : "",
       sources,
       assets,
     ].filter(Boolean).join("");
@@ -276,16 +285,16 @@
     const rowScope = clean(product.action_scope_text) || clean(product.source_spatial_coverage) || "产品范围尚未明确";
     const spatial = clean(product.native_spatial_resolution) || clean(product.native_spatial_unit_or_grid) || "原生尺度待核实";
     let primary = `<span class="action-static">${esc(action.label || ACTION_LABELS.no_verified_entry)}</span>`;
-    if (action.kind === "site_asset_list") {
+    if (action.kind === "site_asset_list" || action.kind === "source_file_list") {
       primary = `<button class="action-button" type="button" data-open-details="${esc(product.dataset_id)}" aria-controls="details-${esc(product.dataset_id)}" aria-expanded="false">${esc(action.label || "本站文件清单")}</button>`;
-    } else if ((action.kind === "official_file" || action.kind === "official_product_page" || action.kind === "login_or_request") && safeHref(action.url)) {
+    } else if ((action.kind === "official_file" || action.kind === "repository_file" || action.kind === "mirror_file" || action.kind === "official_product_page" || action.kind === "login_or_request") && safeHref(action.url)) {
       primary = `<a class="action-link" href="${esc(action.url)}"${externalAttrs(action.url)}>${esc(action.label || ACTION_LABELS[action.kind])}<span aria-hidden="true">↗</span></a>`;
     }
     const pending = product.display_identity_note ? `<span class="name-pending">${esc(product.display_identity_note)}</span>` : "";
     const disambiguator = clean(product.disambiguator) ? `<span>${esc(product.disambiguator)}</span>` : "";
     const version = clean(product.version_label) ? `<span>${esc(product.version_label)}</span>` : "";
     return `<article class="product-row" id="product-${esc(product.dataset_id)}">
-      <div class="row-identity"><div class="identity-flags">${pending}${disambiguator}${version}</div><h3>${esc(product.display_name || "未命名记录")}</h3><p class="row-use">${esc(product.short_use_zh || "")}</p></div>
+      <div class="row-identity"><div class="identity-flags">${pending}${disambiguator}${version}</div><h3>${esc(product.display_name || "未命名记录")}</h3><p class="row-use">${esc(product.short_use_zh || "")}</p>${product.publisher_author ? `<p class="row-use">${esc(product.publisher_author)}</p><p class="row-use">单位：${esc(unique((product.variables || []).map(v=>v.unit)).join("；"))}</p>` : ""}</div>
       <div class="row-scope"><span class="row-label">${esc(action.scope_label || "记录范围")}</span><p>${esc(rowScope)}</p><p class="scale-line"><span class="row-label">原生尺度</span>${esc(spatial)}</p></div>
       <div class="row-action"><span class="row-label">获取方式</span>${primary}<p class="row-limit">${esc(product.main_limitation_zh || "")}</p></div>
       <div class="detail-wrap">${productDetail(product)}</div>
@@ -295,7 +304,8 @@
   function selectedLabels() {
     const values = [];
     if (controls.search.value.trim()) values.push(`搜索：${controls.search.value.trim()}`);
-    lineSelection.forEach((line) => values.push(`主线：${line}`));
+    lineSelection.forEach((line) => values.push(`分类：${line}`));
+    if (controls.domain.value) values.push(`领域：${controls.domain.value}`);
     if (controls.action.value) values.push(`获取方式：${ACTION_LABELS[controls.action.value] || controls.action.value}`);
     [[controls.sourceYear,"来源年份"],[controls.localYear,"本地取得年份"],[controls.hostedYear,"本站文件年份"],
       [controls.frequency,"来源时间步长"],[controls.resolution,"原生空间尺度"],[controls.type,"数据类型"],[controls.format,"原始格式"]].forEach(([control,label]) => {
@@ -348,14 +358,16 @@
 
   async function init() {
     try {
-      const response = await fetch("./data/catalog.json?v=d035-r03", { cache: "no-store" });
+      const response = await fetch("./data/catalog.json?v=d037-r02", { cache: "no-store" });
       if (!response.ok) throw new Error(`目录数据读取失败（HTTP ${response.status}）`);
       catalogue = await response.json();
       products = Array.isArray(catalogue.products) ? catalogue.products : [];
       const ids = products.map((product) => product.dataset_id);
-      if (products.length !== 84 || new Set(ids).size !== 84) throw new Error("目录键检查未通过，请重新加载页面。");
+      if (!products.length || ids.some(id => !id) || new Set(ids).size !== products.length) throw new Error("目录键检查未通过，请重新加载页面。");
       const assetCount = products.reduce((sum, product) => sum + (product.downloads || []).length, 0);
-      if (assetCount !== 26) throw new Error("文件清单与冻结基线不一致，页面已停止渲染。");
+      const assetIds = products.flatMap(product => (product.downloads || []).map(a => a.asset_id));
+      if (assetIds.some(id => !id) || new Set(assetIds).size !== assetIds.length) throw new Error("文件身份检查未通过。");
+      if (catalogue.counts && (catalogue.counts.products !== products.length || catalogue.counts.assets !== assetCount)) throw new Error("目录计数不一致。");
       setupFilters();
       wireEvents();
       render();

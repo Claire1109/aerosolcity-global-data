@@ -1,6 +1,6 @@
 {
   "schema_version": "aerosolcity-compact-catalog-v1",
-  "catalog_version": "D035 enabled candidate r02; publication HOLD",
+  "catalog_version": "D037 unified final candidate r02",
   "themes": [
     {
       "id": "atmospheric_pollution_composition",
@@ -35,6 +35,1002 @@
   ],
   "scope_note": "本目录区分来源记录、本地取得范围和本站文件范围；显示范围不代表质量或许可已全面通过。",
   "products": [
+    {
+      "dataset_id": "HUM-008",
+      "display_name": "全球农业与工业就业占比",
+      "display_identity_note": "",
+      "disambiguator": "经济；产业；农业",
+      "version_label": "WDI lastupdated2026-10-08;retrieved2026-10-14",
+      "short_use_zh": "农业就业占比；工业就业占比",
+      "main_limitation_zh": "不是市级/格网或全为直接调查；industry含采矿/制造/建筑/公用事业；保留空白和汇总记录；导出链接内容可能更新",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "经济",
+        "产业",
+        "农业"
+      ],
+      "source_years": {
+        "values": null,
+        "range": {
+          "start": 1991,
+          "end": 2025
+        },
+        "qualifier": "实际非空值1991–2025"
+      },
+      "local_years": {
+        "values": null,
+        "range": {
+          "start": 1991,
+          "end": 2025
+        },
+        "qualifier": "已取得两ZIP，非空值1991–2025"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "国家/经济体与地区汇总；按附带countrymetadata区分",
+      "source_temporal_resolution": "annual",
+      "native_spatial_resolution": "国家/经济体",
+      "native_spatial_unit_or_grid": "国家/经济体及汇总记录，无原生坐标",
+      "data_type": "全球国家统计分发中的模型估计",
+      "native_formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "variables": [
+        {
+          "name": "SL.AGR.EMPL.ZS",
+          "label": "农业就业占比",
+          "unit": "%总就业",
+          "period": "1991–2025",
+          "definition": "ILO模型估计"
+        },
+        {
+          "name": "SL.IND.EMPL.ZS",
+          "label": "工业就业占比",
+          "unit": "%总就业",
+          "period": "1991–2025",
+          "definition": "工业含采矿、制造、建筑、公用事业；ILO模型估计"
+        }
+      ],
+      "local_scope_note_zh": "已取得两ZIP，非空值1991–2025",
+      "quality_note_zh": "不是市级/格网或全为直接调查；industry含采矿/制造/建筑/公用事业；保留空白和汇总记录；导出链接内容可能更新",
+      "license_note_zh": "CC BY4.0，需署名",
+      "source_page": {
+        "url": "https://data.worldbank.org/indicator/SL.AGR.EMPL.ZS",
+        "label": "来源记录"
+      },
+      "publisher_author": "ILO Modelled Estimates database (ILOEST);World Bank WDI distribution",
+      "source_method": "全球国家统计分发中的模型估计",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 2,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": null,
+        "article_doi": null,
+        "citation": "ILO Modelled Estimates database (ILOEST);World Bank WDI distribution"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum-008-1",
+          "label": "API_SL.AGR.EMPL.ZS_DS2_EN_csv_v2_16633.zip",
+          "filename": "API_SL.AGR.EMPL.ZS_DS2_EN_csv_v2_16633.zip",
+          "href": "https://api.worldbank.org/v2/country/all/indicator/SL.AGR.EMPL.ZS?source=2&downloadformat=csv",
+          "bytes": 87617,
+          "access_method": "official_direct_file",
+          "sha256": "1f4f0bf3600cf6c93737c8dcf9a7e828db89ff58b15e707989f5411806537428",
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "完整ZIP、CRC与字段核验；无发布方校验码"
+        },
+        {
+          "asset_id": "hum-008-2",
+          "label": "API_SL.IND.EMPL.ZS_DS2_EN_csv_v2_16782.zip",
+          "filename": "API_SL.IND.EMPL.ZS_DS2_EN_csv_v2_16782.zip",
+          "href": "https://api.worldbank.org/v2/country/all/indicator/SL.IND.EMPL.ZS?source=2&downloadformat=csv",
+          "bytes": 85455,
+          "access_method": "official_direct_file",
+          "sha256": "4cc11b822a43e446e7f51206fa3daa5ec624bf28aabdfd1f56ebfbb95e37229d",
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "完整ZIP、CRC与字段核验；无发布方校验码"
+        }
+      ],
+      "action_scope_text": "国家/经济体与地区汇总；按附带countrymetadata区分；实际非空值1991–2025",
+      "additional_source_urls": [
+        "https://data.worldbank.org/indicator/SL.IND.EMPL.ZS"
+      ]
+    },
+    {
+      "dataset_id": "HUM-009",
+      "display_name": "全球油气基础设施",
+      "display_identity_note": "",
+      "disambiguator": "能源；产业",
+      "version_label": "OGIM_v2.7 / 2025-03-28",
+      "short_use_zh": "油气设施位置、类型、状态与来源日期；液体/气体设计容量",
+      "main_limitation_zh": "仓库清单核验，数据库内容未完整读取；源记录可能过时，公开版不含约300个俄罗斯压缩站位置；设计容量非实际活动",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "能源",
+        "产业"
+      ],
+      "source_years": {
+        "values": [
+          2025
+        ],
+        "range": null,
+        "qualifier": "v2.7发布2025-03；SRC_DATE来源日期不一，截至2025-02或更早"
+      },
+      "local_years": {
+        "values": null,
+        "range": null,
+        "qualifier": "已取得README；GPKG仅4096字节前缀，未取得整件"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "全球点/线/面油气设施；WGS84 EPSG4326（数据说明）",
+      "source_temporal_resolution": "来源日期不一",
+      "native_spatial_resolution": "设施几何",
+      "native_spatial_unit_or_grid": "WGS84 EPSG:4326（README）；点/线/面",
+      "data_type": "作者整合政府/行业/学术等地理数据",
+      "native_formats": [
+        "GeoPackage",
+        "PDF"
+      ],
+      "variables": [
+        {
+          "name": "facility geometry/status/SRC_DATE",
+          "label": "油气设施位置、类型、状态与来源日期",
+          "unit": "度/类别/日期",
+          "period": "来源日期不一",
+          "definition": "数据说明列点/线/面"
+        },
+        {
+          "name": "design capacity",
+          "label": "液体/气体设计容量",
+          "unit": "桶/日；百万立方英尺/日（源说明）",
+          "period": "来源日期不一",
+          "definition": "数据库实际字段值未完整读取"
+        }
+      ],
+      "local_scope_note_zh": "已取得README；GPKG仅4096字节前缀，未取得整件",
+      "quality_note_zh": "仓库清单核验，数据库内容未完整读取；源记录可能过时，公开版不含约300个俄罗斯压缩站位置；设计容量非实际活动",
+      "license_note_zh": "CC BY4.0，需署名",
+      "source_page": {
+        "url": "https://zenodo.org/records/15103476",
+        "label": "来源记录"
+      },
+      "publisher_author": "Madeleine O'Brien et al.;EDF/MethaneSAT",
+      "source_method": "作者整合政府/行业/学术等地理数据",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 2,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": "10.5281/zenodo.15103476",
+        "article_doi": "10.5194/essd-15-3761-2023",
+        "citation": "Madeleine O'Brien et al.;EDF/MethaneSAT"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum-009-1",
+          "label": "OGIM_v2.7.gpkg",
+          "filename": "OGIM_v2.7.gpkg",
+          "href": "https://zenodo.org/api/records/15103476/files/OGIM_v2.7.gpkg/content",
+          "bytes": 3083259904,
+          "access_method": "repository_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "51f7280fbc9ed408c940f702496c32e8"
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "仅核验4096字节SQLite文件头与全长；内容未完整读取，MD5为仓库提供"
+        },
+        {
+          "asset_id": "hum-009-2",
+          "label": "README_OGIM_v2.7_20250328.pdf",
+          "filename": "README_OGIM_v2.7_20250328.pdf",
+          "href": "https://zenodo.org/api/records/15103476/files/README_OGIM_v2.7_20250328.pdf/content",
+          "bytes": 508966,
+          "access_method": "repository_file",
+          "sha256": "2b1ea77a9b6a717eeba608a717cfce0f05f7b620ca4a062efe6030aad527dc72",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "d3cdf877550491ac2617ff66da1c0525"
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "完整PDF与发布方MD5核验"
+        }
+      ],
+      "action_scope_text": "全球点/线/面油气设施；WGS84 EPSG4326（数据说明）；v2.7发布2025-03；SRC_DATE来源日期不一，截至2025-02或更早",
+      "additional_source_urls": []
+    },
+    {
+      "dataset_id": "HUM-010",
+      "display_name": "全球基本饮用水与卫生服务覆盖",
+      "display_identity_note": "",
+      "disambiguator": "公共服务",
+      "version_label": "WDI 2026-10-08更新，2026-10-14取得",
+      "short_use_zh": "使用至少基本饮用水的人口比例；使用至少基本卫生服务的人口比例",
+      "main_limitation_zh": "至少基本服务含basic与safely managed；缺失值和汇总记录保留。",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "公共服务"
+      ],
+      "source_years": {
+        "values": null,
+        "range": {
+          "start": 2000,
+          "end": 2024
+        },
+        "qualifier": "实际非空值2000–2024"
+      },
+      "local_years": {
+        "values": null,
+        "range": {
+          "start": 2000,
+          "end": 2024
+        },
+        "qualifier": "已取得两ZIP；非空值2000–2024"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "217国家/经济体、48汇总记录及INX未分类记录",
+      "source_temporal_resolution": "annual",
+      "native_spatial_resolution": "国家/经济体",
+      "native_spatial_unit_or_grid": "国家/经济体代码，无原生坐标",
+      "data_type": "WHO/UNICEF JMP，经World Bank WDI分发",
+      "native_formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "variables": [
+        {
+          "name": "SH.H2O.BASW.ZS",
+          "label": "使用至少基本饮用水的人口比例",
+          "unit": "%人口",
+          "period": "2000–2024",
+          "definition": "改善水源，往返取水≤30分钟；含安全管理"
+        },
+        {
+          "name": "SH.STA.BASS.ZS",
+          "label": "使用至少基本卫生服务的人口比例",
+          "unit": "%人口",
+          "period": "2000–2024",
+          "definition": "基本及安全管理卫生服务"
+        }
+      ],
+      "local_scope_note_zh": "已取得两ZIP；非空值2000–2024",
+      "quality_note_zh": "至少基本服务含basic与safely managed；缺失值和汇总记录保留。",
+      "license_note_zh": "CC BY4.0，需署名",
+      "source_page": {
+        "url": "https://data.worldbank.org/indicator/SH.H2O.BASW.ZS",
+        "label": "来源记录"
+      },
+      "publisher_author": "WHO/UNICEF Joint Monitoring Programme；World Bank",
+      "source_method": "WHO/UNICEF JMP，经World Bank WDI分发",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 2,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": null,
+        "article_doi": null,
+        "citation": "WHO/UNICEF Joint Monitoring Programme；World Bank"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum010-1",
+          "label": "基本饮用水ZIP",
+          "filename": "API_SH.H2O.BASW.ZS_DS2_EN_csv_v2_2161.zip",
+          "href": "https://api.worldbank.org/v2/country/all/indicator/SH.H2O.BASW.ZS?source=2&downloadformat=csv",
+          "bytes": 65575,
+          "access_method": "official_direct_file",
+          "sha256": "9ab0ce71561869dd150f346a8c84da76be718af720f7d1b40f6da851614d990b",
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "完整ZIP、CRC与CSV字段核验；无发布方校验码"
+        },
+        {
+          "asset_id": "hum010-2",
+          "label": "基本卫生服务ZIP",
+          "filename": "API_SH.STA.BASS.ZS_DS2_EN_csv_v2_2184.zip",
+          "href": "https://api.worldbank.org/v2/country/all/indicator/SH.STA.BASS.ZS?source=2&downloadformat=csv",
+          "bytes": 67876,
+          "access_method": "official_direct_file",
+          "sha256": "e213fe4d5b7d4c9f1566888aa7f5b24bbd3f4921f72294d22fa4084b537684c3",
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "完整ZIP、CRC与CSV字段核验；无发布方校验码"
+        }
+      ],
+      "action_scope_text": "217国家/经济体、48汇总记录及INX未分类记录；实际非空值2000–2024",
+      "additional_source_urls": [
+        "https://data.worldbank.org/indicator/SH.STA.BASS.ZS"
+      ]
+    },
+    {
+      "dataset_id": "HUM-005",
+      "display_name": "Global Urban Demographic Dataset (GUDD) 静态边界人口",
+      "display_identity_note": "",
+      "disambiguator": "人口",
+      "version_label": "released v1.0",
+      "short_use_zh": "静态边界年龄性别人口数；静态城市边界",
+      "main_limitation_zh": "仓库清单核验，内容未读取；未提供年度指标TAB或动态边界版。",
+      "main_lines": [
+        "人口与城市空间"
+      ],
+      "indicator_domains": [
+        "人口"
+      ],
+      "source_years": {
+        "values": null,
+        "range": {
+          "start": 2000,
+          "end": 2020
+        },
+        "qualifier": "2000–2020静态边界版"
+      },
+      "local_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "全球城市，静态边界版本；只提供人口原始CSV、边界和文档",
+      "source_temporal_resolution": "annual",
+      "native_spatial_resolution": "城市区域",
+      "native_spatial_unit_or_grid": "模型人口按城市边界汇总；原生CRS未核",
+      "data_type": "WorldPop年龄性别模型人口与GHS-UCDB边界叠加",
+      "native_formats": [
+        "CSV",
+        "GeoParquet",
+        "PDF"
+      ],
+      "variables": [
+        {
+          "name": "age-sex population counts",
+          "label": "静态边界年龄性别人口数",
+          "unit": "人（元数据）",
+          "period": "2000–2020",
+          "definition": "实际数值未读"
+        },
+        {
+          "name": "static urban boundary",
+          "label": "静态城市边界",
+          "unit": "几何",
+          "period": "静态框架",
+          "definition": "原生CRS未核"
+        }
+      ],
+      "local_scope_note_zh": "",
+      "quality_note_zh": "仓库清单核验，内容未读取；未提供年度指标TAB或动态边界版。",
+      "license_note_zh": "CC0 1.0",
+      "source_page": {
+        "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GMV8WG",
+        "label": "作者仓库记录"
+      },
+      "publisher_author": "Andrew Zimmer; Nina Brooks; Andrea Gaughan; Jonathan Giezendanner; Cascade Tuholske",
+      "source_method": "WorldPop年龄性别模型人口与GHS-UCDB边界叠加",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 3,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": "10.7910/DVN/GMV8WG",
+        "article_doi": "10.1038/s44284-026-00447-7",
+        "citation": "Zimmer et al. (2026). Global Divergence in Urban Demographic Change and Migration Patterns. Nature Cities."
+      },
+      "downloads": [
+        {
+          "asset_id": "hum005-13669706",
+          "label": "gudd_all_static_boundaries.csv",
+          "filename": "gudd_all_static_boundaries.csv",
+          "href": "https://dataverse.harvard.edu/api/access/datafile/13669706",
+          "bytes": 171318533,
+          "access_method": "repository_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "cd74de727341bd7776047944ea834ec0"
+          },
+          "license": "CC0 1.0",
+          "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+        },
+        {
+          "asset_id": "hum005-13669705",
+          "label": "gudd_static_boundaries_lookup.geoparquet",
+          "filename": "gudd_static_boundaries_lookup.geoparquet",
+          "href": "https://dataverse.harvard.edu/api/access/datafile/13669705",
+          "bytes": 3157603,
+          "access_method": "repository_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "78f6ec96ffe85336865bd021e957db83"
+          },
+          "license": "CC0 1.0",
+          "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+        },
+        {
+          "asset_id": "hum005-13674920",
+          "label": "gudd_dataset_documentation_v1_0.pdf",
+          "filename": "gudd_dataset_documentation_v1_0.pdf",
+          "href": "https://dataverse.harvard.edu/api/access/datafile/13674920",
+          "bytes": 6546504,
+          "access_method": "repository_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "0da2481abe31d83a9b74bfb9e14af6bc"
+          },
+          "license": "CC0 1.0",
+          "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+        }
+      ],
+      "action_scope_text": "全球城市，静态边界版本；只提供人口原始CSV、边界和文档；2000–2020静态边界版"
+    },
+    {
+      "dataset_id": "HUM-006",
+      "display_name": "全球水泥生产设施",
+      "display_identity_note": "",
+      "disambiguator": "产业",
+      "version_label": "2023-10-04",
+      "short_use_zh": "设施位置与运营状态；设施与工艺类型；原始产能",
+      "main_limitation_zh": "位置为作者定位及精度标签；不含设施年度实际产量；供应商表未纳入；产能不换算年产出；3117行含3109唯一UID，8条重复UID保留",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "产业"
+      ],
+      "source_years": {
+        "values": [
+          2023
+        ],
+        "range": null,
+        "qualifier": "2023发布；year字段为投产年份"
+      },
+      "local_years": {
+        "values": [
+          2023
+        ],
+        "range": null,
+        "qualifier": "2023发布快照"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "3117条记录，3109唯一UID；163个ISO3标签；WGS84经纬度",
+      "source_temporal_resolution": "快照",
+      "native_spatial_resolution": "设施点位",
+      "native_spatial_unit_or_grid": "WGS84经纬度设施点",
+      "data_type": "作者编制设施数据",
+      "native_formats": [
+        "CSV",
+        "MD"
+      ],
+      "variables": [
+        {
+          "name": "latitude;longitude;status",
+          "label": "设施位置与运营状态",
+          "unit": "WGS84度/类别",
+          "period": "2023发布快照",
+          "definition": "作者定位与精度标签"
+        },
+        {
+          "name": "plant_type;production_type",
+          "label": "设施与工艺类型",
+          "unit": "类别",
+          "period": "2023发布快照",
+          "definition": "Integrated/Grinding；Wet/Dry"
+        },
+        {
+          "name": "capacity",
+          "label": "原始产能",
+          "unit": "百万吨（README）",
+          "period": "来源快照",
+          "definition": "未附加/年"
+        }
+      ],
+      "local_scope_note_zh": "2023发布快照",
+      "quality_note_zh": "位置为作者定位及精度标签；不含设施年度实际产量；供应商表未纳入；产能不换算年产出；3117行含3109唯一UID，8条重复UID保留",
+      "license_note_zh": "CC0 1.0",
+      "source_page": {
+        "url": "https://zenodo.org/records/8408245",
+        "label": "作者仓库记录"
+      },
+      "publisher_author": "Tkachenko et al.; Spatial Finance Initiative / University of Oxford",
+      "source_method": "作者编制设施数据",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 2,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": "10.5061/dryad.6t1g1jx4f",
+        "article_doi": "10.1038/s41597-023-02599-w",
+        "citation": "Tkachenko et al.; Spatial Finance Initiative / University of Oxford"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum-006-1",
+          "label": "SFI-Global-Cement-Database-assets.csv",
+          "filename": "SFI-Global-Cement-Database-assets.csv",
+          "href": "https://zenodo.org/api/records/8408245/files/SFI-Global-Cement-Database-assets.csv/content",
+          "bytes": 1014764,
+          "access_method": "repository_file",
+          "sha256": "6e9649636ad537333b1a7cd8091f6f787d0870359c61bbdc22ec806805b2ffef",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "5d8b7e5701686d182971858164cd6f19"
+          },
+          "license": "CC0 1.0",
+          "access_note_zh": "作者数据仓库原件"
+        },
+        {
+          "asset_id": "hum-006-2",
+          "label": "README.md",
+          "filename": "README.md",
+          "href": "https://zenodo.org/api/records/8408245/files/README.md/content",
+          "bytes": 5640,
+          "access_method": "repository_file",
+          "sha256": "9bc9d13d8764bc2f0739b2fb941ccd59fc286bbe6685b217645810605fb33f44",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "75577feb72ebec1e8e6bb42b0c44ec1e"
+          },
+          "license": "CC0 1.0",
+          "access_note_zh": "字段说明文件"
+        }
+      ],
+      "action_scope_text": "3117条记录，3109唯一UID；163个ISO3标签；WGS84经纬度；2023发布快照"
+    },
+    {
+      "dataset_id": "HUM-007",
+      "display_name": "全球国家水泥生产与工艺CO2排放",
+      "display_identity_note": "",
+      "disambiguator": "产业",
+      "version_label": "240517 / 2024-05-17",
+      "short_use_zh": "国家水泥工艺CO2原始值；国家/历史实体水泥生产原始值",
+      "main_limitation_zh": "原文件未列明单位；CO2仅水泥工艺；生产表重复KNA列按位置保留。",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "产业"
+      ],
+      "source_years": {
+        "values": null,
+        "range": {
+          "start": 1880,
+          "end": 2023
+        },
+        "qualifier": "1880–2023；各实体缺失范围不同"
+      },
+      "local_years": {
+        "values": null,
+        "range": {
+          "start": 1880,
+          "end": 2023
+        },
+        "qualifier": "已取得1880–2023原始CSV；各实体缺年不同"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "国家、地区及历史实体；原始代码/名称保留，非全部现行国家代码",
+      "source_temporal_resolution": "annual",
+      "native_spatial_resolution": "国家/实体",
+      "native_spatial_unit_or_grid": "国家/地区/历史实体记录",
+      "data_type": "作者编制国家统计与排放估算",
+      "native_formats": [
+        "CSV"
+      ],
+      "variables": [
+        {
+          "name": "GCP-CEM",
+          "label": "国家水泥工艺CO2原始值",
+          "unit": "原文件未列明单位",
+          "period": "1880–2023",
+          "definition": "不含燃料燃烧；空白NODATA"
+        },
+        {
+          "name": "annual_cement_production",
+          "label": "国家/历史实体水泥生产原始值",
+          "unit": "原文件未列明单位",
+          "period": "1880–2023",
+          "definition": "重复KNA列按位置保留"
+        }
+      ],
+      "local_scope_note_zh": "已取得1880–2023原始CSV；各实体缺年不同",
+      "quality_note_zh": "原文件未列明单位；CO2仅水泥工艺；生产表重复KNA列按位置保留。",
+      "license_note_zh": "CC BY 4.0",
+      "source_page": {
+        "url": "https://zenodo.org/records/11207133",
+        "label": "作者仓库记录"
+      },
+      "publisher_author": "Robbie M. Andrew / CICERO",
+      "source_method": "作者编制国家统计与排放估算",
+      "primary_action": {
+        "kind": "source_file_list",
+        "label": "原始文件清单",
+        "url": null,
+        "asset_count": 2,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": "10.5281/zenodo.11207133",
+        "article_doi": "10.5194/essd-11-1675-2019",
+        "citation": "Robbie M. Andrew / CICERO"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum-007-1",
+          "label": "0. GCP-CEM.csv",
+          "filename": "0. GCP-CEM.csv",
+          "href": "https://zenodo.org/api/records/11207133/files/0.%20GCP-CEM.csv/content",
+          "bytes": 126164,
+          "access_method": "repository_file",
+          "sha256": "821821fc6fdfe3718c4eea4ec8d7096255f5ce9dbec0e8159a141163bfbac727",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "05b2aca908422f891bee4b3117cb7a1e"
+          },
+          "license": "CC BY 4.0",
+          "access_note_zh": "作者数据仓库原件"
+        },
+        {
+          "asset_id": "hum-007-2",
+          "label": "1. annual_cement_production.csv",
+          "filename": "1. annual_cement_production.csv",
+          "href": "https://zenodo.org/api/records/11207133/files/1.%20annual_cement_production.csv/content",
+          "bytes": 138933,
+          "access_method": "repository_file",
+          "sha256": "76f229e7bc31602e7d3aaf8467ebb826d8a8215f78637a21b4bff3091222497c",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "a9ce757e05fdbcf0b4fab5c29c0545c6"
+          },
+          "license": "CC BY 4.0",
+          "access_note_zh": "作者数据仓库原件"
+        }
+      ],
+      "action_scope_text": "国家、地区及历史实体；原始代码/名称保留，非全部现行国家代码；1880–2023；各实体缺失范围不同"
+    },
+    {
+      "dataset_id": "HUM-003",
+      "display_name": "OurAirports 全球机场设施",
+      "display_identity_note": "",
+      "disambiguator": "交通",
+      "version_label": "2026-10-14快照",
+      "short_use_zh": "设施位置与类型",
+      "main_limitation_zh": "含关闭设施、直升机场与小机场；不是航班或客流数据。",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "交通"
+      ],
+      "source_years": {
+        "values": [
+          2026
+        ],
+        "range": null,
+        "qualifier": "2026-10-14动态快照"
+      },
+      "local_years": {
+        "values": [
+          2026
+        ],
+        "range": null,
+        "qualifier": "2026-10-14下载快照"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "86242条设施记录；247个iso_country代码标签",
+      "source_temporal_resolution": "快照",
+      "native_spatial_resolution": "设施点位",
+      "native_spatial_unit_or_grid": "latitude_deg/longitude_deg设施点",
+      "data_type": "社区维护设施名录",
+      "native_formats": [
+        "CSV"
+      ],
+      "variables": [
+        {
+          "name": "id;type;latitude_deg;longitude_deg",
+          "label": "设施位置与类型",
+          "unit": "度/类别",
+          "period": "2026-10-14",
+          "definition": "动态设施记录"
+        }
+      ],
+      "local_scope_note_zh": "2026-10-14下载快照",
+      "quality_note_zh": "含关闭设施、直升机场与小机场；不是航班或客流数据。",
+      "license_note_zh": "Public Domain",
+      "source_page": {
+        "url": "https://ourairports.com/data/",
+        "label": "作者仓库记录"
+      },
+      "publisher_author": "OurAirports / David Megginson",
+      "source_method": "社区维护设施名录",
+      "primary_action": {
+        "kind": "repository_file",
+        "label": "发布者CSV文件",
+        "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+        "asset_count": 1,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": null,
+        "article_doi": null,
+        "citation": "OurAirports / David Megginson"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum003-airports",
+          "label": "airports.csv",
+          "filename": "airports.csv",
+          "href": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+          "bytes": 12746366,
+          "access_method": "repository_file",
+          "sha256": "f219659218d1f27e7907c284b87778047b84102435d3483c7ee0ce6990b95e77",
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "Public Domain",
+          "access_note_zh": "发布者数据仓库；2026-10-14下载快照"
+        }
+      ],
+      "action_scope_text": "86242条设施记录；247个iso_country代码标签；2026-10-14动态快照"
+    },
+    {
+      "dataset_id": "HUM-001",
+      "display_name": "WorldPop Global1 全球2020模型人口数",
+      "display_identity_note": "",
+      "disambiguator": "人口",
+      "version_label": "Global1 2020",
+      "short_use_zh": "模型人口数",
+      "main_limitation_zh": "仅核验下载响应头；不是人口密度，UN调整状态未确认。",
+      "main_lines": [
+        "人口与城市空间"
+      ],
+      "indicator_domains": [
+        "人口"
+      ],
+      "source_years": {
+        "values": [
+          2020
+        ],
+        "range": null,
+        "qualifier": "2020"
+      },
+      "local_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "全球模型人口拼接",
+      "source_temporal_resolution": "快照",
+      "native_spatial_resolution": "约1km（发布方说明）",
+      "native_spatial_unit_or_grid": "发布方称30角秒；CRS未读取",
+      "data_type": "模型人口count",
+      "native_formats": [
+        "TIFF"
+      ],
+      "variables": [
+        {
+          "name": "population count",
+          "label": "模型人口数",
+          "unit": "人/像元（发布方定义）",
+          "period": "2020",
+          "definition": "模型下推国家人口拼接"
+        }
+      ],
+      "local_scope_note_zh": "",
+      "quality_note_zh": "仅核验下载响应头；不是人口密度，UN调整状态未确认。",
+      "license_note_zh": "WorldPop FAQ默认CC BY4.0，需署名",
+      "source_page": {
+        "url": "https://www.worldpop.org/faq/",
+        "label": "来源记录"
+      },
+      "publisher_author": "WorldPop / University of Southampton",
+      "source_method": "模型人口count",
+      "primary_action": {
+        "kind": "official_file",
+        "label": "官方TIFF（仅核验下载响应头）",
+        "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/0_Mosaicked/ppp_2020_1km_Aggregated.tif",
+        "asset_count": 1,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": null,
+        "article_doi": null,
+        "citation": "WorldPop / University of Southampton"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum001-worldpop2020",
+          "label": "ppp_2020_1km_Aggregated.tif",
+          "filename": "ppp_2020_1km_Aggregated.tif",
+          "href": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/0_Mosaicked/ppp_2020_1km_Aggregated.tif",
+          "bytes": 869715253,
+          "access_method": "official_direct_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "WorldPop FAQ默认CC BY4.0，需署名",
+          "access_note_zh": "仅核验下载响应头；内容、校验码和原生地理信息未验证",
+          "button_label": "官方TIFF（仅核验下载响应头）"
+        }
+      ],
+      "action_scope_text": "全球模型人口拼接；2020"
+    },
+    {
+      "dataset_id": "HUM-002",
+      "display_name": "Global Steel Plant Tracker 大型钢铁设施",
+      "display_identity_note": "",
+      "disambiguator": "产业",
+      "version_label": "April2024 V1",
+      "short_use_zh": "设施位置与运营状态；炼钢工艺；原始产能",
+      "main_limitation_zh": "≥0.5MTPA；1848状态行含重复PlantID；产能ttpa倍率未明，2019产量缺失较多。",
+      "main_lines": [
+        "人类活动"
+      ],
+      "indicator_domains": [
+        "产业"
+      ],
+      "source_years": {
+        "values": [
+          2024
+        ],
+        "range": null,
+        "qualifier": "2024-04状态快照"
+      },
+      "local_years": {
+        "values": [
+          2024
+        ],
+        "range": null,
+        "qualifier": "2024-04工作簿"
+      },
+      "hosted_years": {
+        "values": null,
+        "range": null,
+        "qualifier": null
+      },
+      "source_spatial_coverage": "89个国家/地区标签；1163唯一PlantID",
+      "source_temporal_resolution": "快照",
+      "native_spatial_resolution": "设施点位",
+      "native_spatial_unit_or_grid": "设施经纬度点；1846行坐标可解析、2缺",
+      "data_type": "设施资料汇编",
+      "native_formats": [
+        "XLSX"
+      ],
+      "variables": [
+        {
+          "name": "Coordinates;Capacity operating status",
+          "label": "设施位置与运营状态",
+          "unit": "度/类别",
+          "period": "2024-04",
+          "definition": "按状态记录，非1848独立工厂"
+        },
+        {
+          "name": "Main production process",
+          "label": "炼钢工艺",
+          "unit": "类别",
+          "period": "2024-04",
+          "definition": "原始工艺分类"
+        },
+        {
+          "name": "capacity",
+          "label": "原始产能",
+          "unit": "ttpa（倍率未核）",
+          "period": "2024-04",
+          "definition": "保留原值，未换算"
+        }
+      ],
+      "local_scope_note_zh": "2024-04工作簿",
+      "quality_note_zh": "≥0.5MTPA；1848状态行含重复PlantID；产能ttpa倍率未明，2019产量缺失较多。",
+      "license_note_zh": "CC BY4.0",
+      "source_page": {
+        "url": "https://zenodo.org/records/16893375",
+        "label": "来源记录"
+      },
+      "publisher_author": "Global Energy Monitor；Zenodo镜像",
+      "source_method": "设施资料汇编",
+      "primary_action": {
+        "kind": "mirror_file",
+        "label": "下载镜像XLSX",
+        "url": "https://zenodo.org/api/records/16893375/files/Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx/content",
+        "asset_count": 1,
+        "scope_label": "数据范围"
+      },
+      "references": {
+        "data_record_doi": "10.5281/zenodo.16893375",
+        "article_doi": null,
+        "citation": "Global Energy Monitor；Zenodo镜像"
+      },
+      "downloads": [
+        {
+          "asset_id": "hum002-steel2024",
+          "label": "Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx",
+          "filename": "Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx",
+          "href": "https://zenodo.org/api/records/16893375/files/Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx/content",
+          "bytes": 842098,
+          "access_method": "mirror_file",
+          "sha256": "f8acee2cfe36ba65ff2f7b691426ee2be58da5b3261e5c3d39575da404805066",
+          "publisher_checksum": {
+            "algorithm": "MD5",
+            "value": "724612100d1ed0404efaca1d7364f272"
+          },
+          "license": "CC BY4.0",
+          "access_note_zh": "Zenodo镜像；上载者未认证为GEM"
+        }
+      ],
+      "action_scope_text": "89个国家/地区标签；1163唯一PlantID；2024-04状态快照"
+    },
     {
       "dataset_id": "LEG-001",
       "display_name": "Urban Centre Database (UCDB) R2024A",
@@ -130,7 +1126,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1975–2030 · 全球城市中心"
+      "action_scope_text": "1975–2030 · 全球城市中心",
+      "indicator_domains": [
+        "人口"
+      ]
     },
     {
       "dataset_id": "LEG-002",
@@ -193,7 +1192,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "逐指标不同；固定边界2025；NOx字段含1975–2024标签 · 本区域产品：大洋洲18座城市；产品家族含全球"
+      "action_scope_text": "逐指标不同；固定边界2025；NOx字段含1975–2024标签 · 本区域产品：大洋洲18座城市；产品家族含全球",
+      "indicator_domains": []
     },
     {
       "dataset_id": "LEG-003",
@@ -256,16 +1256,19 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1975-2020 estimates every 5 years; 2025/2030 projections · 全球 · 官方提供100m/1km及其他版本；当前未取栅格"
+      "action_scope_text": "1975-2020 estimates every 5 years; 2025/2030 projections · 全球 · 官方提供100m/1km及其他版本；当前未取栅格",
+      "indicator_domains": [
+        "人口"
+      ]
     },
     {
       "dataset_id": "LEG-004",
       "display_name": "GHS-BUILT-S-R2023A",
-      "display_identity_note": "名称待核实",
+      "display_identity_note": "",
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "全球建成区面积的多期格网估算。",
-      "main_limitation_zh": "建成区面积含估算与时空分配；2020不是2019直接观测。",
+      "main_limitation_zh": "2020模型建成地表；官方生成链接，文件响应未核验。",
       "main_lines": [
         "人口与城市空间"
       ],
@@ -295,34 +1298,54 @@
       "native_formats": [],
       "variables": [
         {
-          "name": "unknown",
-          "label": "m2 of built-up surface per cell; unsigned integers documented",
-          "unit": "unknown",
-          "period": "unknown",
-          "definition": "unknown"
+          "name": "built-up surface",
+          "label": "建成地表面积",
+          "unit": "m²/像元（发布方说明）",
+          "period": "2020文件；产品家族1975–2030",
+          "definition": "1000m World Mollweide/54009，未读文件"
         }
       ],
       "local_scope_note_zh": "",
-      "quality_note_zh": "建成区面积含估算与时空分配；2020不是2019直接观测。",
-      "license_note_zh": "来源记录标注 CC BY 4.0；具体再分发仍按对应资产条件执行。",
+      "quality_note_zh": "官方生成2020 1km ZIP链接；大小、校验码和原件地理信息未核验。",
+      "license_note_zh": "European Commission reuse notice：注明来源；个别版权声明及第三方权利另适用。",
       "source_page": {
         "label": "官方产品/数据记录页",
         "url": "https://data.jrc.ec.europa.eu/dataset/9f06f36f-4b11-47ec-abb0-4f8b7b1d72ea"
       },
       "primary_action": {
-        "kind": "official_product_page",
-        "label": "官方产品页",
-        "url": "https://data.jrc.ec.europa.eu/dataset/9f06f36f-4b11-47ec-abb0-4f8b7b1d72ea",
-        "asset_count": 0,
-        "scope_label": "产品记录范围"
+        "kind": "official_file",
+        "label": "官方生成链接（文件响应未核验）",
+        "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000/V1-0/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip",
+        "asset_count": 1,
+        "scope_label": "文件范围"
       },
       "references": {
         "citation": "",
-        "data_record_doi": "",
+        "data_record_doi": "10.2905/9F06F36F-4B11-47EC-ABB0-4F8B7B1D72EA",
         "article_doi": ""
       },
-      "downloads": [],
-      "action_scope_text": "1975–2030 · 全球 · 官方提供100m/1km及其他版本；当前未取栅格"
+      "downloads": [
+        {
+          "asset_id": "leg004-ghsl2020-1km",
+          "label": "2020 1km GHS-BUILT-S ZIP",
+          "filename": "GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip",
+          "href": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000/V1-0/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip",
+          "bytes": null,
+          "access_method": "official_generated_file",
+          "sha256": null,
+          "publisher_checksum": {
+            "algorithm": "unknown",
+            "value": null
+          },
+          "license": "European Commission reuse notice",
+          "access_note_zh": "官方生成链接，文件响应未核验；文件大小与校验码未知；1000m World Mollweide/54009为发布方说明"
+        }
+      ],
+      "action_scope_text": "官方文件链接：2020全球1km；产品家族1975–2030",
+      "indicator_domains": [
+        "建成环境"
+      ],
+      "publisher_author": "European Commission / JRC"
     },
     {
       "dataset_id": "LEG-005",
@@ -422,7 +1445,8 @@
           }
         }
       ],
-      "action_scope_text": "本地与本站文件为2019年全球0.1° NH₃ 年度网格。"
+      "action_scope_text": "本地与本站文件为2019年全球0.1° NH₃ 年度网格。",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-001",
@@ -582,7 +1606,8 @@
           }
         }
       ],
-      "action_scope_text": "本站仅列2019年 NOₓ 与 SO₂ 两份文件；PM₂.₅多年份档案不提供下载入口。"
+      "action_scope_text": "本站仅列2019年 NOₓ 与 SO₂ 两份文件；PM₂.₅多年份档案不提供下载入口。",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-002",
@@ -648,7 +1673,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–2022 · global · 0.1°"
+      "action_scope_text": "2000–2022 · global · 0.1°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-003",
@@ -714,7 +1740,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–2020 · global mosaic from national/regional inventories · 0.1° and 0.5°"
+      "action_scope_text": "2000–2020 · global mosaic from national/regional inventories · 0.1° and 0.5°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-004",
@@ -777,7 +1804,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1980–2019 (0.1°); alternate 0.5° product covers 1750–2019 · global · 0.1°"
+      "action_scope_text": "1980–2019 (0.1°); alternate 0.5° product covers 1750–2019 · global · 0.1°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-005",
@@ -893,7 +1921,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1980–present (CMR granule inventory) · global · 0.5° latitude × 0.625° longitude (361×576)"
+      "action_scope_text": "1980–present (CMR granule inventory) · global · 0.5° latitude × 0.625° longitude (361×576)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-006",
@@ -1009,7 +2038,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1980–present (CMR granule inventory) · global · 0.5° latitude × 0.625° longitude (361×576)"
+      "action_scope_text": "1980–present (CMR granule inventory) · global · 0.5° latitude × 0.625° longitude (361×576)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-007",
@@ -1072,7 +2102,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1980–present (collection-level) · global · 0.5° × 0.625°, 72 model layers"
+      "action_scope_text": "1980–present (collection-level) · global · 0.5° × 0.625°, 72 model layers",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-008",
@@ -1208,7 +2239,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2003–2025 · global · 0.75° × 0.75°"
+      "action_scope_text": "2003–2025 · global · 0.75° × 0.75°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-009",
@@ -1271,7 +2303,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "By source family: anthropogenic 2000–2026; biogenic 2000–2024; oceanic 2000–2023; shipping 2000–2021; soil 2000–2018; termite 2000 only; volcanic 2005–2021. · global · Source-specific: anthropogenic/shipping/volcanic 0.1°; biogenic/shipping 0.25°; aviation/oceanic/soil/termite 0.5°."
+      "action_scope_text": "By source family: anthropogenic 2000–2026; biogenic 2000–2024; oceanic 2000–2023; shipping 2000–2021; soil 2000–2018; termite 2000 only; volcanic 2005–2021. · global · Source-specific: anthropogenic/shipping/volcanic 0.1°; biogenic/shipping 0.25°; aviation/oceanic/soil/termite 0.5°.",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-010",
@@ -1424,7 +2457,8 @@
           }
         }
       ],
-      "action_scope_text": "本站文件仅为2019年2米气温月均处理子集；原始数据为全球0.25°网格。"
+      "action_scope_text": "本站文件仅为2019年2米气温月均处理子集；原始数据为全球0.25°网格。",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-011",
@@ -1544,7 +2578,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1948–2026 · global · Native grids vary: 94×192 Gaussian for 2 m temp/specific humidity/precip; 73×144 for sigma-level humidity/wind"
+      "action_scope_text": "1948–2026 · global · Native grids vary: 94×192 Gaussian for 2 m temp/specific humidity/precip; 73×144 for sigma-level humidity/wind",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-012",
@@ -1607,7 +2642,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–present product family · global land · 1 km sinusoidal grid"
+      "action_scope_text": "2000–present product family · global land · 1 km sinusoidal grid",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-013",
@@ -1673,7 +2709,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1998–2022 · global land · 0.01° and 0.1° product directories"
+      "action_scope_text": "1998–2022 · global land · 0.01° and 0.1° product directories",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-014",
@@ -1739,7 +2776,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1997–2020 · global · 0.25° nominal product grid; verify per version"
+      "action_scope_text": "1997–2020 · global · 0.25° nominal product grid; verify per version",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-015",
@@ -1842,7 +2880,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "ISIMIP2b family 1850–2099; ISIMIP2a 1860–2016; ISIMIP3 source 1850–2014 (2014 repeated through 2021 in ISIMIP3a) · global · 0.5°"
+      "action_scope_text": "ISIMIP2b family 1850–2099; ISIMIP2a 1860–2016; ISIMIP3 source 1850–2014 (2014 repeated through 2021 in ISIMIP3a) · global · 0.5°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-016",
@@ -1921,7 +2960,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "SO4/NO3: 2005–2024; NH4: 2008–2024 · East Asia, Europe, North America; not global · 0.25°"
+      "action_scope_text": "SO4/NO3: 2005–2024; NH4: 2008–2024 · East Asia, Europe, North America; not global · 0.25°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-017",
@@ -1984,7 +3024,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019–2020 · Europe (25W–45E, 30N–70N) · model/native grid from Zarr"
+      "action_scope_text": "2019–2020 · Europe (25W–45E, 30N–70N) · model/native grid from Zarr",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-018",
@@ -2064,7 +3105,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2011、2019 · global · ~1.1° (TL159, 320×160)"
+      "action_scope_text": "2011、2019 · global · ~1.1° (TL159, 320×160)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-019",
@@ -2124,7 +3166,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "See product page/version paper · North America"
+      "action_scope_text": "See product page/version paper · North America",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-020",
@@ -2229,7 +3272,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2018–2022 · global · 0.5°"
+      "action_scope_text": "2018–2022 · global · 0.5°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-021",
@@ -2294,7 +3338,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2004 · global · 0.25° × 0.25°"
+      "action_scope_text": "2004 · global · 0.25° × 0.25°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-022",
@@ -2359,7 +3404,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2004 · global swath · 13×24 km at nadir"
+      "action_scope_text": "2004 · global swath · 13×24 km at nadir",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-023",
@@ -2425,7 +3471,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2018、2019 · global swath · few-km native pixel, varies with product/version"
+      "action_scope_text": "2018、2019 · global swath · few-km native pixel, varies with product/version",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-024",
@@ -2491,7 +3538,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2008–2016 · global · orbit footprint; version dependent"
+      "action_scope_text": "2008–2016 · global · orbit footprint; version dependent",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-025",
@@ -2566,7 +3614,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1970–2022 · global country and regional aggregates · country/region; not gridded"
+      "action_scope_text": "1970–2022 · global country and regional aggregates · country/region; not gridded",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-026",
@@ -2639,7 +3688,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global (-90–90°, -180–180°) · 0.2° × 0.2°"
+      "action_scope_text": "2019 · global (-90–90°, -180–180°) · 0.2° × 0.2°",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-027",
@@ -2745,7 +3795,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1997–2025 · global total plus 14 GFED basis regions · regional aggregate only; not gridded"
+      "action_scope_text": "1997–2025 · global total plus 14 GFED basis regions · regional aggregate only; not gridded",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-028",
@@ -2754,7 +3805,7 @@
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "TROPESS 全球气溶胶铵盐（NH₄）月均三维场。",
-      "main_limitation_zh": "铵盐单位为 μg/m³；27层网格不等同于未知的 pH 模型网格。",
+      "main_limitation_zh": "铵盐单位为 μg/m³。",
       "main_lines": [
         "大气污染与组成"
       ],
@@ -2795,7 +3846,7 @@
         }
       ],
       "local_scope_note_zh": "本地为2019年12个月、27层全球网格。",
-      "quality_note_zh": "铵盐单位为 μg/m³；27层网格不等同于未知的 pH 模型网格。",
+      "quality_note_zh": "铵盐单位为 μg/m³。",
       "license_note_zh": "许可记录：NASA Earthdata / GES DISC；该产品专属许可条款需遵从档案要求",
       "source_page": null,
       "primary_action": {
@@ -2811,7 +3862,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays"
+      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-029",
@@ -2877,7 +3929,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays"
+      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-030",
@@ -2886,7 +3939,7 @@
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "TROPESS 全球气溶胶硫酸盐（SO₄）月均三维场。",
-      "main_limitation_zh": "硫酸盐原生单位为 kg/m³；27层网格不等同于未知的 pH 模型网格。",
+      "main_limitation_zh": "硫酸盐原生单位为 kg/m³。",
       "main_lines": [
         "大气污染与组成"
       ],
@@ -2927,7 +3980,7 @@
         }
       ],
       "local_scope_note_zh": "本地为2019年12个月、27层全球网格。",
-      "quality_note_zh": "硫酸盐原生单位为 kg/m³；27层网格不等同于未知的 pH 模型网格。",
+      "quality_note_zh": "硫酸盐原生单位为 kg/m³。",
       "license_note_zh": "许可记录：NASA Earthdata / GES DISC；该产品专属许可条款需遵从档案要求",
       "source_page": null,
       "primary_action": {
@@ -2943,7 +3996,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays"
+      "action_scope_text": "2019 · global · Nominal longitude interval 1.125°; 320×160; latitude spacing is irregular (0.122°–2.1213°), inspect actual coordinate and bounds arrays",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-031",
@@ -3040,7 +4094,8 @@
           }
         }
       ],
-      "action_scope_text": "2019 · Global land areas, excluding oceans and Antarctica · 0.01° (~1 km nominal); NetCDF dimensions 18000×36000"
+      "action_scope_text": "2019 · Global land areas, excluding oceans and Antarctica · 0.01° (~1 km nominal); NetCDF dimensions 18000×36000",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-032",
@@ -3584,7 +4639,8 @@
           }
         }
       ],
-      "action_scope_text": "源档案2008–2020；本站仅列2019年14个已核实的全球陆地年层。"
+      "action_scope_text": "源档案2008–2020；本站仅列2019年14个已核实的全球陆地年层。",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-033",
@@ -3654,7 +4710,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–2022 · global · 0.1°; 1800×3600"
+      "action_scope_text": "2000–2022 · global · 0.1°; 1800×3600",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "ATM-034",
@@ -3716,7 +4775,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global · 0.25° × 0.25° (CMR collection metadata)"
+      "action_scope_text": "2019 · global · 0.25° × 0.25° (CMR collection metadata)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-035",
@@ -3793,7 +4853,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–2022 · global · 0.1° × 0.1°; 1800×3600"
+      "action_scope_text": "2000–2022 · global · 0.1° × 0.1°; 1800×3600",
+      "indicator_domains": [
+        "能源"
+      ]
     },
     {
       "dataset_id": "ATM-036",
@@ -3859,7 +4922,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2015–2019 · global · nominal 250 km; catalogue/model description N96 192×144, 85 atmospheric levels; not confirmed by local file read."
+      "action_scope_text": "2015–2019 · global · nominal 250 km; catalogue/model description N96 192×144, 85 atmospheric levels; not confirmed by local file read.",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-037",
@@ -3929,7 +4993,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2010、2020、2040、2060、2080、2100 · MRI-CGCM3 RCP8.5情景目录无2019目标月份 · 精确空间范围、原生网格与垂直层未核实。"
+      "action_scope_text": "2010、2020、2040、2060、2080、2100 · MRI-CGCM3 RCP8.5情景目录无2019目标月份 · 精确空间范围、原生网格与垂直层未核实。",
+      "indicator_domains": []
     },
     {
       "dataset_id": "ATM-038",
@@ -3995,7 +5060,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2015–2100 · global per CEDA catalogue record · native model grid gn; exact coordinate spacing not verified from local science file"
+      "action_scope_text": "2015–2100 · global per CEDA catalogue record · native model grid gn; exact coordinate spacing not verified from local science file",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-002",
@@ -4066,7 +5132,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000、2005、2010、2015、2020 · 全球陆地 · 30 arc-second (~1 km at equator)"
+      "action_scope_text": "2000、2005、2010、2015、2020 · 全球陆地 · 30 arc-second (~1 km at equator)",
+      "indicator_domains": [
+        "人口"
+      ]
     },
     {
       "dataset_id": "URB-003",
@@ -4135,7 +5204,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1990–2015 · 全球陆地 · 5 arc-min (~10 km at equator)"
+      "action_scope_text": "1990–2015 · 全球陆地 · 5 arc-min (~10 km at equator)",
+      "indicator_domains": [
+        "经济"
+      ]
     },
     {
       "dataset_id": "URB-004",
@@ -4207,7 +5279,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2001–present; CMR confirms 2019 annual granule · 全球 · 0.05 degree CMG"
+      "action_scope_text": "2001–present; CMR confirms 2019 annual granule · 全球 · 0.05 degree CMG",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-005",
@@ -4293,7 +5366,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–present; CMR confirms all 12 months of 2019 · 全球 · 0.05 degree CMG"
+      "action_scope_text": "2000–present; CMR confirms all 12 months of 2019 · 全球 · 0.05 degree CMG",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-006",
@@ -4359,7 +5433,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020、2021 · 全球陆地 · 10 m; 2,651 3° × 3° tiles; 18 Zenodo 60° macrotile archives"
+      "action_scope_text": "2020、2021 · 全球陆地 · 10 m; 2,651 3° × 3° tiles; 18 Zenodo 60° macrotile archives",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-007",
@@ -4422,7 +5497,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1975–2020五年观测/模型；2025/2030 projection · 全球陆地 · 100 m Mollweide / 1 km / geographic 3 arcsec or 30 arcsec variants"
+      "action_scope_text": "1975–2020五年观测/模型；2025/2030 projection · 全球陆地 · 100 m Mollweide / 1 km / geographic 3 arcsec or 30 arcsec variants",
+      "indicator_domains": [
+        "人口"
+      ]
     },
     {
       "dataset_id": "URB-008",
@@ -4488,7 +5566,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1975–2030 · global · 100 m or 1 km World Mollweide; 3 arc-sec or 30 arc-sec WGS84"
+      "action_scope_text": "1975–2030 · global · 100 m or 1 km World Mollweide; 3 arc-sec or 30 arc-sec WGS84",
+      "indicator_domains": [
+        "建成环境"
+      ]
     },
     {
       "dataset_id": "URB-009",
@@ -4554,7 +5635,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2012–2020 · 180°W–180°E; 65°S–75°N (page specification) · 15 arc-second (~500 m at equator)"
+      "action_scope_text": "2012–2020 · 180°W–180°E; 65°S–75°N (page specification) · 15 arc-second (~500 m at equator)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-010",
@@ -4621,7 +5703,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020 · 全球陆地 · 1 km and 10 km mapsets; additional 5 arc-min products may exist"
+      "action_scope_text": "2020 · 全球陆地 · 1 km and 10 km mapsets; additional 5 arc-min products may exist",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-011",
@@ -4690,7 +5775,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1990–2015 · 全球陆地 · 5 arc-min"
+      "action_scope_text": "1990–2015 · 全球陆地 · 5 arc-min",
+      "indicator_domains": [
+        "经济"
+      ]
     },
     {
       "dataset_id": "URB-012",
@@ -4756,7 +5844,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1961–2023 · 全球国家/地区 · 国家级"
+      "action_scope_text": "1961–2023 · 全球国家/地区 · 国家级",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-013",
@@ -4818,7 +5909,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2026 · 全球 · facility coordinates"
+      "action_scope_text": "2026 · 全球 · facility coordinates",
+      "indicator_domains": [
+        "能源"
+      ]
     },
     {
       "dataset_id": "URB-014",
@@ -4885,7 +5979,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2022 · 全球陆海 · 15 arc-second; 1 arc-minute and 1 arc-degree"
+      "action_scope_text": "2022 · 全球陆海 · 15 arc-second; 1 arc-minute and 1 arc-degree",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-015",
@@ -4951,7 +6046,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1985–2015 · 全球陆地 · 30 m nominal; product bands vary"
+      "action_scope_text": "1985–2015 · 全球陆地 · 30 m nominal; product bands vary",
+      "indicator_domains": [
+        "建成环境"
+      ]
     },
     {
       "dataset_id": "URB-016",
@@ -5019,7 +6117,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2010、2050 · global · 1 km"
+      "action_scope_text": "2010、2050 · global · 1 km",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-017",
@@ -5084,7 +6183,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020 · 全球范围声明；实际覆盖与文件规模尚未确认 · 建筑轮廓 / 栅格瓦片。"
+      "action_scope_text": "2020 · 全球范围声明；实际覆盖与文件规模尚未确认 · 建筑轮廓 / 栅格瓦片。",
+      "indicator_domains": [
+        "建成环境"
+      ]
     },
     {
       "dataset_id": "URB-018",
@@ -5144,7 +6246,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": ""
+      "action_scope_text": "",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-019",
@@ -5209,7 +6312,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global · 100 m"
+      "action_scope_text": "2019 · global · 100 m",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-020",
@@ -5302,7 +6406,10 @@
           }
         }
       ],
-      "action_scope_text": "本站为v1.3.0 CSV快照；仅部分发电字段覆盖至2019。"
+      "action_scope_text": "本站为v1.3.0 CSV快照；仅部分发电字段覆盖至2019。",
+      "indicator_domains": [
+        "能源"
+      ]
     },
     {
       "dataset_id": "URB-021",
@@ -5373,7 +6480,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020–2050 · global · 1/8-degree grid polygons"
+      "action_scope_text": "2020–2050 · global · 1/8-degree grid polygons",
+      "indicator_domains": [
+        "建成环境"
+      ]
     },
     {
       "dataset_id": "URB-022",
@@ -5439,7 +6549,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2015–2019 · global · 1 km"
+      "action_scope_text": "2015–2019 · global · 1 km",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-023",
@@ -5505,7 +6616,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1984–2024 · global · 30 m"
+      "action_scope_text": "1984–2024 · global · 30 m",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-024",
@@ -5571,7 +6683,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1985–2018 · global · 30 m"
+      "action_scope_text": "1985–2018 · global · 30 m",
+      "indicator_domains": [
+        "建成环境"
+      ]
     },
     {
       "dataset_id": "URB-025",
@@ -5650,7 +6765,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–present (2019 exact global CMR inventory: 365 daily granules) · global · 0.05 degree CMG"
+      "action_scope_text": "2000–present (2019 exact global CMR inventory: 365 daily granules) · global · 0.05 degree CMG",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-026",
@@ -5659,7 +6775,7 @@
       "disambiguator": "",
       "version_label": "SoilGrids 2.0",
       "short_use_zh": "SoilGrids 全球土壤水浸提 pH 预测图层。",
-      "main_limitation_zh": "本地只有1009/7692个非连续瓦片；土壤水浸提 pH 不等于气溶胶 pH。",
+      "main_limitation_zh": "本地只有1009/7692个非连续瓦片。",
       "main_lines": [
         "地表与生态"
       ],
@@ -5692,11 +6808,11 @@
           "label": "表层土壤水浸提pH预测均值",
           "unit": "原始Int16编码；官方缩放因子待核实",
           "period": "静态SoilGrids v2.0预测面；模型数据快照标记2020-03",
-          "definition": "ISRIC SoilGrids soil pH measured in water, 0–5 cm interval, mean prediction layer. Soil property, not aerosol pH."
+          "definition": "ISRIC SoilGrids soil pH measured in water, 0–5 cm interval, mean prediction layer."
         }
       ],
       "local_scope_note_zh": "本地phh2o仅1009/7692个非连续瓦片，不代表完整全球面。",
-      "quality_note_zh": "本地只有1009/7692个非连续瓦片；土壤水浸提 pH 不等于气溶胶 pH。",
+      "quality_note_zh": "本地只有1009/7692个非连续瓦片。",
       "license_note_zh": "许可记录冲突：ISRIC访问说明列 CC BY 4.0，本地记录列 ODbL 1.0；不能据此推断瓦片可再分发。",
       "source_page": {
         "label": "官方产品/数据记录页",
@@ -5715,7 +6831,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "static prediction surface/version 2.0 · global · 250 m"
+      "action_scope_text": "static prediction surface/version 2.0 · global · 250 m",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-027",
@@ -5827,7 +6944,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "circa 2010; P fertilizer means 2010–2014 and comparator 2002–2006; source table 2002–2015 · global populated/cropland hex cells; lat −55.94 to 71.68; lon −179.86 to 179.89 · fine and coarse hex-cell variants; nominal spacing not asserted"
+      "action_scope_text": "circa 2010; P fertilizer means 2010–2014 and comparator 2002–2006; source table 2002–2015 · global populated/cropland hex cells; lat −55.94 to 71.68; lon −179.86 to 179.89 · fine and coarse hex-cell variants; nominal spacing not asserted",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-028",
@@ -5891,7 +7011,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · 266 country/economy and regional records returned by API; includes aggregates; non-null values 193 · country/economy"
+      "action_scope_text": "2019 · 266 country/economy and regional records returned by API; includes aggregates; non-null values 193 · country/economy",
+      "indicator_domains": [
+        "能源"
+      ]
     },
     {
       "dataset_id": "URB-029",
@@ -5953,7 +7076,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2026 · global · object-based vector; varying source geometry"
+      "action_scope_text": "2026 · global · object-based vector; varying source geometry",
+      "indicator_domains": [
+        "交通"
+      ]
     },
     {
       "dataset_id": "URB-030",
@@ -6018,7 +7144,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "GRIP4 compiled release published 2018; constituent road-source vintages vary and are not represented as one observation year · Global; record describes source coverage across 222 countries · 5 arc-minutes (0.0833333°; approx. 8 x 8 km at equator)"
+      "action_scope_text": "GRIP4 compiled release published 2018; constituent road-source vintages vary and are not represented as one observation year · Global; record describes source coverage across 222 countries · 5 arc-minutes (0.0833333°; approx. 8 x 8 km at equator)",
+      "indicator_domains": [
+        "交通"
+      ]
     },
     {
       "dataset_id": "URB-031",
@@ -6148,7 +7277,10 @@
           }
         }
       ],
-      "action_scope_text": "本站为全球2019年PPP GDP总量单波段GeoTIFF。"
+      "action_scope_text": "本站为全球2019年PPP GDP总量单波段GeoTIFF。",
+      "indicator_domains": [
+        "经济"
+      ]
     },
     {
       "dataset_id": "URB-032",
@@ -6278,7 +7410,10 @@
           }
         }
       ],
-      "action_scope_text": "本站为全球2019年PPP GDP人均单波段GeoTIFF。"
+      "action_scope_text": "本站为全球2019年PPP GDP人均单波段GeoTIFF。",
+      "indicator_domains": [
+        "经济"
+      ]
     },
     {
       "dataset_id": "URB-033",
@@ -6399,7 +7534,10 @@
           }
         }
       ],
-      "action_scope_text": "仅水稻 · 1961–2023年度序列 · 46.2 MB"
+      "action_scope_text": "仅水稻 · 1961–2023年度序列 · 46.2 MB",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-034",
@@ -6487,7 +7625,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2019 · global CMG · 0.05° (~5.6 km)"
+      "action_scope_text": "2019 · global CMG · 0.05° (~5.6 km)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-035",
@@ -6571,7 +7710,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2012–present; 2019 tile inventory verified at LAADS · Global land tiles · 15 arc-second geographic grid"
+      "action_scope_text": "2012–present; 2019 tile inventory verified at LAADS · Global land tiles · 15 arc-second geographic grid",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-037",
@@ -6580,7 +7720,7 @@
       "disambiguator": "",
       "version_label": "",
       "short_use_zh": "FAOSTAT 国家和地区年度肥料使用量。",
-      "main_limitation_zh": "派生CSV仍quality_hold；无机肥统计不含粪肥，国家与区域须分开。",
+      "main_limitation_zh": "派生CSV有格式与空间支持问题；无机肥统计不含粪肥。",
       "main_lines": [
         "人类活动"
       ],
@@ -6634,7 +7774,7 @@
         }
       ],
       "local_scope_note_zh": "本地保留全时序数据；2019含236条氮肥农业使用记录。",
-      "quality_note_zh": "无机肥统计不含粪肥；国家与区域汇总须按分类分别处理。 派生CSV仍为quality_hold（质量保留）：去引号/换行处理与builder空间支持问题未闭合，不提供该派生CSV下载。",
+      "quality_note_zh": "派生CSV有格式与空间支持问题；国家与区域汇总需区分。",
       "license_note_zh": "记录标注 CC BY-NC-SA 3.0 IGO，含非商业及相同方式共享条件。",
       "source_page": {
         "label": "官方产品/数据记录页",
@@ -6653,7 +7793,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "1961–2024 · FAO countries, territories and regional aggregates · Country/territory; no gridded coordinates"
+      "action_scope_text": "1961–2024 · FAO countries, territories and regional aggregates · Country/territory; no gridded coordinates",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-036",
@@ -6718,7 +7861,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020 · Global land · 10 m; 2,651 3° tiles"
+      "action_scope_text": "2020 · Global land · 10 m; 2,651 3° tiles",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-038",
@@ -6820,7 +7964,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2020 · Global WGS84 grid · 1 km nominal (0.0083333°)"
+      "action_scope_text": "2020 · Global WGS84 grid · 1 km nominal (0.0083333°)",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-039",
@@ -6886,7 +8033,8 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2012、2019 · Global (collection title only) · 15 arc-second (collection title)"
+      "action_scope_text": "2012、2019 · Global (collection title only) · 15 arc-second (collection title)",
+      "indicator_domains": []
     },
     {
       "dataset_id": "URB-040",
@@ -6987,7 +8135,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2015、2020 · Global/world, WGS84 EPSG:4326 · 0.5 arc-minute (approximately 1 km at equator)"
+      "action_scope_text": "2015、2020 · Global/world, WGS84 EPSG:4326 · 0.5 arc-minute (approximately 1 km at equator)",
+      "indicator_domains": [
+        "农业"
+      ]
     },
     {
       "dataset_id": "URB-041",
@@ -7085,7 +8236,10 @@
           }
         }
       ],
-      "action_scope_text": "本地2018年末预测清单；压缩档82,539,694 B，含68,661个唯一Polygon。"
+      "action_scope_text": "本地2018年末预测清单；压缩档82,539,694 B，含68,661个唯一Polygon。",
+      "indicator_domains": [
+        "能源"
+      ]
     },
     {
       "dataset_id": "ATM-039",
@@ -7151,7 +8305,10 @@
         "article_doi": ""
       },
       "downloads": [],
-      "action_scope_text": "2000–2022 · global · 0.1° × 0.1° (official product page; member not opened)"
+      "action_scope_text": "2000–2022 · global · 0.1° × 0.1° (official product page; member not opened)",
+      "indicator_domains": [
+        "交通"
+      ]
     }
   ],
   "provenance": [
@@ -7185,5 +8342,9 @@
       "output_bytes": 4389936,
       "output_sha256": "29881df9920b4900f3007d600f661e6e4393a21a4c1e1c40bef84bc510fa0469"
     }
-  ]
+  ],
+  "counts": {
+    "products": 93,
+    "assets": 43
+  }
 }
