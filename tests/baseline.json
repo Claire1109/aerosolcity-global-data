@@ -1,0 +1,1077 @@
+{
+  "catalog_sha256": "d12bab02af226762290cc8a7e7314806106c125689f9a41fbf85d15f328ce507",
+  "product_ids": [
+    "HUM-008",
+    "HUM-009",
+    "HUM-010",
+    "HUM-005",
+    "HUM-006",
+    "HUM-007",
+    "HUM-003",
+    "HUM-001",
+    "HUM-002",
+    "LEG-001",
+    "LEG-002",
+    "LEG-003",
+    "LEG-004",
+    "LEG-005",
+    "ATM-001",
+    "ATM-002",
+    "ATM-003",
+    "ATM-004",
+    "ATM-005",
+    "ATM-006",
+    "ATM-007",
+    "ATM-008",
+    "ATM-009",
+    "ATM-010",
+    "ATM-011",
+    "ATM-012",
+    "ATM-013",
+    "ATM-014",
+    "ATM-015",
+    "ATM-016",
+    "ATM-017",
+    "ATM-018",
+    "ATM-019",
+    "ATM-020",
+    "ATM-021",
+    "ATM-022",
+    "ATM-023",
+    "ATM-024",
+    "ATM-025",
+    "ATM-026",
+    "ATM-027",
+    "ATM-028",
+    "ATM-029",
+    "ATM-030",
+    "ATM-031",
+    "ATM-032",
+    "ATM-033",
+    "ATM-034",
+    "ATM-035",
+    "ATM-036",
+    "ATM-037",
+    "ATM-038",
+    "URB-002",
+    "URB-003",
+    "URB-004",
+    "URB-005",
+    "URB-006",
+    "URB-007",
+    "URB-008",
+    "URB-009",
+    "URB-010",
+    "URB-011",
+    "URB-012",
+    "URB-013",
+    "URB-014",
+    "URB-015",
+    "URB-016",
+    "URB-017",
+    "URB-018",
+    "URB-019",
+    "URB-020",
+    "URB-021",
+    "URB-022",
+    "URB-023",
+    "URB-024",
+    "URB-025",
+    "URB-026",
+    "URB-027",
+    "URB-028",
+    "URB-029",
+    "URB-030",
+    "URB-031",
+    "URB-032",
+    "URB-033",
+    "URB-034",
+    "URB-035",
+    "URB-037",
+    "URB-036",
+    "URB-038",
+    "URB-039",
+    "URB-040",
+    "URB-041",
+    "ATM-039"
+  ],
+  "assets": [
+    {
+      "asset_id": "hum-008-1",
+      "label": "API_SL.AGR.EMPL.ZS_DS2_EN_csv_v2_16633.zip",
+      "filename": "API_SL.AGR.EMPL.ZS_DS2_EN_csv_v2_16633.zip",
+      "href": "https://api.worldbank.org/v2/country/all/indicator/SL.AGR.EMPL.ZS?source=2&downloadformat=csv",
+      "bytes": 87617,
+      "access_method": "official_direct_file",
+      "sha256": "1f4f0bf3600cf6c93737c8dcf9a7e828db89ff58b15e707989f5411806537428",
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "完整ZIP、CRC与字段核验；无发布方校验码"
+    },
+    {
+      "asset_id": "hum-008-2",
+      "label": "API_SL.IND.EMPL.ZS_DS2_EN_csv_v2_16782.zip",
+      "filename": "API_SL.IND.EMPL.ZS_DS2_EN_csv_v2_16782.zip",
+      "href": "https://api.worldbank.org/v2/country/all/indicator/SL.IND.EMPL.ZS?source=2&downloadformat=csv",
+      "bytes": 85455,
+      "access_method": "official_direct_file",
+      "sha256": "4cc11b822a43e446e7f51206fa3daa5ec624bf28aabdfd1f56ebfbb95e37229d",
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "完整ZIP、CRC与字段核验；无发布方校验码"
+    },
+    {
+      "asset_id": "hum-009-1",
+      "label": "OGIM_v2.7.gpkg",
+      "filename": "OGIM_v2.7.gpkg",
+      "href": "https://zenodo.org/api/records/15103476/files/OGIM_v2.7.gpkg/content",
+      "bytes": 3083259904,
+      "access_method": "repository_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "51f7280fbc9ed408c940f702496c32e8"
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "仅核验4096字节SQLite文件头与全长；内容未完整读取，MD5为仓库提供"
+    },
+    {
+      "asset_id": "hum-009-2",
+      "label": "README_OGIM_v2.7_20250328.pdf",
+      "filename": "README_OGIM_v2.7_20250328.pdf",
+      "href": "https://zenodo.org/api/records/15103476/files/README_OGIM_v2.7_20250328.pdf/content",
+      "bytes": 508966,
+      "access_method": "repository_file",
+      "sha256": "2b1ea77a9b6a717eeba608a717cfce0f05f7b620ca4a062efe6030aad527dc72",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "d3cdf877550491ac2617ff66da1c0525"
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "完整PDF与发布方MD5核验"
+    },
+    {
+      "asset_id": "hum010-1",
+      "label": "基本饮用水ZIP",
+      "filename": "API_SH.H2O.BASW.ZS_DS2_EN_csv_v2_2161.zip",
+      "href": "https://api.worldbank.org/v2/country/all/indicator/SH.H2O.BASW.ZS?source=2&downloadformat=csv",
+      "bytes": 65575,
+      "access_method": "official_direct_file",
+      "sha256": "9ab0ce71561869dd150f346a8c84da76be718af720f7d1b40f6da851614d990b",
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "完整ZIP、CRC与CSV字段核验；无发布方校验码"
+    },
+    {
+      "asset_id": "hum010-2",
+      "label": "基本卫生服务ZIP",
+      "filename": "API_SH.STA.BASS.ZS_DS2_EN_csv_v2_2184.zip",
+      "href": "https://api.worldbank.org/v2/country/all/indicator/SH.STA.BASS.ZS?source=2&downloadformat=csv",
+      "bytes": 67876,
+      "access_method": "official_direct_file",
+      "sha256": "e213fe4d5b7d4c9f1566888aa7f5b24bbd3f4921f72294d22fa4084b537684c3",
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "完整ZIP、CRC与CSV字段核验；无发布方校验码"
+    },
+    {
+      "asset_id": "hum005-13669706",
+      "label": "gudd_all_static_boundaries.csv",
+      "filename": "gudd_all_static_boundaries.csv",
+      "href": "https://dataverse.harvard.edu/api/access/datafile/13669706",
+      "bytes": 171318533,
+      "access_method": "repository_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "cd74de727341bd7776047944ea834ec0"
+      },
+      "license": "CC0 1.0",
+      "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+    },
+    {
+      "asset_id": "hum005-13669705",
+      "label": "gudd_static_boundaries_lookup.geoparquet",
+      "filename": "gudd_static_boundaries_lookup.geoparquet",
+      "href": "https://dataverse.harvard.edu/api/access/datafile/13669705",
+      "bytes": 3157603,
+      "access_method": "repository_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "78f6ec96ffe85336865bd021e957db83"
+      },
+      "license": "CC0 1.0",
+      "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+    },
+    {
+      "asset_id": "hum005-13674920",
+      "label": "gudd_dataset_documentation_v1_0.pdf",
+      "filename": "gudd_dataset_documentation_v1_0.pdf",
+      "href": "https://dataverse.harvard.edu/api/access/datafile/13674920",
+      "bytes": 6546504,
+      "access_method": "repository_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "0da2481abe31d83a9b74bfb9e14af6bc"
+      },
+      "license": "CC0 1.0",
+      "access_note_zh": "仓库清单核验，内容未读取；MD5为仓库提供"
+    },
+    {
+      "asset_id": "hum-006-1",
+      "label": "SFI-Global-Cement-Database-assets.csv",
+      "filename": "SFI-Global-Cement-Database-assets.csv",
+      "href": "https://zenodo.org/api/records/8408245/files/SFI-Global-Cement-Database-assets.csv/content",
+      "bytes": 1014764,
+      "access_method": "repository_file",
+      "sha256": "6e9649636ad537333b1a7cd8091f6f787d0870359c61bbdc22ec806805b2ffef",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "5d8b7e5701686d182971858164cd6f19"
+      },
+      "license": "CC0 1.0",
+      "access_note_zh": "作者数据仓库原件"
+    },
+    {
+      "asset_id": "hum-006-2",
+      "label": "README.md",
+      "filename": "README.md",
+      "href": "https://zenodo.org/api/records/8408245/files/README.md/content",
+      "bytes": 5640,
+      "access_method": "repository_file",
+      "sha256": "9bc9d13d8764bc2f0739b2fb941ccd59fc286bbe6685b217645810605fb33f44",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "75577feb72ebec1e8e6bb42b0c44ec1e"
+      },
+      "license": "CC0 1.0",
+      "access_note_zh": "字段说明文件"
+    },
+    {
+      "asset_id": "hum-007-1",
+      "label": "0. GCP-CEM.csv",
+      "filename": "0. GCP-CEM.csv",
+      "href": "https://zenodo.org/api/records/11207133/files/0.%20GCP-CEM.csv/content",
+      "bytes": 126164,
+      "access_method": "repository_file",
+      "sha256": "821821fc6fdfe3718c4eea4ec8d7096255f5ce9dbec0e8159a141163bfbac727",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "05b2aca908422f891bee4b3117cb7a1e"
+      },
+      "license": "CC BY 4.0",
+      "access_note_zh": "作者数据仓库原件"
+    },
+    {
+      "asset_id": "hum-007-2",
+      "label": "1. annual_cement_production.csv",
+      "filename": "1. annual_cement_production.csv",
+      "href": "https://zenodo.org/api/records/11207133/files/1.%20annual_cement_production.csv/content",
+      "bytes": 138933,
+      "access_method": "repository_file",
+      "sha256": "76f229e7bc31602e7d3aaf8467ebb826d8a8215f78637a21b4bff3091222497c",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "a9ce757e05fdbcf0b4fab5c29c0545c6"
+      },
+      "license": "CC BY 4.0",
+      "access_note_zh": "作者数据仓库原件"
+    },
+    {
+      "asset_id": "hum003-airports",
+      "label": "airports.csv",
+      "filename": "airports.csv",
+      "href": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+      "bytes": 12746366,
+      "access_method": "repository_file",
+      "sha256": "f219659218d1f27e7907c284b87778047b84102435d3483c7ee0ce6990b95e77",
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "Public Domain",
+      "access_note_zh": "发布者数据仓库；2026-10-14下载快照"
+    },
+    {
+      "asset_id": "hum001-worldpop2020",
+      "label": "ppp_2020_1km_Aggregated.tif",
+      "filename": "ppp_2020_1km_Aggregated.tif",
+      "href": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/0_Mosaicked/ppp_2020_1km_Aggregated.tif",
+      "bytes": 869715253,
+      "access_method": "official_direct_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "WorldPop FAQ默认CC BY4.0，需署名",
+      "access_note_zh": "仅核验下载响应头；内容、校验码和原生地理信息未验证",
+      "button_label": "官方TIFF（仅核验下载响应头）"
+    },
+    {
+      "asset_id": "hum002-steel2024",
+      "label": "Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx",
+      "filename": "Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx",
+      "href": "https://zenodo.org/api/records/16893375/files/Global-Steel-Plant-Tracker-April-2024-Standard-Copy-V1.xlsx/content",
+      "bytes": 842098,
+      "access_method": "mirror_file",
+      "sha256": "f8acee2cfe36ba65ff2f7b691426ee2be58da5b3261e5c3d39575da404805066",
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "724612100d1ed0404efaca1d7364f272"
+      },
+      "license": "CC BY4.0",
+      "access_note_zh": "Zenodo镜像；上载者未认证为GEM"
+    },
+    {
+      "asset_id": "leg004-ghsl2020-1km",
+      "label": "2020 1km GHS-BUILT-S ZIP",
+      "filename": "GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip",
+      "href": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000/V1-0/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip",
+      "bytes": null,
+      "access_method": "official_generated_file",
+      "sha256": null,
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "license": "European Commission reuse notice",
+      "access_note_zh": "官方生成链接，文件响应未核验；文件大小与校验码未知；1000m World Mollweide/54009为发布方说明"
+    },
+    {
+      "asset_id": "edgar-2019-nh3",
+      "label": "EDGAR 2019 NH₃ TOTALS ZIP",
+      "scope_refs": [
+        "ATM-001#NH3-legacy-2019-TOTALS"
+      ],
+      "access_method": "site_hosted",
+      "href": "./data/files/edgar-2019-nh3.zip",
+      "filename": "edgar-2019-nh3.zip",
+      "bytes": 16439850,
+      "sha256": "2def3020e25bb8a472a27c713450d5bdeb0e28b5130044b6f9b34b4dfdce03a2",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 16439850,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "edgar-2019-nox",
+      "label": "EDGAR 2019 NOₓ TOTALS ZIP",
+      "scope_refs": [
+        "ATM-001#2019-NOx-TOTALS"
+      ],
+      "access_method": "site_hosted",
+      "href": "./data/files/edgar-2019-nox.zip",
+      "filename": "edgar-2019-nox.zip",
+      "bytes": 16147566,
+      "sha256": "4f860295b189cde225f5054e13bfb1a0ba563c88ffcf85023a602c14a382b192",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 16147566,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "edgar-2019-so2",
+      "label": "EDGAR 2019 SO₂ TOTALS ZIP",
+      "scope_refs": [
+        "ATM-001#2019-SO2-TOTALS"
+      ],
+      "access_method": "site_hosted",
+      "href": "./data/files/edgar-2019-so2.zip",
+      "filename": "edgar-2019-so2.zip",
+      "bytes": 15886397,
+      "sha256": "77db865d6751726b4facd8d42031ab9bf9edf6e85a254d47993c0557e5028929",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 15886397,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "era5-2019-t2m",
+      "label": "ERA5 2019 2t 月均 NetCDF（处理子集）",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/era5-2019-t2m-monthly.nc",
+      "filename": "era5-2019-t2m-monthly.nc",
+      "bytes": 49875989,
+      "sha256": "b2fa58a00b3bba4d3304896246cc11cf476e4f7ada9c452338d47c24a22858da",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 49875989,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "ghap-2019-pm25",
+      "label": "GHAP V2 2019 年均地表 PM₂.₅ NetCDF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/ghap-2019-pm25-y1k.nc",
+      "filename": "ghap-2019-pm25-y1k.nc",
+      "bytes": 69398857,
+      "sha256": "4639191513c0da5ca8bc8dc08a2fbe6fbd00cf32269b13ad031c579868dabbdf",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 69398857,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryHNO3/sha256:b30241203e4e6631f6e5397c65df5c1cb3e3b69234cae82535b60079d137f785",
+      "label": "2019 dryHNO3 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryHNO3_2019_hm.tif",
+      "filename": "mean_dryHNO3_2019_hm.tif",
+      "bytes": 2868504,
+      "sha256": "b30241203e4e6631f6e5397c65df5c1cb3e3b69234cae82535b60079d137f785",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:26.675300+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2868504,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNH3/sha256:8603e471cb546e31d21cd223dc99845f14306f7a456905fec4db3df744bd653c",
+      "label": "2019 dryNH3 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNH3_2019_hm.tif",
+      "filename": "mean_dryNH3_2019_hm.tif",
+      "bytes": 2881000,
+      "sha256": "8603e471cb546e31d21cd223dc99845f14306f7a456905fec4db3df744bd653c",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:28.679999+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2881000,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNH4/sha256:67faf73e72ac5d397236e52fcc2f9b605596e5d0160f479839db7c362602691b",
+      "label": "2019 dryNH4 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNH4_2019_hm.tif",
+      "filename": "mean_dryNH4_2019_hm.tif",
+      "bytes": 2862022,
+      "sha256": "67faf73e72ac5d397236e52fcc2f9b605596e5d0160f479839db7c362602691b",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:30.474598+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2862022,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNHx/sha256:4815d82bdcd9688563773cf3190102bda0df9de4e273224dcb52a76694e73a50",
+      "label": "2019 dryNHx GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNHx_2019_hm.tif",
+      "filename": "mean_dryNHx_2019_hm.tif",
+      "bytes": 2877084,
+      "sha256": "4815d82bdcd9688563773cf3190102bda0df9de4e273224dcb52a76694e73a50",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:32.227695+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2877084,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryN/sha256:4b83d29d8e2e97a8a3e2e6695a92e0c4b3a29a880038110bbe8c17afa4bf2700",
+      "label": "2019 dryN GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryN_2019_hm.tif",
+      "filename": "mean_dryN_2019_hm.tif",
+      "bytes": 2861576,
+      "sha256": "4b83d29d8e2e97a8a3e2e6695a92e0c4b3a29a880038110bbe8c17afa4bf2700",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:33.480069+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2861576,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNO2/sha256:7bbac354b97246ca5d3a49227061a379d5e12731a5fc0e4e266be6a687ec286a",
+      "label": "2019 dryNO2 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNO2_2019_hm.tif",
+      "filename": "mean_dryNO2_2019_hm.tif",
+      "bytes": 2902146,
+      "sha256": "7bbac354b97246ca5d3a49227061a379d5e12731a5fc0e4e266be6a687ec286a",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:34.955835+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2902146,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNO3/sha256:ef475ade0494b0c9ba5ba59e9496481f03ba6612e18d05b87e8df852a97aeb35",
+      "label": "2019 dryNO3 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNO3_2019_hm.tif",
+      "filename": "mean_dryNO3_2019_hm.tif",
+      "bytes": 2881504,
+      "sha256": "ef475ade0494b0c9ba5ba59e9496481f03ba6612e18d05b87e8df852a97aeb35",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:36.668717+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2881504,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/dryNOy/sha256:170b2f701650a57ca1eb00f058e4bc7bac108a85e29957ed55ae7167815995ff",
+      "label": "2019 dryNOy GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_dryNOy_2019_hm.tif",
+      "filename": "mean_dryNOy_2019_hm.tif",
+      "bytes": 2868614,
+      "sha256": "170b2f701650a57ca1eb00f058e4bc7bac108a85e29957ed55ae7167815995ff",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:38.221291+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2868614,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/totN/sha256:8a8935256290b5bbf5c03c8839c0cd9fa2d0b67eb9aede14009816c8e0cabb23",
+      "label": "2019 totN GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_totN_2019_hm.tif",
+      "filename": "mean_totN_2019_hm.tif",
+      "bytes": 2849862,
+      "sha256": "8a8935256290b5bbf5c03c8839c0cd9fa2d0b67eb9aede14009816c8e0cabb23",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:39.532246+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2849862,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/totNHx/sha256:98b5c7308ee5d87fbc9177423266ac5d8236bc9522492f8d10700d72964fc4df",
+      "label": "2019 totNHx GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_totNHx_2019_hm.tif",
+      "filename": "mean_totNHx_2019_hm.tif",
+      "bytes": 2857256,
+      "sha256": "98b5c7308ee5d87fbc9177423266ac5d8236bc9522492f8d10700d72964fc4df",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:40.931039+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2857256,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/totNOy/sha256:82245c859e63fb570085a203fb3270c09fdbb7725986e76b2f094a3f117642df",
+      "label": "2019 totNOy GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_totNOy_2019_hm.tif",
+      "filename": "mean_totNOy_2019_hm.tif",
+      "bytes": 2850160,
+      "sha256": "82245c859e63fb570085a203fb3270c09fdbb7725986e76b2f094a3f117642df",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:42.556386+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2850160,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/wetNH3/sha256:67ab668e24292e9ba7e1a65215b38ffc1cb5cdb5ec03fe8214d4c6a6389e66ad",
+      "label": "2019 wetNH3 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_wetNH3_2019_hm.tif",
+      "filename": "mean_wetNH3_2019_hm.tif",
+      "bytes": 2853734,
+      "sha256": "67ab668e24292e9ba7e1a65215b38ffc1cb5cdb5ec03fe8214d4c6a6389e66ad",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:47.541331+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2853734,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/wetN/sha256:f84bf40c9c7d426f42644a58e0122b25b81e74463ff126b8fd3f27ed54495743",
+      "label": "2019 wetN GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_wetN_2019_hm.tif",
+      "filename": "mean_wetN_2019_hm.tif",
+      "bytes": 2855670,
+      "sha256": "f84bf40c9c7d426f42644a58e0122b25b81e74463ff126b8fd3f27ed54495743",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:49.071746+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2855670,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "ATM-032/MGND/2019/wetNO3/sha256:69b1d32c7f99ec813e309873fe504e57fa6e47b35a244cc7b370a8512b42128d",
+      "label": "2019 wetNO3 GeoTIFF",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/atm032/2019/mean_wetNO3_2019_hm.tif",
+      "filename": "mean_wetNO3_2019_hm.tif",
+      "bytes": 2862570,
+      "sha256": "69b1d32c7f99ec813e309873fe504e57fa6e47b35a244cc7b370a8512b42128d",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "对应的2019年GeoTIFF已完成全波段读取验收。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13T16:24:50.761112+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "image/tiff",
+        "content_length": 2862570,
+        "details": "匿名公网整件 GET 的响应字节数和 SHA-256 与文件登记相同。"
+      }
+    },
+    {
+      "asset_id": "wri-gppd-v130",
+      "label": "WRI Global Power Plant Database v1.3.0 CSV",
+      "scope_refs": [],
+      "access_method": "site_hosted",
+      "href": "./data/files/wri-global-power-plant-database-v1.3.0.csv",
+      "filename": "wri-global-power-plant-database-v1.3.0.csv",
+      "bytes": 11973385,
+      "sha256": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 11973385,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "gdp-ppp-total-2019",
+      "label": "全球 GDP PPP 总量 2019 单波段 GeoTIFF",
+      "scope_refs": [
+        "URB-031#2019_band_30_single_band_geotiff"
+      ],
+      "access_method": "site_hosted",
+      "href": "./data/files/gdp-ppp-total-2019.tif",
+      "filename": "gdp-ppp-total-2019.tif",
+      "bytes": 6632065,
+      "sha256": "e13750656a433f9160e916ba352e610285821366fc3cf63b2580c14160a09780",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 6632065,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "gdp-ppp-total-1990-2024",
+      "label": "PPP GDP 总量多年原件",
+      "filename": "rast_gdpTot_1990_2024_5arcmin.tif",
+      "bytes": 184157771,
+      "sha256": "3e11f274d342a0af6a81385ca749b6712aea0f0102f353f05c6edbc6c02ef366",
+      "publisher_checksum": {
+        "algorithm": "md5",
+        "value": "25b38c030acb6c528bfb9c72970c2876",
+        "basis": "historical publisher record metadata"
+      },
+      "scope_label": "1990–2024 · 35 年度波段 · 全球 5 角分 · GDP 总量",
+      "access_method": "official_direct_file",
+      "publication_status": "verified",
+      "access_note_zh": "匿名Range文件头核验；未做当日全件checksum；TIFF可能在浏览器内打开，可另存为文件",
+      "checked_at": "2026-10-14T03:18:31.052744+00:00",
+      "href": "https://zenodo.org/api/records/18429133/files/rast_gdpTot_1990_2024_5arcmin.tif/content",
+      "record_doi": "10.5281/zenodo.18429133",
+      "license_note_zh": "CC BY 4.0；请注明来源与改动",
+      "endpoint_evidence": {
+        "checked_at": "2026-10-14T03:18:31.052744+00:00",
+        "http_status": 206,
+        "body_bytes": 8,
+        "content_range_total": 184157771,
+        "anonymous": true,
+        "redirects": false,
+        "full_checksum_checked_today": false,
+        "filename_basis": "exact request URL/publisher record; response inline without filename"
+      }
+    },
+    {
+      "asset_id": "gdp-ppp-per-capita-2019",
+      "label": "全球 GDP PPP 人均 2019 单波段 GeoTIFF",
+      "scope_refs": [
+        "URB-032#2019_band_30_single_band_geotiff"
+      ],
+      "access_method": "site_hosted",
+      "href": "./data/files/gdp-ppp-per-capita-2019.tif",
+      "filename": "gdp-ppp-per-capita-2019.tif",
+      "bytes": 4389936,
+      "sha256": "29881df9920b4900f3007d600f661e6e4393a21a4c1e1c40bef84bc510fa0469",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "unknown",
+        "value": null
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-13",
+        "checked_at_precision": "date",
+        "http_status": 200,
+        "content_type": null,
+        "content_length": 4389936,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    },
+    {
+      "asset_id": "gdp-ppp-per-capita-1990-2024",
+      "label": "PPP GDP 人均多年原件",
+      "filename": "rast_adm2_gdp_perCapita_1990_2024.tif",
+      "bytes": 130266414,
+      "sha256": "f1fcea7226e558442801fe3f938a6afe32845587444b078fd45756a7e6c682f6",
+      "publisher_checksum": {
+        "algorithm": "md5",
+        "value": "0aedd8d85b682f5ee84bf286300f39bb",
+        "basis": "historical publisher record metadata"
+      },
+      "scope_label": "1990–2024 · 35 年度波段 · 全球 5 角分 · GDP 人均",
+      "access_method": "official_direct_file",
+      "publication_status": "verified",
+      "access_note_zh": "匿名Range文件头核验；未做当日全件checksum；TIFF可能在浏览器内打开，可另存为文件",
+      "checked_at": "2026-10-14T03:18:32.548114+00:00",
+      "href": "https://zenodo.org/api/records/18429133/files/rast_adm2_gdp_perCapita_1990_2024.tif/content",
+      "record_doi": "10.5281/zenodo.18429133",
+      "license_note_zh": "CC BY 4.0；请注明来源与改动",
+      "endpoint_evidence": {
+        "checked_at": "2026-10-14T03:18:32.548114+00:00",
+        "http_status": 206,
+        "body_bytes": 8,
+        "content_range_total": 130266414,
+        "anonymous": true,
+        "redirects": false,
+        "full_checksum_checked_today": false,
+        "filename_basis": "exact request URL/publisher record; response inline without filename"
+      }
+    },
+    {
+      "asset_id": "hani-crop-rice-1961-2023",
+      "label": "HaNi-Crop 水稻氮投入原件",
+      "filename": "HaNi-Crop-Rice.nc",
+      "bytes": 46168898,
+      "sha256": "b4ec2715a70275ae5e4addc6b02f00616085ce36b6ba5a1fb83118fc83249313",
+      "publisher_checksum": {
+        "algorithm": "md5",
+        "value": "eaba2069096b4af6aa442ecbe32d5701",
+        "basis": "historical publisher record metadata"
+      },
+      "scope_label": "仅水稻 · 1961–2023 年度序列 · 全球 0.1° · 四类氮投入变量",
+      "access_method": "official_direct_file",
+      "publication_status": "verified",
+      "access_note_zh": "匿名Range文件头核验；未做当日全件checksum",
+      "checked_at": "2026-10-14T03:18:29.144689+00:00",
+      "href": "https://zenodo.org/api/records/21364978/files/HaNi-Crop-Rice.nc/content",
+      "record_doi": "10.5281/zenodo.21364978",
+      "license_note_zh": "CC BY 4.0；请注明来源与改动",
+      "endpoint_evidence": {
+        "checked_at": "2026-10-14T03:18:29.144689+00:00",
+        "http_status": 206,
+        "body_bytes": 8,
+        "content_range_total": 46168898,
+        "anonymous": true,
+        "redirects": false,
+        "full_checksum_checked_today": false,
+        "filename_basis": "Content-Disposition attachment filename"
+      }
+    },
+    {
+      "asset_id": "urb-041-zip",
+      "label": "global_pv_inventory_all.zip",
+      "scope_refs": [],
+      "access_method": "official_direct_file",
+      "href": "https://zenodo.org/api/records/5005868/files/global_pv_inventory_all.zip/content",
+      "filename": "global_pv_inventory_all.zip",
+      "bytes": 82539694,
+      "sha256": "c97a488e65921e90d9776f73ad52f35b46997b28455d37c38af69c1e67f2bb01",
+      "local_downloaded": true,
+      "local_read": {
+        "accepted": true,
+        "details": "本地科学文件的对应范围已有读取验收记录。"
+      },
+      "publisher_checksum": {
+        "algorithm": "MD5",
+        "value": "418adba10ebd05d079ed5be9ab6788dd"
+      },
+      "endpoint_verification": {
+        "checked_at": "2026-10-12T15:27:34.405861+00:00",
+        "checked_at_precision": "timestamp",
+        "http_status": 200,
+        "content_type": "application/octet-stream",
+        "content_length": 82539694,
+        "details": "既有匿名公网核验记录为 HTTP 200，响应长度与登记字节数相符。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "version": "d039-v1",
+  "products": {
+    "HUM-002": {
+      "primary": [
+        "industry-energy",
+        "steel"
+      ],
+      "secondary": [],
+      "review_note": "设施位置、炼钢工艺与产能，钢铁设施主路径。"
+    },
+    "HUM-006": {
+      "primary": [
+        "industry-energy",
+        "cement"
+      ],
+      "secondary": [],
+      "review_note": "水泥设施或国家水泥生产/工艺CO2，水泥主路径；设施与国家汇总不混为同一尺度。"
+    },
+    "HUM-007": {
+      "primary": [
+        "industry-energy",
+        "cement"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "emissions"
+        ]
+      ],
+      "review_note": "水泥设施或国家水泥生产/工艺CO2，水泥主路径；设施与国家汇总不混为同一尺度。"
+    },
+    "HUM-009": {
+      "primary": [
+        "industry-energy",
+        "oil-gas"
+      ],
+      "secondary": [],
+      "review_note": "OGIM油气基础设施点线面；不是燃油燃气电厂。"
+    },
+    "URB-013": {
+      "primary": [
+        "industry-energy",
+        "power"
+      ],
+      "secondary": [],
+      "review_note": "电厂/机组设施位置、燃料与容量字段。"
+    },
+    "URB-020": {
+      "primary": [
+        "industry-energy",
+        "power"
+      ],
+      "secondary": [],
+      "review_note": "电厂/机组设施位置、燃料与容量字段。"
+    },
+    "URB-041": {
+      "primary": [
+        "industry-energy",
+        "renewables"
+      ],
+      "secondary": [],
+      "review_note": "光伏发电设施预测多边形，静态快照。"
+    },
+    "URB-028": {
+      "primary": [
+        "industry-energy",
+        "consumption"
+      ],
+      "secondary": [],
+      "review_note": "国家经济体人均用电量。"
+    },
+    "LEG-001": {
+      "primary": [
+        "urban-transport",
+        "boundaries"
+      ],
+      "secondary": [
+        [
+          "population-economy",
+          "population"
+        ],
+        [
+          "urban-transport",
+          "built"
+        ]
+      ],
+      "review_note": "UCDB城市中心多边形，LEG002的NOx是城市边界统计属性；不将实体主归排放格网。"
+    },
+    "LEG-002": {
+      "primary": [
+        "urban-transport",
+        "boundaries"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "emissions"
+        ]
+      ],
+      "review_note": "UCDB城市中心多边形，LEG002的NOx是城市边界统计属性；不将实体主归排放格网。"
+    },
+    "LEG-004": {
+      "primary": [
+        "urban-transport",
+        "built"
+      ],
+      "secondary": [],
+      "review_note": "建成面积/体积或不透水面变化年份。"
+    },
+    "URB-008": {
+      "primary": [
+        "urban-transport",
+        "built"
+      ],
+      "secondary": [],
+      "review_note": "建成面积/体积或不透水面变化年份。"
+    },
+    "URB-015": {
+      "primary": [
+        "urban-transport",
+        "built"
+      ],
+      "secondary": [],
+      "review_note": "建成面积/体积或不透水面变化年份。"
+    },
+    "URB-024": {
+      "primary": [
+        "urban-transport",
+        "built"
+      ],
+      "secondary": [],
+      "review_note": "建成面积/体积或不透水面变化年份。"
+    },
+    "URB-017": {
+      "primary": [
+        "urban-transport",
+        "buildings"
+      ],
+      "secondary": [],
+      "review_note": "建筑轮廓/高度与SSP屋顶面积，保留单体和网格的区别。"
+    },
+    "URB-021": {
+      "primary": [
+        "urban-transport",
+        "buildings"
+      ],
+      "secondary": [],
+      "review_note": "建筑轮廓/高度与SSP屋顶面积，保留单体和网格的区别。"
+    },
+    "URB-029": {
+      "primary": [
+        "urban-transport",
+        "roads"
+      ],
+      "secondary": [],
+      "review_note": "OSM对象标签与GRIP道路密度，点线面对象和栅格分别记录。"
+    },
+    "URB-030": {
+      "primary": [
+        "urban-transport",
+        "roads"
+      ],
+      "secondary": [],
+      "review_note": "OSM对象标签与GRIP道路密度，点线面对象和栅格分别记录。"
+    },
+    "HUM-003": {
+      "primary": [
+        "urban-transport",
+        "airports"
+      ],
+      "secondary": [],
+      "review_note": "机场设施点；非客流统计，含关闭机场与直升机坪。"
+    },
+    "URB-009": {
+      "primary": [
+        "urban-transport",
+        "night-lights"
+      ],
+      "secondary": [],
+      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
+    },
+    "URB-016": {
+      "primary": [
+        "urban-transport",
+        "morphology"
+      ],
+      "secondary": [],
+      "review_note": "夜间灯光或人为热通量，按已登记城市环境图层归入城市形态，未推断城市经济值。"
+    },
+    "URB-035": {
+      "primary": [
+        "urban-transport",
+        "night-lights"
+      ],
+      "secondary": [],
+      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
+    },
+    "URB-039": {
+      "primary": [
+        "urban-transport",
+        "night-lights"
+      ],
+      "secondary": [],
+      "review_note": "夜间灯光亮度图层；独立子目录，不作为GDP或城市几何实测。"
+    },
+    "HUM-001": {
+      "primary": [
+        "population-economy",
+        "population"
+      ],
+      "secondary": [],
+      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+    },
+    "HUM-005": {
+      "primary": [
+        "population-economy",
+        "population"
+      ],
+      "secondary": [
+        [
+          "urban-transport",
+          "boundaries"
+        ]
+      ],
+      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+    },
+    "LEG-003": {
+      "primary": [
+        "population-economy",
+        "population"
+      ],
+      "secondary": [],
+      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+    },
+    "URB-002": {
+      "primary": [
+        "population-economy",
+        "population"
+      ],
+      "secondary": [],
+      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+    },
+    "URB-007": {
+      "primary": [
+        "population-economy",
+        "population"
+      ],
+      "secondary": [],
+      "review_note": "模型人口格网或静态边界人口年龄性别汇总。"
+    },
+    "URB-003": {
+      "primary": [
+        "population-economy",
+        "gdp"
+      ],
+      "secondary": [],
+      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+    },
+    "URB-011": {
+      "primary": [
+        "population-economy",
+        "gdp"
+      ],
+      "secondary": [],
+      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+    },
+    "URB-031": {
+      "primary": [
+        "population-economy",
+        "gdp"
+      ],
+      "secondary": [],
+      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+    },
+    "URB-032": {
+      "primary": [
+        "population-economy",
+        "gdp"
+      ],
+      "secondary": [],
+      "review_note": "GDP总量、人均值或HDI格网，实体ID与版本不合并。"
+    },
+    "HUM-008": {
+      "primary": [
+        "population-economy",
+        "employment"
+      ],
+      "secondary": [
+        [
+          "industry-energy",
+          "industrial-employment"
+        ],
+        [
+          "agriculture-livestock",
+          "agricultural-employment"
+        ]
+      ],
+      "review_note": "ILO模型估计农业/工业就业占比；国家经济体汇总。"
+    },
+    "HUM-010": {
+      "primary": [
+        "population-economy",
+        "services"
+      ],
+      "secondary": [],
+      "review_note": "JMP基本饮水/卫生人口比例；国家经济体及汇总。"
+    },
+    "ATM-005": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "composition"
+        ]
+      ],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-007": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-008": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [
+        [
+          "meteorology-climate",
+          "reanalysis"
+        ]
+      ],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-012": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-013": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-018": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "deposition"
+        ],
+        [
+          "atmosphere-emissions",
+          "composition"
+        ]
+      ],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-020": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "composition"
+        ]
+      ],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-031": {
+      "primary": [
+        "atmosphere-emissions",
+        "aerosols"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶浓度、混合比或光学厚度；同页逐变量保留物理量。"
+    },
+    "ATM-019": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-028": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-029": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-030": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-036": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-037": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-038": {
+      "primary": [
+        "atmosphere-emissions",
+        "composition"
+      ],
+      "secondary": [],
+      "review_note": "气溶胶组分或气溶胶水，不将混合比/质量浓度视为同量。"
+    },
+    "ATM-021": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "ATM-022": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "ATM-023": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "ATM-024": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "ATM-026": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "ATM-034": {
+      "primary": [
+        "atmosphere-emissions",
+        "gases"
+      ],
+      "secondary": [],
+      "review_note": "遥感气态污染物柱浓度，非排放通量。"
+    },
+    "LEG-005": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-001": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-002": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-003": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-004": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-009": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-025": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-033": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [
+        [
+          "agriculture-livestock",
+          "agricultural-emissions"
+        ]
+      ],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-035": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [
+        [
+          "industry-energy",
+          "power-emissions"
+        ]
+      ],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-039": {
+      "primary": [
+        "atmosphere-emissions",
+        "emissions"
+      ],
+      "secondary": [
+        [
+          "urban-transport",
+          "transport-emissions"
+        ]
+      ],
+      "review_note": "大气排放清单，按原部门/物理量保留格网与国家统计。"
+    },
+    "ATM-014": {
+      "primary": [
+        "atmosphere-emissions",
+        "fire"
+      ],
+      "secondary": [],
+      "review_note": "火灾排放；ATM027全球与14区域汇总，不伪造格网。"
+    },
+    "ATM-027": {
+      "primary": [
+        "atmosphere-emissions",
+        "fire"
+      ],
+      "secondary": [],
+      "review_note": "火灾排放；ATM027全球与14区域汇总，不伪造格网。"
+    },
+    "ATM-006": {
+      "primary": [
+        "atmosphere-emissions",
+        "deposition"
+      ],
+      "secondary": [
+        [
+          "atmosphere-emissions",
+          "emissions"
+        ]
+      ],
+      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
+    },
+    "ATM-015": {
+      "primary": [
+        "atmosphere-emissions",
+        "deposition"
+      ],
+      "secondary": [],
+      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
+    },
+    "ATM-016": {
+      "primary": [
+        "atmosphere-emissions",
+        "deposition"
+      ],
+      "secondary": [],
+      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
+    },
+    "ATM-017": {
+      "primary": [
+        "atmosphere-emissions",
+        "deposition"
+      ],
+      "secondary": [],
+      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
+    },
+    "ATM-032": {
+      "primary": [
+        "atmosphere-emissions",
+        "deposition"
+      ],
+      "secondary": [],
+      "review_note": "干湿沉降通量/年度图层，保持独立沉降目录。"
+    },
+    "ATM-010": {
+      "primary": [
+        "meteorology-climate",
+        "reanalysis"
+      ],
+      "secondary": [
+        [
+          "meteorology-climate",
+          "temperature-wind"
+        ],
+        [
+          "meteorology-climate",
+          "precipitation"
+        ]
+      ],
+      "review_note": "气象再分析；源月平均频率，温湿风降水交叉入口。"
+    },
+    "ATM-011": {
+      "primary": [
+        "meteorology-climate",
+        "reanalysis"
+      ],
+      "secondary": [
+        [
+          "meteorology-climate",
+          "temperature-wind"
+        ],
+        [
+          "meteorology-climate",
+          "precipitation"
+        ]
+      ],
+      "review_note": "气象再分析；源月平均频率，温湿风降水交叉入口。"
+    },
+    "URB-004": {
+      "primary": [
+        "land-ecology",
+        "cover"
+      ],
+      "secondary": [],
+      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
+    },
+    "URB-006": {
+      "primary": [
+        "land-ecology",
+        "cover"
+      ],
+      "secondary": [],
+      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
+    },
+    "URB-019": {
+      "primary": [
+        "land-ecology",
+        "cover"
+      ],
+      "secondary": [],
+      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
+    },
+    "URB-036": {
+      "primary": [
+        "land-ecology",
+        "cover"
+      ],
+      "secondary": [],
+      "review_note": "土地覆盖类别图；年度图/单时期版本，不当连续时间序列。"
+    },
+    "URB-022": {
+      "primary": [
+        "land-ecology",
+        "vegetation"
+      ],
+      "secondary": [],
+      "review_note": "NDVI/EVI植被指数，十日或月合成。"
+    },
+    "URB-034": {
+      "primary": [
+        "land-ecology",
+        "vegetation"
+      ],
+      "secondary": [],
+      "review_note": "NDVI/EVI植被指数，十日或月合成。"
+    },
+    "URB-023": {
+      "primary": [
+        "land-ecology",
+        "water"
+      ],
+      "secondary": [],
+      "review_note": "地表水历史、季节性与发生率。"
+    },
+    "URB-026": {
+      "primary": [
+        "land-ecology",
+        "soil"
+      ],
+      "secondary": [],
+      "review_note": "土壤水浸提pH，真实变量保留。"
+    },
+    "URB-014": {
+      "primary": [
+        "land-ecology",
+        "terrain"
+      ],
+      "secondary": [],
+      "review_note": "全球陆地高程和海底地形。"
+    },
+    "URB-005": {
+      "primary": [
+        "land-ecology",
+        "surface"
+      ],
+      "secondary": [],
+      "review_note": "陆表温度/发射率或反照率，不归常规气温。"
+    },
+    "URB-025": {
+      "primary": [
+        "land-ecology",
+        "surface"
+      ],
+      "secondary": [],
+      "review_note": "陆表温度/发射率或反照率，不归常规气温。"
+    },
+    "URB-010": {
+      "primary": [
+        "agriculture-livestock",
+        "livestock"
+      ],
+      "secondary": [],
+      "review_note": "家畜每像元数量或密度，原单位分别保留。"
+    },
+    "URB-038": {
+      "primary": [
+        "agriculture-livestock",
+        "livestock"
+      ],
+      "secondary": [],
+      "review_note": "家畜每像元数量或密度，原单位分别保留。"
+    },
+    "URB-040": {
+      "primary": [
+        "agriculture-livestock",
+        "livestock"
+      ],
+      "secondary": [],
+      "review_note": "家畜每像元数量或密度，原单位分别保留。"
+    },
+    "URB-012": {
+      "primary": [
+        "agriculture-livestock",
+        "inputs"
+      ],
+      "secondary": [],
+      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+    },
+    "URB-027": {
+      "primary": [
+        "agriculture-livestock",
+        "inputs"
+      ],
+      "secondary": [
+        [
+          "agriculture-livestock",
+          "crops"
+        ],
+        [
+          "agriculture-livestock",
+          "livestock"
+        ],
+        [
+          "population-economy",
+          "population"
+        ]
+      ],
+      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+    },
+    "URB-033": {
+      "primary": [
+        "agriculture-livestock",
+        "inputs"
+      ],
+      "secondary": [
+        [
+          "agriculture-livestock",
+          "crops"
+        ]
+      ],
+      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+    },
+    "URB-037": {
+      "primary": [
+        "agriculture-livestock",
+        "inputs"
+      ],
+      "secondary": [],
+      "review_note": "肥料/粪肥输入，国家/六边形/作物格网分开。"
+    },
+    "URB-018": {
+      "primary": [
+        "unclassified"
+      ],
+      "secondary": [],
+      "review_note": "仓库候选真实名称与内容仍待核，urban footprints字段不足以确认城市三十年产品含义，留内部审核队列。"
+    }
+  },
+  "unclassified": [
+    "URB-018"
+  ]
+}
