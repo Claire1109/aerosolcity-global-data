@@ -74,8 +74,10 @@
     const links = page && safeHref(page.url) ? `<a href="${esc(page.url)}" target="_blank" rel="noopener noreferrer">${esc(page.label || "官方产品/数据记录页")}</a>` : "";
     const extraLinks = (product.additional_source_urls || []).filter(safeHref).map(url=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">来源记录</a>`).join("");
     const refs = product.references || {};
+    const dataDoi = refs.data_record_doi || refs.data_doi;
     const typedDois = [
-      refs.data_record_doi ? `<a href="https://doi.org/${esc(refs.data_record_doi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(refs.data_record_doi)}</a>` : "",
+      dataDoi ? `<a href="https://doi.org/${esc(dataDoi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">数据记录 DOI：${esc(dataDoi)}</a>` : "",
+      refs.data_version_doi ? `<a href="https://doi.org/${esc(refs.data_version_doi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">数据版本 DOI：${esc(refs.data_version_doi)}</a>` : "",
       refs.article_doi ? `<a href="https://doi.org/${esc(refs.article_doi.replace(/^https?:\/\/doi\.org\//i, ""))}" target="_blank" rel="noopener noreferrer">论文 DOI：${esc(refs.article_doi)}</a>` : "",
     ].filter(Boolean).join("");
     const citation = clean(refs.citation);
