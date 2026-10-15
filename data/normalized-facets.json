@@ -1,5 +1,5 @@
 {
-  "version": "d043-v1",
+  "version": "d045-v1",
   "products": {
     "ATM-005": {
       "frequency": "monthly",
@@ -2456,6 +2456,228 @@
       },
       "spatial_form": "grid",
       "scale_group": "native-grid",
+      "access": [
+        "request"
+      ]
+    },
+    "ATM-044": {
+      "frequency": "daily",
+      "frequency_original": "逐日24小时采样",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "站点24小时滤膜样品",
+      "formats": [
+        "XLSX"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2018,
+            "end": 2018
+          },
+          "qualifier": "2018-01-01至01-31，两个站点",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 2018,
+            "end": 2018
+          },
+          "qualifier": "FIG.1：每站31日，共62条站点日期记录",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "access": [
+        "repository"
+      ]
+    },
+    "ATM-045": {
+      "frequency": "daily",
+      "frequency_original": "逐日滤膜记录",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "单站滤膜样品；33.776°N、84.413°W",
+      "formats": [
+        "TSV"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2017,
+            "end": 2017
+          },
+          "qualifier": "2017-01-02至12-31",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 2017,
+            "end": 2017
+          },
+          "qualifier": "364个唯一日期行；各方法有效值不同",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "access": [
+        "repository"
+      ]
+    },
+    "ATM-046": {
+      "frequency": "hourly",
+      "frequency_original": "小时位置，存在缺测",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "在线测量时间序列；具体站点坐标未由文件核实",
+      "formats": [
+        "XLSX"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2021,
+            "end": 2021
+          },
+          "qualifier": "文件时标2021-01-15至03-20",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": {
+            "start": 2021,
+            "end": 2021
+          },
+          "qualifier": "有效OP时间2021-01-17 12:00至03-20 09:00；时区未声明",
+          "basis": "declared_range"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "access": [
+        "repository"
+      ]
+    },
+    "ATM-047": {
+      "frequency": "daily",
+      "frequency_original": "采样频次未由原件核验",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "站点样品；坐标和逐样品字段尚未由原件核验",
+      "formats": [
+        "XLSX"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2018,
+            "end": 2018
+          },
+          "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得数值文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "access": [
+        "repository"
+      ]
+    },
+    "ATM-048": {
+      "frequency": "mixed",
+      "frequency_original": "多数24小时滤膜；各站观测期2个月至9.5年不等",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+      "formats": [
+        "XLSX"
+      ],
+      "years": {
+        "source_years": {
+          "explicit": [],
+          "range": {
+            "start": 2011,
+            "end": 2024
+          },
+          "qualifier": "论文总体取样期，各地点取样年份与长度不同，非完整连续14年",
+          "basis": "declared_range"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得数值文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
+      "access": [
+        "repository"
+      ]
+    },
+    "ATM-049": {
+      "frequency": "mixed",
+      "frequency_original": "每2日一次、每次24小时；元数据声明13个月",
+      "spatial_form": "point",
+      "scale_group": "object",
+      "scale_original": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+      "formats": [],
+      "years": {
+        "source_years": {
+          "explicit": [
+            2023
+          ],
+          "range": null,
+          "qualifier": "仅确证起始年：2023-05-31 22:00 UTC起，声明13个月；末日与完整有效值年份未由文件核验",
+          "basis": "explicit"
+        },
+        "local_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": "未取得数值文件",
+          "basis": "unknown"
+        },
+        "hosted_years": {
+          "explicit": [],
+          "range": null,
+          "qualifier": null,
+          "basis": "unknown"
+        }
+      },
       "access": [
         "request"
       ]

@@ -140,12 +140,12 @@
     return {path,params};
   }
   function exportGroupsCsv(results,mapping,taxonomy,base='') {
-    const rows=[['核心产品ID','产品名称','匹配版本ID','原记录ID','主分类','变量与单位','来源年份及说明','本地年份及说明','本站年份及说明','原生空间单位','原生尺度','当前版本文件入口','来源记录','版本详情链接','匹配版本标签','温度类型','昼夜声明','原家族来源年份（仅参考）']];
+    const rows=[['核心产品ID','产品名称','匹配版本ID','原记录ID','主分类','变量与单位','来源年份及说明','本地年份及说明','本站年份及说明','原生空间单位','原生尺度','当前版本文件入口','来源记录','版本详情链接','匹配版本标签','温度类型','昼夜声明','原家族来源年份（仅参考）','数值类型','核验范围','许可与限制','逐文件核验与许可']];
     results.forEach(({group,matched_variant_ids})=>group.variants.filter(v=>matched_variant_ids.includes(v.variant_id)).forEach(v=>{
       const p=viewRecord(v);rows.push([group.dataset_id,group.display_name,v.variant_id,(v.legacy_record_ids||[]).join(';'),pathLabel(mapping.products[group.dataset_id].primary,taxonomy),
       (p.variables||[]).map(x=>typeof x==='string'?x:[x.label||x.name,x.unit].filter(Boolean).join(' / ')).join(';'),
       JSON.stringify(p.source_years),JSON.stringify(p.local_years),JSON.stringify(p.hosted_years),p.native_spatial_unit_or_grid,p.native_spatial_resolution,
-      (p.downloads||[]).map(a=>a.href).join(';')||p.primary_action?.url||'',p.source_page?.url||'',base+'#/datasets/'+group.dataset_id+'?variant='+encodeURIComponent(v.variant_id),v.label,v.facets.heat_type||'',(v.facets.diurnal||[]).join('/'),JSON.stringify(v.original_record.source_years)]);
+      (p.downloads||[]).map(a=>a.href).join(';')||p.primary_action?.url||'',p.source_page?.url||'',base+'#/datasets/'+group.dataset_id+'?variant='+encodeURIComponent(v.variant_id),v.label,v.facets.heat_type||'',(v.facets.diurnal||[]).join('/'),JSON.stringify(v.original_record.source_years),p.data_type||'',p.quality_note_zh||'',p.license_note_zh||'',(p.downloads||[]).map(a=>[a.filename||a.asset_id,a.scope_label,a.access_note_zh,a.license_note_zh||a.license].filter(Boolean).join(' / ')).join('；')]);
     }));
     return '\uFEFF'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n');
   }

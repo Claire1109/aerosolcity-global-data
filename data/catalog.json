@@ -1,6 +1,6 @@
 {
   "schema_version": "d041-core-variants-v1",
-  "catalog_version": "d043-v1",
+  "catalog_version": "d045-v1",
   "products": [
     {
       "dataset_id": "ATM-005",
@@ -21111,6 +21111,2546 @@
         "no2-tropospheric-column",
         "so2-column"
       ]
+    },
+    {
+      "dataset_id": "ATM-044",
+      "display_name": "北京南北两站 PM₂.₅ 氧化潜势（2018年1月）",
+      "short_use_zh": "PM₂.₅ 水溶性组分DTT体积归一与质量归一氧化潜势。",
+      "aliases": [
+        "PM₂.₅氧化潜势（DTT，空气体积归一）",
+        "PM₂.₅氧化潜势（DTT，质量归一）"
+      ],
+      "variants": [
+        {
+          "variant_id": "ATM-044",
+          "legacy_record_ids": [],
+          "label": "2018年1月 · 两站逐日实测",
+          "original_record": {
+            "dataset_id": "ATM-044",
+            "variant_id": "ATM-044",
+            "display_name": "北京南北两站 PM₂.₅ 氧化潜势（2018年1月）",
+            "version_label": "2018年1月 · 两站逐日实测",
+            "publisher_author": "Wei Yuan 等；ACP / Zenodo",
+            "source_page": {
+              "url": "https://zenodo.org/records/10791126",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "2018-01-01至01-31，两个站点"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "FIG.1：每站31日，共62条站点日期记录"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "中国北京：大兴定福庄村与海淀国家纳米科学中心",
+            "native_spatial_resolution": "站点24小时滤膜样品",
+            "native_spatial_unit_or_grid": "站点24小时滤膜样品",
+            "source_temporal_resolution": "逐日24小时采样",
+            "data_type": "环境实测：PM₂.₅ 水溶性组分 DTT 反应活性；FIG.1 数值",
+            "source_method": "水超声提取30分钟、0.45 µm PVDF过滤；37°C、pH7.4，TCA终止反应，DTNB/412 nm检测；滤膜空白校正。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "DTTV",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "按采样空气体积归一的DTT消耗速率；原表DTTV列。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DTTm",
+                "label": "DTT质量归一氧化潜势（PM₂.₅实测）",
+                "unit": "pmol min⁻¹ µg⁻¹",
+                "definition": "按PM质量归一的DTT消耗速率；方法2.3单位为pmol，与其他来源的nmol单位分别保留。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-044-1",
+                "filename": "FIG.3.xlsx",
+                "label": "FIG.3.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.3.xlsx/content",
+                "bytes": 8900,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "d13a3c73d687f1df2ad2688161e68fa3"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-2",
+                "filename": "FIG.2.xlsx",
+                "label": "FIG.2.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.2.xlsx/content",
+                "bytes": 9711,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "c94c5115c1f50c88a24e78288849747f"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-3",
+                "filename": "FIG.1.xlsx",
+                "label": "FIG.1.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.1.xlsx/content",
+                "bytes": 18582,
+                "sha256": "47476776581dcfdd18fc1a336be65e16f80ac89fd2623c8d6e06e509feecbef5",
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "bb7e99f9aabe37d4a6263fbe869413ce"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "已取得FIG.1，MD5/CRC及62条站点日期记录的DTTv/DTTm列通过核验；本站未托管该原件。"
+                },
+                "local_evidence_path": "data/raw/ATM/D045/Yuan_2024_Beijing_FIG1.body",
+                "license": "CC BY 4.0",
+                "access_note_zh": "已取得FIG.1，MD5/CRC及62条站点日期记录的DTTv/DTTm列通过核验；本站未托管该原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-4",
+                "filename": "FIG.4.xlsx",
+                "label": "FIG.4.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.4.xlsx/content",
+                "bytes": 9522,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "e5ebbb4dce0d90281706e629689d87ee"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-5",
+                "filename": "FIG.5.xlsx",
+                "label": "FIG.5.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.5.xlsx/content",
+                "bytes": 9053,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "0fc46ffdc38da12ce3b70161a0491c71"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://zenodo.org/records/10791126",
+              "label": "查看官方文件清单",
+              "asset_count": 5,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/ATM/D045/yuan_numeric_qc.json",
+              "work/ATM/D045/yuan_file_manifest.json",
+              "work/REVIEW/D045/source_gate/atm_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.5194/acp-24-13219-2024",
+              "data_doi": "10.5281/zenodo.10791126"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅ 水溶性组分DTT体积归一与质量归一氧化潜势。",
+            "coordinates": [
+              {
+                "file_label": "South",
+                "name": "Dingfuzhuang village (DFZ), Daxing, Beijing",
+                "latitude": 39.61,
+                "longitude": 116.28,
+                "coordinate_source": "paper Methods2.1; not workbook columns"
+              },
+              {
+                "file_label": "North",
+                "name": "National Center for Nanoscience and Technology (NCNT), Haidian, Beijing",
+                "latitude": 39.99,
+                "longitude": 116.32,
+                "coordinate_source": "paper Methods2.1; not workbook columns"
+              }
+            ],
+            "license_note_zh": "数据仓库许可 CC BY 4.0。",
+            "quality_note_zh": "FIG.1完整取得，发布方MD5及ZIP CRC通过；DTTV、DTTm各62个有效值，无缺失。其余4个图表文件仅核实仓库清单。站点标签按原表空行分块核对；坐标来自论文方法。",
+            "main_limitation_zh": "仅北京两站2018年1月，非全国或长期重建。摘要与方法2.3的DTTm单位记载存在疑似排版不一致，本目录采用方法2.3，不改动原文或换算数值。"
+          },
+          "original_record_sha256": "d94626bbd9418f4cad63207b581c9ccc1e6a230d1e967a17e9fa75c6354632fa",
+          "current_view": {
+            "dataset_id": "ATM-044",
+            "variant_id": "ATM-044",
+            "display_name": "北京南北两站 PM₂.₅ 氧化潜势（2018年1月）",
+            "version_label": "2018年1月 · 两站逐日实测",
+            "publisher_author": "Wei Yuan 等；ACP / Zenodo",
+            "source_page": {
+              "url": "https://zenodo.org/records/10791126",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "2018-01-01至01-31，两个站点"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "FIG.1：每站31日，共62条站点日期记录"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "中国北京：大兴定福庄村与海淀国家纳米科学中心",
+            "native_spatial_resolution": "站点24小时滤膜样品",
+            "native_spatial_unit_or_grid": "站点24小时滤膜样品",
+            "source_temporal_resolution": "逐日24小时采样",
+            "data_type": "环境实测：PM₂.₅ 水溶性组分 DTT 反应活性；FIG.1 数值",
+            "source_method": "水超声提取30分钟、0.45 µm PVDF过滤；37°C、pH7.4，TCA终止反应，DTNB/412 nm检测；滤膜空白校正。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "DTTV",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "按采样空气体积归一的DTT消耗速率；原表DTTV列。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DTTm",
+                "label": "DTT质量归一氧化潜势（PM₂.₅实测）",
+                "unit": "pmol min⁻¹ µg⁻¹",
+                "definition": "按PM质量归一的DTT消耗速率；方法2.3单位为pmol，与其他来源的nmol单位分别保留。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-044-1",
+                "filename": "FIG.3.xlsx",
+                "label": "FIG.3.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.3.xlsx/content",
+                "bytes": 8900,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "d13a3c73d687f1df2ad2688161e68fa3"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-2",
+                "filename": "FIG.2.xlsx",
+                "label": "FIG.2.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.2.xlsx/content",
+                "bytes": 9711,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "c94c5115c1f50c88a24e78288849747f"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-3",
+                "filename": "FIG.1.xlsx",
+                "label": "FIG.1.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.1.xlsx/content",
+                "bytes": 18582,
+                "sha256": "47476776581dcfdd18fc1a336be65e16f80ac89fd2623c8d6e06e509feecbef5",
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "bb7e99f9aabe37d4a6263fbe869413ce"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "已取得FIG.1，MD5/CRC及62条站点日期记录的DTTv/DTTm列通过核验；本站未托管该原件。"
+                },
+                "local_evidence_path": "data/raw/ATM/D045/Yuan_2024_Beijing_FIG1.body",
+                "license": "CC BY 4.0",
+                "access_note_zh": "已取得FIG.1，MD5/CRC及62条站点日期记录的DTTv/DTTm列通过核验；本站未托管该原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-4",
+                "filename": "FIG.4.xlsx",
+                "label": "FIG.4.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.4.xlsx/content",
+                "bytes": 9522,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "e5ebbb4dce0d90281706e629689d87ee"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-044-5",
+                "filename": "FIG.5.xlsx",
+                "label": "FIG.5.xlsx",
+                "href": "https://zenodo.org/api/records/10791126/files/FIG.5.xlsx/content",
+                "bytes": 9053,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "0fc46ffdc38da12ce3b70161a0491c71"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "发布方文件名、大小与MD5已登记；内容未核验。"
+                },
+                "local_evidence_path": null,
+                "license": "CC BY 4.0",
+                "access_note_zh": "发布方文件名、大小与MD5已登记；内容未核验。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://zenodo.org/records/10791126",
+              "label": "查看官方文件清单",
+              "asset_count": 5,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/ATM/D045/yuan_numeric_qc.json",
+              "work/ATM/D045/yuan_file_manifest.json",
+              "work/REVIEW/D045/source_gate/atm_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.5194/acp-24-13219-2024",
+              "data_doi": "10.5281/zenodo.10791126"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅ 水溶性组分DTT体积归一与质量归一氧化潜势。",
+            "coordinates": [
+              {
+                "file_label": "South",
+                "name": "Dingfuzhuang village (DFZ), Daxing, Beijing",
+                "latitude": 39.61,
+                "longitude": 116.28,
+                "coordinate_source": "paper Methods2.1; not workbook columns"
+              },
+              {
+                "file_label": "North",
+                "name": "National Center for Nanoscience and Technology (NCNT), Haidian, Beijing",
+                "latitude": 39.99,
+                "longitude": 116.32,
+                "coordinate_source": "paper Methods2.1; not workbook columns"
+              }
+            ],
+            "license_note_zh": "数据仓库许可 CC BY 4.0。",
+            "quality_note_zh": "FIG.1完整取得，发布方MD5及ZIP CRC通过；DTTV、DTTm各62个有效值，无缺失。其余4个图表文件仅核实仓库清单。站点标签按原表空行分块核对；坐标来自论文方法。",
+            "main_limitation_zh": "仅北京两站2018年1月，非全国或长期重建。摘要与方法2.3的DTTm单位记载存在疑似排版不一致，本目录采用方法2.3，不改动原文或换算数值。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/ATM/D045/yuan_numeric_qc.json",
+              "work/ATM/D045/yuan_file_manifest.json",
+              "work/REVIEW/D045/source_gate/atm_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "daily",
+            "frequency_original": "逐日24小时采样",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "站点24小时滤膜样品",
+            "formats": [
+              "XLSX"
+            ],
+            "years": {
+              "source_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2018,
+                  "end": 2018
+                },
+                "qualifier": "2018-01-01至01-31，两个站点",
+                "basis": "declared_range"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2018,
+                  "end": 2018
+                },
+                "qualifier": "FIG.1：每站31日，共62条站点日期记录",
+                "basis": "declared_range"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "repository"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": [
+        "op-pm25-dtt-v",
+        "op-pm25-dtt-m"
+      ]
+    },
+    {
+      "dataset_id": "ATM-045",
+      "display_name": "亚特兰大 PM₂.₅ 逐日氧化潜势（DTT / AA / GSH）",
+      "short_use_zh": "DTT消耗速率及AA/GSH百分比消耗；三项均按采样空气体积归一。",
+      "aliases": [
+        "PM₂.₅氧化潜势（DTT，空气体积归一）",
+        "PM₂.₅氧化潜势（AA百分比消耗，体积归一）",
+        "PM₂.₅氧化潜势（GSH百分比消耗，体积归一）"
+      ],
+      "variants": [
+        {
+          "variant_id": "ATM-045",
+          "legacy_record_ids": [],
+          "label": "2017年 · Jefferson Street站实测",
+          "original_record": {
+            "dataset_id": "ATM-045",
+            "variant_id": "ATM-045",
+            "display_name": "亚特兰大 PM₂.₅ 逐日氧化潜势（DTT / AA / GSH）",
+            "version_label": "2017年 · Jefferson Street站实测",
+            "publisher_author": "Dong Gao 等；PANGAEA",
+            "source_page": {
+              "url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "2017-01-02至12-31"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "364个唯一日期行；各方法有效值不同"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "美国亚特兰大 Jefferson Street SEARCH 站",
+            "native_spatial_resolution": "单站滤膜样品；33.776°N、84.413°W",
+            "native_spatial_unit_or_grid": "单站滤膜样品；33.776°N、84.413°W",
+            "source_temporal_resolution": "逐日滤膜记录",
+            "data_type": "环境实测：PM₂.₅ 水溶性组分DTT及模拟呼吸道衬液AA/GSH消耗",
+            "source_method": "PM₂.₅水溶性提取液；DTT法报告消耗速率，RTLF-AA/GSH报告按空气体积归一的抗氧化物百分比消耗。",
+            "native_formats": [
+              "TSV"
+            ],
+            "variables": [
+              {
+                "name": "DTT depl [nmol/min/m**3] (oxidative potential measure)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "DTT消耗速率/采样空气体积；324个有效值，40个缺失。",
+                "period": "2017-01-02至12-31",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AA depl [%/m**3] (oxidative potential measure)",
+                "label": "AA百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-AA百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "AA",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "GSH depl [%/m**3] (oxidative potential measure)",
+                "label": "GSH百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-GSH百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "GSH",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-045-1",
+                "filename": "Gao_2019.tab",
+                "label": "Gao_2019.tab",
+                "href": "https://doi.pangaea.de/10.1594/PANGAEA.908043?format=textfile",
+                "bytes": 142008,
+                "sha256": "408d5d149f4408070586106aba3b9bbbd5306bb9687687b7c5d7d2d4ad497d66",
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "完整TSV已取得并核验OP列、日期及缺失情况；下载SHA-256已保存，发布方无独立校验码；本站未托管原件。"
+                },
+                "local_evidence_path": "data/raw/URB/D045/pangaea-908043/data.tsv",
+                "license": "CC BY 4.0",
+                "access_note_zh": "完整TSV已取得并核验OP列、日期及缺失情况；下载SHA-256已保存，发布方无独立校验码；本站未托管原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+              "label": "查看官方文件清单",
+              "asset_count": 1,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.5194/acp-20-5197-2020",
+              "data_doi": "10.1594/PANGAEA.908043"
+            },
+            "access_routes": [],
+            "short_use_zh": "DTT消耗速率及AA/GSH百分比消耗；三项均按采样空气体积归一。",
+            "coordinates": {
+              "latitude": 33.776,
+              "longitude": -84.413
+            },
+            "license_note_zh": "文件头明确 CC BY 4.0。",
+            "quality_note_zh": "完整TSV已取得，32列、364个日期行。DTT有效324/缺失40，AA与GSH各有效346/缺失18；不等于364个完整配对样本。已保存下载SHA-256，无独立发布方校验码。",
+            "main_limitation_zh": "单站2017年观测。AA/GSH单位为百分比消耗/立方米，不是DTT速率单位；无OPm列。仓库引用年、论文年与观测年分别记录。"
+          },
+          "original_record_sha256": "8808d20c0f036ce134214dc85dbf7418e9ca7c3a53e6566f4b191700f24049a4",
+          "current_view": {
+            "dataset_id": "ATM-045",
+            "variant_id": "ATM-045",
+            "display_name": "亚特兰大 PM₂.₅ 逐日氧化潜势（DTT / AA / GSH）",
+            "version_label": "2017年 · Jefferson Street站实测",
+            "publisher_author": "Dong Gao 等；PANGAEA",
+            "source_page": {
+              "url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "2017-01-02至12-31"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "364个唯一日期行；各方法有效值不同"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "美国亚特兰大 Jefferson Street SEARCH 站",
+            "native_spatial_resolution": "单站滤膜样品；33.776°N、84.413°W",
+            "native_spatial_unit_or_grid": "单站滤膜样品；33.776°N、84.413°W",
+            "source_temporal_resolution": "逐日滤膜记录",
+            "data_type": "环境实测：PM₂.₅ 水溶性组分DTT及模拟呼吸道衬液AA/GSH消耗",
+            "source_method": "PM₂.₅水溶性提取液；DTT法报告消耗速率，RTLF-AA/GSH报告按空气体积归一的抗氧化物百分比消耗。",
+            "native_formats": [
+              "TSV"
+            ],
+            "variables": [
+              {
+                "name": "DTT depl [nmol/min/m**3] (oxidative potential measure)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "DTT消耗速率/采样空气体积；324个有效值，40个缺失。",
+                "period": "2017-01-02至12-31",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AA depl [%/m**3] (oxidative potential measure)",
+                "label": "AA百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-AA百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "AA",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "GSH depl [%/m**3] (oxidative potential measure)",
+                "label": "GSH百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-GSH百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "GSH",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-045-1",
+                "filename": "Gao_2019.tab",
+                "label": "Gao_2019.tab",
+                "href": "https://doi.pangaea.de/10.1594/PANGAEA.908043?format=textfile",
+                "bytes": 142008,
+                "sha256": "408d5d149f4408070586106aba3b9bbbd5306bb9687687b7c5d7d2d4ad497d66",
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "完整TSV已取得并核验OP列、日期及缺失情况；下载SHA-256已保存，发布方无独立校验码；本站未托管原件。"
+                },
+                "local_evidence_path": "data/raw/URB/D045/pangaea-908043/data.tsv",
+                "license": "CC BY 4.0",
+                "access_note_zh": "完整TSV已取得并核验OP列、日期及缺失情况；下载SHA-256已保存，发布方无独立校验码；本站未托管原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+              "label": "查看官方文件清单",
+              "asset_count": 1,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.5194/acp-20-5197-2020",
+              "data_doi": "10.1594/PANGAEA.908043"
+            },
+            "access_routes": [],
+            "short_use_zh": "DTT消耗速率及AA/GSH百分比消耗；三项均按采样空气体积归一。",
+            "coordinates": {
+              "latitude": 33.776,
+              "longitude": -84.413
+            },
+            "license_note_zh": "文件头明确 CC BY 4.0。",
+            "quality_note_zh": "完整TSV已取得，32列、364个日期行。DTT有效324/缺失40，AA与GSH各有效346/缺失18；不等于364个完整配对样本。已保存下载SHA-256，无独立发布方校验码。",
+            "main_limitation_zh": "单站2017年观测。AA/GSH单位为百分比消耗/立方米，不是DTT速率单位；无OPm列。仓库引用年、论文年与观测年分别记录。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "daily",
+            "frequency_original": "逐日滤膜记录",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "单站滤膜样品；33.776°N、84.413°W",
+            "formats": [
+              "TSV"
+            ],
+            "years": {
+              "source_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2017,
+                  "end": 2017
+                },
+                "qualifier": "2017-01-02至12-31",
+                "basis": "declared_range"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2017,
+                  "end": 2017
+                },
+                "qualifier": "364个唯一日期行；各方法有效值不同",
+                "basis": "declared_range"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "repository"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": [
+        "op-pm25-dtt-v",
+        "op-pm25-aa-depl-v",
+        "op-pm25-gsh-depl-v"
+      ]
+    },
+    {
+      "dataset_id": "ATM-046",
+      "display_name": "北京 PM₂.₅ 在线DTT氧化潜势（2021）",
+      "short_use_zh": "PM₂.₅在线DTT体积归一氧化潜势，509个有效数值。",
+      "aliases": [
+        "PM₂.₅氧化潜势（DTT，空气体积归一）"
+      ],
+      "variants": [
+        {
+          "variant_id": "ATM-046",
+          "legacy_record_ids": [],
+          "label": "2021年冬季 · 处理后的在线实测",
+          "original_record": {
+            "dataset_id": "ATM-046",
+            "variant_id": "ATM-046",
+            "display_name": "北京 PM₂.₅ 在线DTT氧化潜势（2021）",
+            "version_label": "2021年冬季 · 处理后的在线实测",
+            "publisher_author": "Ka Yuen Cheung 等；PSI / 北京大学等",
+            "source_page": {
+              "url": "https://zenodo.org/records/10969848",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2021,
+                "end": 2021
+              },
+              "qualifier": "文件时标2021-01-15至03-20"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2021,
+                "end": 2021
+              },
+              "qualifier": "有效OP时间2021-01-17 12:00至03-20 09:00；时区未声明"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "中国北京及周边研究；已取得文件没有站点ID列",
+            "native_spatial_resolution": "在线测量时间序列；具体站点坐标未由文件核实",
+            "native_spatial_unit_or_grid": "在线测量时间序列；具体站点坐标未由文件核实",
+            "source_temporal_resolution": "小时位置，存在缺测",
+            "data_type": "环境实测：处理后的在线DTT数值，不是原始仪器信号或模型合成序列",
+            "source_method": "PM₂.₅在线DTT测定，按采样空气体积归一；化学组分与源贡献另有仓库文件，本轮未取得。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "OPvDTT",
+                "label": "DTT体积归一氧化潜势（PM₂.₅在线实测处理值）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "采样空气体积归一DTT消耗速率；509个有效数值/1560个小时位置，1051缺失；单位由作者机构摘要确认。",
+                "period": "有效OP：2021-01-17至03-20；时区未声明",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-046-1",
+                "filename": "BeijingOP_OPvDTT.xlsx",
+                "label": "BeijingOP_OPvDTT.xlsx",
+                "href": "https://zenodo.org/api/records/10969848/files/BeijingOP_OPvDTT.xlsx/content",
+                "bytes": 33459,
+                "sha256": "9908e4f131f622b7c7cd068b290a901c0494a772b9eb189b8be5642b2b301bc0",
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "b8437e58a4187cf4bcaf8dbb65ea9372"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "已取得并核验509个有效OP数值、1051个缺失，发布方MD5匹配；本站未托管原件。"
+                },
+                "local_evidence_path": "data/raw/URB/D045/zenodo-10969848/BeijingOP_OPvDTT.xlsx",
+                "license": "CC BY 4.0",
+                "access_note_zh": "已取得并核验509个有效OP数值、1051个缺失，发布方MD5匹配；本站未托管原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://zenodo.org/records/10969848",
+              "label": "查看官方文件清单",
+              "asset_count": 1,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_PROCESSED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/URB/D045/beijing-column-qc.json",
+              "work/URB/D045/beijing-author-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1016/j.scitotenv.2024.172345",
+              "data_doi": "10.5281/zenodo.10969848"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅在线DTT体积归一氧化潜势，509个有效数值。",
+            "license_note_zh": "数据仓库 CC BY 4.0。",
+            "quality_note_zh": "1560个小时位置中509个OP值、1051个缺失，无非有限值。发布方MD5匹配，XLSX结构通过核验；Excel使用1900日期系统。单位来自作者机构摘要，原表表头未标单位。",
+            "main_limitation_zh": "仅处理后的OPvDTT两列表，不能把1560个时标当作1560次有效OP测量。具体站点ID、坐标与时区未核实；其他组分文件未读取。"
+          },
+          "original_record_sha256": "2ef2aeb4aaf6e1c0d142f14e6acf58efe0dc4df61c114cc306c090ebd0f5da59",
+          "current_view": {
+            "dataset_id": "ATM-046",
+            "variant_id": "ATM-046",
+            "display_name": "北京 PM₂.₅ 在线DTT氧化潜势（2021）",
+            "version_label": "2021年冬季 · 处理后的在线实测",
+            "publisher_author": "Ka Yuen Cheung 等；PSI / 北京大学等",
+            "source_page": {
+              "url": "https://zenodo.org/records/10969848",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2021,
+                "end": 2021
+              },
+              "qualifier": "文件时标2021-01-15至03-20"
+            },
+            "local_years": {
+              "values": null,
+              "range": {
+                "start": 2021,
+                "end": 2021
+              },
+              "qualifier": "有效OP时间2021-01-17 12:00至03-20 09:00；时区未声明"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "中国北京及周边研究；已取得文件没有站点ID列",
+            "native_spatial_resolution": "在线测量时间序列；具体站点坐标未由文件核实",
+            "native_spatial_unit_or_grid": "在线测量时间序列；具体站点坐标未由文件核实",
+            "source_temporal_resolution": "小时位置，存在缺测",
+            "data_type": "环境实测：处理后的在线DTT数值，不是原始仪器信号或模型合成序列",
+            "source_method": "PM₂.₅在线DTT测定，按采样空气体积归一；化学组分与源贡献另有仓库文件，本轮未取得。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "OPvDTT",
+                "label": "DTT体积归一氧化潜势（PM₂.₅在线实测处理值）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "采样空气体积归一DTT消耗速率；509个有效数值/1560个小时位置，1051缺失；单位由作者机构摘要确认。",
+                "period": "有效OP：2021-01-17至03-20；时区未声明",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-046-1",
+                "filename": "BeijingOP_OPvDTT.xlsx",
+                "label": "BeijingOP_OPvDTT.xlsx",
+                "href": "https://zenodo.org/api/records/10969848/files/BeijingOP_OPvDTT.xlsx/content",
+                "bytes": 33459,
+                "sha256": "9908e4f131f622b7c7cd068b290a901c0494a772b9eb189b8be5642b2b301bc0",
+                "publisher_checksum": {
+                  "algorithm": "MD5",
+                  "value": "b8437e58a4187cf4bcaf8dbb65ea9372"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": true,
+                "local_read": {
+                  "accepted": true,
+                  "details": "已取得并核验509个有效OP数值、1051个缺失，发布方MD5匹配；本站未托管原件。"
+                },
+                "local_evidence_path": "data/raw/URB/D045/zenodo-10969848/BeijingOP_OPvDTT.xlsx",
+                "license": "CC BY 4.0",
+                "access_note_zh": "已取得并核验509个有效OP数值、1051个缺失，发布方MD5匹配；本站未托管原件。",
+                "scope_label": "已取得并核验数值",
+                "verification_tier": "1_ACQUIRED_NUMERIC_FILE_VERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://zenodo.org/records/10969848",
+              "label": "查看官方文件清单",
+              "asset_count": 1,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "1_ACQUIRED_PROCESSED_MEASURED_NUMERIC",
+            "verification_tier_number": 1,
+            "evidence_refs": [
+              "work/URB/D045/beijing-column-qc.json",
+              "work/URB/D045/beijing-author-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1016/j.scitotenv.2024.172345",
+              "data_doi": "10.5281/zenodo.10969848"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅在线DTT体积归一氧化潜势，509个有效数值。",
+            "license_note_zh": "数据仓库 CC BY 4.0。",
+            "quality_note_zh": "1560个小时位置中509个OP值、1051个缺失，无非有限值。发布方MD5匹配，XLSX结构通过核验；Excel使用1900日期系统。单位来自作者机构摘要，原表表头未标单位。",
+            "main_limitation_zh": "仅处理后的OPvDTT两列表，不能把1560个时标当作1560次有效OP测量。具体站点ID、坐标与时区未核实；其他组分文件未读取。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/URB/D045/beijing-column-qc.json",
+              "work/URB/D045/beijing-author-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "hourly",
+            "frequency_original": "小时位置，存在缺测",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "在线测量时间序列；具体站点坐标未由文件核实",
+            "formats": [
+              "XLSX"
+            ],
+            "years": {
+              "source_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2021,
+                  "end": 2021
+                },
+                "qualifier": "文件时标2021-01-15至03-20",
+                "basis": "declared_range"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2021,
+                  "end": 2021
+                },
+                "qualifier": "有效OP时间2021-01-17 12:00至03-20 09:00；时区未声明",
+                "basis": "declared_range"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "repository"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": [
+        "op-pm25-dtt-v"
+      ]
+    },
+    {
+      "dataset_id": "ATM-047",
+      "display_name": "北印度五站 PM₂.₅ 氧化潜势（DTT / AA / DCFH）",
+      "short_use_zh": "PM₂.₅的AA/DTT反应活性与DCFH测定H₂O₂当量，体积归一和质量归一分别记录。",
+      "aliases": [
+        "PM₂.₅氧化潜势（DTT，空气体积归一）",
+        "PM₂.₅氧化潜势（DTT，质量归一）",
+        "PM₂.₅氧化潜势（AA，空气体积归一）",
+        "PM₂.₅氧化潜势（AA，质量归一）",
+        "PM₂.₅氧化潜势（DCFH，体积归一H₂O₂当量）",
+        "PM₂.₅氧化潜势（DCFH，质量归一H₂O₂当量）"
+      ],
+      "variants": [
+        {
+          "variant_id": "ATM-047",
+          "legacy_record_ids": [],
+          "label": "2018年1—5月 · 公开仓库文件清单",
+          "original_record": {
+            "dataset_id": "ATM-047",
+            "variant_id": "ATM-047",
+            "display_name": "北印度五站 PM₂.₅ 氧化潜势（DTT / AA / DCFH）",
+            "version_label": "2018年1—5月 · 公开仓库文件清单",
+            "publisher_author": "Deepika Bhattu 等；Dryad",
+            "source_page": {
+              "url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "印度德里及周边 Indo-Gangetic Plain 五个站点",
+            "native_spatial_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_spatial_unit_or_grid": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_temporal_resolution": "采样频次未由原件核验",
+            "data_type": "环境测量数据及源解析/图表汇总的公开档案；文件内容尚未核验",
+            "source_method": "仓库README分别列出AA、DTT和DCFH及空气体积/PM质量归一指标；DCFH为H₂O₂当量，不含消耗速率的每分钟因子。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "DTTv (README concept; raw header unverified)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AAv (README concept; raw header unverified)",
+                "label": "AA体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DCFHv (README concept; raw header unverified)",
+                "label": "DCFH体积归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DTTm (README concept; raw header unverified)",
+                "label": "DTT质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AAm (README concept; raw header unverified)",
+                "label": "AA质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DCFHm (README concept; raw header unverified)",
+                "label": "DCFH质量归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-047-1",
+                "filename": "India_Delhi2018_Rawdata.xlsx",
+                "label": "India_Delhi2018_Rawdata.xlsx",
+                "href": "https://datadryad.org/api/v2/files/3699978/download",
+                "bytes": 12535214,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "1eeeb826cad4376392cd6a9ce4f6d781b68d1ecffed3b99798919d233de6cc72"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-047-2",
+                "filename": "India_Delhi2018dataset_figures.xlsx",
+                "label": "India_Delhi2018dataset_figures.xlsx",
+                "href": "https://datadryad.org/api/v2/files/3699977/download",
+                "bytes": 84749,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "f314b5be9a70675a0643bdbffd48d61e3babf5bcfc7e329cf1511c14cc80e3e2"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-047-3",
+                "filename": "README.md",
+                "label": "README.md",
+                "href": "https://datadryad.org/api/v2/files/3699986/download",
+                "bytes": 4081,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "5ee4d6e722a4da7ddd87fac4f62358d43756433d7cde8f7253e06cf471f0ad83"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+              "label": "查看官方文件清单",
+              "asset_count": 3,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "verification_tier_number": 2,
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1038/s41467-024-47785-5",
+              "data_doi": "10.5061/dryad.280gb5mvx"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅的AA/DTT反应活性与DCFH测定H₂O₂当量，体积归一和质量归一分别记录。",
+            "license_note_zh": "Dryad数据许可 CC0 1.0。论文另有使用数据时联系通讯作者的说明，未将其推定为新增版权条件。",
+            "quality_note_zh": "官方清单核实了12.5 MB原始表、图表汇总表及README的文件名、大小和发布方SHA-256。数值文件未取得；批量下载返回401，单文件响应未核验。",
+            "main_limitation_zh": "公开清单和方法定义已核实，尚未核验实际数值、坐标、缺失和逐样品时间；不能把文件名中的Rawdata视为本地原始数值验收。"
+          },
+          "original_record_sha256": "1620bd9822a2ee51018cbd2bda116ee2290530da0b18241642736c46cb645fe0",
+          "current_view": {
+            "dataset_id": "ATM-047",
+            "variant_id": "ATM-047",
+            "display_name": "北印度五站 PM₂.₅ 氧化潜势（DTT / AA / DCFH）",
+            "version_label": "2018年1—5月 · 公开仓库文件清单",
+            "publisher_author": "Deepika Bhattu 等；Dryad",
+            "source_page": {
+              "url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "印度德里及周边 Indo-Gangetic Plain 五个站点",
+            "native_spatial_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_spatial_unit_or_grid": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_temporal_resolution": "采样频次未由原件核验",
+            "data_type": "环境测量数据及源解析/图表汇总的公开档案；文件内容尚未核验",
+            "source_method": "仓库README分别列出AA、DTT和DCFH及空气体积/PM质量归一指标；DCFH为H₂O₂当量，不含消耗速率的每分钟因子。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "DTTv (README concept; raw header unverified)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AAv (README concept; raw header unverified)",
+                "label": "AA体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DCFHv (README concept; raw header unverified)",
+                "label": "DCFH体积归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DTTm (README concept; raw header unverified)",
+                "label": "DTT质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "AAm (README concept; raw header unverified)",
+                "label": "AA质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              },
+              {
+                "name": "DCFHm (README concept; raw header unverified)",
+                "label": "DCFH质量归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-047-1",
+                "filename": "India_Delhi2018_Rawdata.xlsx",
+                "label": "India_Delhi2018_Rawdata.xlsx",
+                "href": "https://datadryad.org/api/v2/files/3699978/download",
+                "bytes": 12535214,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "1eeeb826cad4376392cd6a9ce4f6d781b68d1ecffed3b99798919d233de6cc72"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-047-2",
+                "filename": "India_Delhi2018dataset_figures.xlsx",
+                "label": "India_Delhi2018dataset_figures.xlsx",
+                "href": "https://datadryad.org/api/v2/files/3699977/download",
+                "bytes": 84749,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "f314b5be9a70675a0643bdbffd48d61e3babf5bcfc7e329cf1511c14cc80e3e2"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-047-3",
+                "filename": "README.md",
+                "label": "README.md",
+                "href": "https://datadryad.org/api/v2/files/3699986/download",
+                "bytes": 4081,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "SHA-256",
+                  "value": "5ee4d6e722a4da7ddd87fac4f62358d43756433d7cde8f7253e06cf471f0ad83"
+                },
+                "access_method": "author_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。"
+                },
+                "local_evidence_path": null,
+                "license": "CC0 1.0",
+                "access_note_zh": "官方清单列出的文件；内容和单文件响应未核验，发布方SHA-256未与本地原件比对；批量下载曾返回401。",
+                "scope_label": "官方文件清单；内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+              "label": "查看官方文件清单",
+              "asset_count": 3,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "verification_tier_number": 2,
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1038/s41467-024-47785-5",
+              "data_doi": "10.5061/dryad.280gb5mvx"
+            },
+            "access_routes": [],
+            "short_use_zh": "PM₂.₅的AA/DTT反应活性与DCFH测定H₂O₂当量，体积归一和质量归一分别记录。",
+            "license_note_zh": "Dryad数据许可 CC0 1.0。论文另有使用数据时联系通讯作者的说明，未将其推定为新增版权条件。",
+            "quality_note_zh": "官方清单核实了12.5 MB原始表、图表汇总表及README的文件名、大小和发布方SHA-256。数值文件未取得；批量下载返回401，单文件响应未核验。",
+            "main_limitation_zh": "公开清单和方法定义已核实，尚未核验实际数值、坐标、缺失和逐样品时间；不能把文件名中的Rawdata视为本地原始数值验收。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "daily",
+            "frequency_original": "采样频次未由原件核验",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "formats": [
+              "XLSX"
+            ],
+            "years": {
+              "source_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2018,
+                  "end": 2018
+                },
+                "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验",
+                "basis": "declared_range"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": "未取得数值文件",
+                "basis": "unknown"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "repository"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": [
+        "op-pm25-dtt-v",
+        "op-pm25-dtt-m",
+        "op-pm25-aa-v",
+        "op-pm25-aa-m",
+        "op-pm25-dcfh-v",
+        "op-pm25-dcfh-m"
+      ]
+    },
+    {
+      "dataset_id": "ATM-048",
+      "display_name": "欧洲多站颗粒物氧化潜势（Tassel 2025）",
+      "short_use_zh": "AA与DTT的体积归一、质量归一氧化潜势；原始观测、图表汇总与模型情景分开。",
+      "aliases": [],
+      "variants": [
+        {
+          "variant_id": "ATM-048",
+          "legacy_record_ids": [],
+          "label": "2011—2024年研究范围 · 官方源表入口",
+          "original_record": {
+            "dataset_id": "ATM-048",
+            "variant_id": "ATM-048",
+            "display_name": "欧洲多站颗粒物氧化潜势（Tassel 2025）",
+            "version_label": "2011—2024年研究范围 · 官方源表入口",
+            "publisher_author": "Cécile Tassel 等；Université Grenoble Alpes / IGE",
+            "source_page": {
+              "url": "https://www.nature.com/articles/s41586-025-09666-9",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2011,
+                "end": 2024
+              },
+              "qualifier": "论文总体取样期，各地点取样年份与长度不同，非完整连续14年"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "欧洲10国43个地点，以法国为主；逐站坐标未由原表核验",
+            "native_spatial_resolution": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+            "native_spatial_unit_or_grid": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+            "source_temporal_resolution": "多数24小时滤膜；各站观测期2个月至9.5年不等",
+            "data_type": "环境滤膜实测研究，附图表汇总与PMF/MLR源贡献及减排暴露情景；不同结果类别分别标注",
+            "source_method": "IGE同实验室协议：Gamble+DPPC模拟肺液，10或25 µg/mL；37°C、75分钟，AA265 nm/DTT412 nm；技术重复不是新增环境样本。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "OPAA_v (paper concept; file header unverified)",
+                "label": "AA体积归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "AA",
+                "normalization": "OPv",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPDTT_v (paper concept; file header unverified)",
+                "label": "DTT体积归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPAA_m (paper concept; file header unverified)",
+                "label": "AA质量归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ µg⁻¹",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "AA",
+                "normalization": "OPm",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPDTT_m (paper concept; file header unverified)",
+                "label": "DTT质量归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ µg⁻¹",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-048-1",
+                "filename": "41586_2025_9666_MOESM2_ESM.xlsx",
+                "label": "Source Data Supplementary Fig1",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM2_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-2",
+                "filename": "41586_2025_9666_MOESM3_ESM.xlsx",
+                "label": "Source Data Supplementary Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM3_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-3",
+                "filename": "41586_2025_9666_MOESM4_ESM.xlsx",
+                "label": "Source Data Supplementary Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM4_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-4",
+                "filename": "41586_2025_9666_MOESM5_ESM.xlsx",
+                "label": "Source Data Supplementary Figs4–13",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM5_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-5",
+                "filename": "41586_2025_9666_MOESM6_ESM.xlsx",
+                "label": "Source Data Fig1",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM6_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-6",
+                "filename": "41586_2025_9666_MOESM7_ESM.xlsx",
+                "label": "Source Data Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM7_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-7",
+                "filename": "41586_2025_9666_MOESM8_ESM.xlsx",
+                "label": "Source Data Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM8_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-8",
+                "filename": "41586_2025_9666_MOESM9_ESM.xlsx",
+                "label": "Source Data Extended Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM9_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-9",
+                "filename": "41586_2025_9666_MOESM10_ESM.xlsx",
+                "label": "Source Data Extended Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM10_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-10",
+                "filename": "41586_2025_9666_MOESM11_ESM.xlsx",
+                "label": "Source Data Extended Fig5",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM11_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://www.nature.com/articles/s41586-025-09666-9",
+              "label": "查看官方文件清单",
+              "asset_count": 10,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "2_PUBLIC_SOURCE_ATTACHMENTS_CONTENT_UNVERIFIED",
+            "verification_tier_number": 2,
+            "evidence_refs": [
+              "work/ATM/D045/europe2025_metadata_enrichment.json",
+              "work/URB/D045/europe2025-paper-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1038/s41586-025-09666-9",
+              "data_doi": "10.5281/zenodo.15424165",
+              "data_version_doi": "10.5281/zenodo.17160080"
+            },
+            "access_routes": [
+              {
+                "kind": "author_request",
+                "url": "https://www.nature.com/articles/s41586-025-09666-9",
+                "request_email": "gaelle.uzu@ird.fr",
+                "verification": "论文通讯渠道已核；完整逐样品表、逐站元数据与许可需确认；未发送申请"
+              }
+            ],
+            "short_use_zh": "AA与DTT的体积归一、质量归一氧化潜势；原始观测、图表汇总与模型情景分开。",
+            "license_note_zh": "论文 CC BY-NC-ND 4.0；数值附件及Zenodo数据许可未独立核实，不将论文许可或演示代码许可替代数据许可。",
+            "quality_note_zh": "完整正文方法与10个XLSX附件链接已核实。全部数值附件内容均未核验；一次附件响应为下载准备HTML，不能作为XLSX。近11500样品属于论文研究范围，不是本地取得行数。",
+            "main_limitation_zh": "PM粒径与测定方法的逐文件配对尚未核验，不生成粒径×方法组合。可能与ATM-042及其他法国观测共享样本，不能视为独立新增近11500次观测；demo文件不作真实OP。"
+          },
+          "original_record_sha256": "87b3c915bb0f5d79933b2ffce718d5222eb620368ebc4cb1402669a1b02e7d5e",
+          "current_view": {
+            "dataset_id": "ATM-048",
+            "variant_id": "ATM-048",
+            "display_name": "欧洲多站颗粒物氧化潜势（Tassel 2025）",
+            "version_label": "2011—2024年研究范围 · 官方源表入口",
+            "publisher_author": "Cécile Tassel 等；Université Grenoble Alpes / IGE",
+            "source_page": {
+              "url": "https://www.nature.com/articles/s41586-025-09666-9",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2011,
+                "end": 2024
+              },
+              "qualifier": "论文总体取样期，各地点取样年份与长度不同，非完整连续14年"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "欧洲10国43个地点，以法国为主；逐站坐标未由原表核验",
+            "native_spatial_resolution": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+            "native_spatial_unit_or_grid": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+            "source_temporal_resolution": "多数24小时滤膜；各站观测期2个月至9.5年不等",
+            "data_type": "环境滤膜实测研究，附图表汇总与PMF/MLR源贡献及减排暴露情景；不同结果类别分别标注",
+            "source_method": "IGE同实验室协议：Gamble+DPPC模拟肺液，10或25 µg/mL；37°C、75分钟，AA265 nm/DTT412 nm；技术重复不是新增环境样本。",
+            "native_formats": [
+              "XLSX"
+            ],
+            "variables": [
+              {
+                "name": "OPAA_v (paper concept; file header unverified)",
+                "label": "AA体积归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "AA",
+                "normalization": "OPv",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPDTT_v (paper concept; file header unverified)",
+                "label": "DTT体积归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPAA_m (paper concept; file header unverified)",
+                "label": "AA质量归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ µg⁻¹",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "AA",
+                "normalization": "OPm",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              },
+              {
+                "name": "OPDTT_m (paper concept; file header unverified)",
+                "label": "DTT质量归一氧化潜势（论文定义；粒径配对未核）",
+                "unit": "nmol min⁻¹ µg⁻¹",
+                "definition": "论文方法定义；源表实际字段与PM₁/PM₂.₅/PM₁₀的配对未核验，不代表各粒径均有该指标。",
+                "period": "2011—2024总体研究范围；逐站不同",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "mixed; fraction pairing unverified"
+              }
+            ],
+            "downloads": [
+              {
+                "asset_id": "d045-atm-048-1",
+                "filename": "41586_2025_9666_MOESM2_ESM.xlsx",
+                "label": "Source Data Supplementary Fig1",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM2_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-2",
+                "filename": "41586_2025_9666_MOESM3_ESM.xlsx",
+                "label": "Source Data Supplementary Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM3_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-3",
+                "filename": "41586_2025_9666_MOESM4_ESM.xlsx",
+                "label": "Source Data Supplementary Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM4_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-4",
+                "filename": "41586_2025_9666_MOESM5_ESM.xlsx",
+                "label": "Source Data Supplementary Figs4–13",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM5_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-5",
+                "filename": "41586_2025_9666_MOESM6_ESM.xlsx",
+                "label": "Source Data Fig1",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM6_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-6",
+                "filename": "41586_2025_9666_MOESM7_ESM.xlsx",
+                "label": "Source Data Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM7_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-7",
+                "filename": "41586_2025_9666_MOESM8_ESM.xlsx",
+                "label": "Source Data Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM8_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-8",
+                "filename": "41586_2025_9666_MOESM9_ESM.xlsx",
+                "label": "Source Data Extended Fig2",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM9_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-9",
+                "filename": "41586_2025_9666_MOESM10_ESM.xlsx",
+                "label": "Source Data Extended Fig3",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM10_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              },
+              {
+                "asset_id": "d045-atm-048-10",
+                "filename": "41586_2025_9666_MOESM11_ESM.xlsx",
+                "label": "Source Data Extended Fig5",
+                "href": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12589103/bin/41586_2025_9666_MOESM11_ESM.xlsx",
+                "bytes": null,
+                "sha256": null,
+                "publisher_checksum": {
+                  "algorithm": "unknown",
+                  "value": null
+                },
+                "access_method": "publisher_repository_file",
+                "local_downloaded": false,
+                "local_read": {
+                  "accepted": false,
+                  "details": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。"
+                },
+                "local_evidence_path": null,
+                "license": "文件许可未独立核实；论文 CC BY-NC-ND 4.0",
+                "access_note_zh": "论文提供的官方附件入口；内容未核验，可能先显示下载准备页；不保证匿名直接返回XLSX。",
+                "scope_label": "官方附件入口；数值内容未核验",
+                "verification_tier": "2_PUBLIC_FILE_CONTENT_UNVERIFIED"
+              }
+            ],
+            "primary_action": {
+              "kind": "source_file_list",
+              "url": "https://www.nature.com/articles/s41586-025-09666-9",
+              "label": "查看官方文件清单",
+              "asset_count": 10,
+              "scope_label": "来源文件入口；内容核验状态逐文件标注"
+            },
+            "verification_tier": "2_PUBLIC_SOURCE_ATTACHMENTS_CONTENT_UNVERIFIED",
+            "verification_tier_number": 2,
+            "evidence_refs": [
+              "work/ATM/D045/europe2025_metadata_enrichment.json",
+              "work/URB/D045/europe2025-paper-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "article_doi": "10.1038/s41586-025-09666-9",
+              "data_doi": "10.5281/zenodo.15424165",
+              "data_version_doi": "10.5281/zenodo.17160080"
+            },
+            "access_routes": [
+              {
+                "kind": "author_request",
+                "url": "https://www.nature.com/articles/s41586-025-09666-9",
+                "request_email": "gaelle.uzu@ird.fr",
+                "verification": "论文通讯渠道已核；完整逐样品表、逐站元数据与许可需确认；未发送申请"
+              }
+            ],
+            "short_use_zh": "AA与DTT的体积归一、质量归一氧化潜势；原始观测、图表汇总与模型情景分开。",
+            "license_note_zh": "论文 CC BY-NC-ND 4.0；数值附件及Zenodo数据许可未独立核实，不将论文许可或演示代码许可替代数据许可。",
+            "quality_note_zh": "完整正文方法与10个XLSX附件链接已核实。全部数值附件内容均未核验；一次附件响应为下载准备HTML，不能作为XLSX。近11500样品属于论文研究范围，不是本地取得行数。",
+            "main_limitation_zh": "PM粒径与测定方法的逐文件配对尚未核验，不生成粒径×方法组合。可能与ATM-042及其他法国观测共享样本，不能视为独立新增近11500次观测；demo文件不作真实OP。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/ATM/D045/europe2025_metadata_enrichment.json",
+              "work/URB/D045/europe2025-paper-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "mixed",
+            "frequency_original": "多数24小时滤膜；各站观测期2个月至9.5年不等",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "站点滤膜样品；PM₁、PM₂.₅与PM₁₀，不同站点分组",
+            "formats": [
+              "XLSX"
+            ],
+            "years": {
+              "source_years": {
+                "explicit": [],
+                "range": {
+                  "start": 2011,
+                  "end": 2024
+                },
+                "qualifier": "论文总体取样期，各地点取样年份与长度不同，非完整连续14年",
+                "basis": "declared_range"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": "未取得数值文件",
+                "basis": "unknown"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "repository"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": []
+    },
+    {
+      "dataset_id": "ATM-049",
+      "display_name": "贝尔格莱德 PM₁₀ DTT 氧化潜势（受限数据）",
+      "short_use_zh": "PM₁₀水提取液DTT体积归一氧化潜势；实际文件访问受限。",
+      "aliases": [
+        "PM₁₀氧化潜势（DTT，空气体积归一）"
+      ],
+      "variants": [
+        {
+          "variant_id": "ATM-049",
+          "legacy_record_ids": [],
+          "label": "2023年起 · 官方受限数据元信息",
+          "original_record": {
+            "dataset_id": "ATM-049",
+            "variant_id": "ATM-049",
+            "display_name": "贝尔格莱德 PM₁₀ DTT 氧化潜势（受限数据）",
+            "version_label": "2023年起 · 官方受限数据元信息",
+            "publisher_author": "Milena Jovasevic-Stojanovic 等；Vinča Institute / WeBaSOOP",
+            "source_page": {
+              "url": "https://zenodo.org/records/18255336",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": [
+                2023
+              ],
+              "range": null,
+              "qualifier": "仅确证起始年：2023-05-31 22:00 UTC起，声明13个月；末日与完整有效值年份未由文件核验"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "塞尔维亚贝尔格莱德 Ada Marina 城市公园",
+            "native_spatial_resolution": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "native_spatial_unit_or_grid": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "source_temporal_resolution": "每2日一次、每次24小时；元数据声明13个月",
+            "data_type": "环境实测数据的官方元信息；数值文件受限，未取得",
+            "source_method": "PM₁₀水提取液DTT分光光度法，按采样空气体积归一；RI-URBANS实验室间比对参与信息来自仓库声明。",
+            "native_formats": [],
+            "variables": [
+              {
+                "name": "OPv_DTT (official metadata concept; raw column unverified)",
+                "label": "DTT体积归一氧化潜势（PM₁₀，受限源定义）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "PM₁₀水提取液DTT消耗速率/采样空气体积；来源声明值定义，数值文件未取得。",
+                "period": "2023-05-31 22:00 UTC起，元数据声明13个月",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM10"
+              }
+            ],
+            "downloads": [],
+            "primary_action": {
+              "kind": "author_request_instructions",
+              "url": "https://zenodo.org/records/18255336",
+              "label": "查看受限数据与申请渠道",
+              "asset_count": 0,
+              "scope_label": "受限访问；未取得数值文件"
+            },
+            "verification_tier": "3_RESTRICTED_OFFICIAL_DATASET_METADATA",
+            "verification_tier_number": 3,
+            "evidence_refs": [
+              "work/URB/D045/evidence/webasoop-field/current-record.json",
+              "work/URB/D045/webasoop-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "data_doi": "10.5281/zenodo.18255336",
+              "concept_doi": "10.5281/zenodo.18255335"
+            },
+            "access_routes": [
+              {
+                "kind": "author_request",
+                "url": "https://zenodo.org/records/18255336",
+                "request_email": "mjovst@vin.bg.ac.rs",
+                "submitter_email": "bojana.petrovic@vin.bg.ac.rs",
+                "verification": "官方元数据联系人；未发送邮件或提交访问申请"
+              }
+            ],
+            "short_use_zh": "PM₁₀水提取液DTT体积归一氧化潜势；实际文件访问受限。",
+            "coordinates": {
+              "latitude": 44.790286,
+              "longitude": 20.417187,
+              "altitude_m": 71
+            },
+            "license_note_zh": "仓库记录声明 CC BY 4.0，同时实际访问权限为 restricted；两者并存不代表已获得匿名文件。来源要求保留数据发起者及WeBaSOOP项目致谢。",
+            "quality_note_zh": "官方方法、坐标、采样安排及联系人已核实；匿名文件清单为空，未取得数值。元数据的99.99缺测码与RI-URBANS比对说明不是本地文件质量验收。",
+            "main_limitation_zh": "需向数据发起者确认访问和使用条件；未提交申请，不提供虚构的直接下载按钮。其他Belgrade/Bor的AA/DTT项目链接尚未逐项核验，不作为新增数据集。"
+          },
+          "original_record_sha256": "fafc71aa9121b52a03def4edd7b4bdd70a097f22f6fd42da6814afd160c018f1",
+          "current_view": {
+            "dataset_id": "ATM-049",
+            "variant_id": "ATM-049",
+            "display_name": "贝尔格莱德 PM₁₀ DTT 氧化潜势（受限数据）",
+            "version_label": "2023年起 · 官方受限数据元信息",
+            "publisher_author": "Milena Jovasevic-Stojanovic 等；Vinča Institute / WeBaSOOP",
+            "source_page": {
+              "url": "https://zenodo.org/records/18255336",
+              "label": "官方来源与获取说明"
+            },
+            "source_years": {
+              "values": [
+                2023
+              ],
+              "range": null,
+              "qualifier": "仅确证起始年：2023-05-31 22:00 UTC起，声明13个月；末日与完整有效值年份未由文件核验"
+            },
+            "local_years": {
+              "values": null,
+              "range": null,
+              "qualifier": "未取得数值文件"
+            },
+            "hosted_years": {
+              "values": null,
+              "range": null,
+              "qualifier": null
+            },
+            "source_spatial_coverage": "塞尔维亚贝尔格莱德 Ada Marina 城市公园",
+            "native_spatial_resolution": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "native_spatial_unit_or_grid": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "source_temporal_resolution": "每2日一次、每次24小时；元数据声明13个月",
+            "data_type": "环境实测数据的官方元信息；数值文件受限，未取得",
+            "source_method": "PM₁₀水提取液DTT分光光度法，按采样空气体积归一；RI-URBANS实验室间比对参与信息来自仓库声明。",
+            "native_formats": [],
+            "variables": [
+              {
+                "name": "OPv_DTT (official metadata concept; raw column unverified)",
+                "label": "DTT体积归一氧化潜势（PM₁₀，受限源定义）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "PM₁₀水提取液DTT消耗速率/采样空气体积；来源声明值定义，数值文件未取得。",
+                "period": "2023-05-31 22:00 UTC起，元数据声明13个月",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM10"
+              }
+            ],
+            "downloads": [],
+            "primary_action": {
+              "kind": "author_request_instructions",
+              "url": "https://zenodo.org/records/18255336",
+              "label": "查看受限数据与申请渠道",
+              "asset_count": 0,
+              "scope_label": "受限访问；未取得数值文件"
+            },
+            "verification_tier": "3_RESTRICTED_OFFICIAL_DATASET_METADATA",
+            "verification_tier_number": 3,
+            "evidence_refs": [
+              "work/URB/D045/evidence/webasoop-field/current-record.json",
+              "work/URB/D045/webasoop-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ],
+            "proposed_theme": "大气环境与健康",
+            "references": {
+              "data_doi": "10.5281/zenodo.18255336",
+              "concept_doi": "10.5281/zenodo.18255335"
+            },
+            "access_routes": [
+              {
+                "kind": "author_request",
+                "url": "https://zenodo.org/records/18255336",
+                "request_email": "mjovst@vin.bg.ac.rs",
+                "submitter_email": "bojana.petrovic@vin.bg.ac.rs",
+                "verification": "官方元数据联系人；未发送邮件或提交访问申请"
+              }
+            ],
+            "short_use_zh": "PM₁₀水提取液DTT体积归一氧化潜势；实际文件访问受限。",
+            "coordinates": {
+              "latitude": 44.790286,
+              "longitude": 20.417187,
+              "altitude_m": 71
+            },
+            "license_note_zh": "仓库记录声明 CC BY 4.0，同时实际访问权限为 restricted；两者并存不代表已获得匿名文件。来源要求保留数据发起者及WeBaSOOP项目致谢。",
+            "quality_note_zh": "官方方法、坐标、采样安排及联系人已核实；匿名文件清单为空，未取得数值。元数据的99.99缺测码与RI-URBANS比对说明不是本地文件质量验收。",
+            "main_limitation_zh": "需向数据发起者确认访问和使用条件；未提交申请，不提供虚构的直接下载按钮。其他Belgrade/Bor的AA/DTT项目链接尚未逐项核验，不作为新增数据集。"
+          },
+          "approved_overlay": {
+            "evidence_refs": [
+              "work/URB/D045/evidence/webasoop-field/current-record.json",
+              "work/URB/D045/webasoop-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          "facets": {
+            "frequency": "mixed",
+            "frequency_original": "每2日一次、每次24小时；元数据声明13个月",
+            "spatial_form": "point",
+            "scale_group": "object",
+            "scale_original": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "formats": [],
+            "years": {
+              "source_years": {
+                "explicit": [
+                  2023
+                ],
+                "range": null,
+                "qualifier": "仅确证起始年：2023-05-31 22:00 UTC起，声明13个月；末日与完整有效值年份未由文件核验",
+                "basis": "explicit"
+              },
+              "local_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": "未取得数值文件",
+                "basis": "unknown"
+              },
+              "hosted_years": {
+                "explicit": [],
+                "range": null,
+                "qualifier": null,
+                "basis": "unknown"
+              }
+            },
+            "access": [
+              "request"
+            ]
+          }
+        }
+      ],
+      "status": "core",
+      "classic_slugs": [
+        "op-dtt"
+      ]
     }
   ],
   "archives": [
@@ -24310,14 +26850,14 @@
     }
   ],
   "counts": {
-    "products": 44,
-    "variants": 65,
-    "assets": 66,
+    "products": 50,
+    "variants": 71,
+    "assets": 86,
     "archived_records": 48,
     "historical_asset_objects": 43,
-    "all_file_entrances": 69,
+    "all_file_entrances": 89,
     "all_site_hosted": 22,
-    "classic_indicators": 47
+    "classic_indicators": 55
   },
   "variant_migration": {
     "ATM-004?variant=ATM-004": {
@@ -25759,7 +28299,7 @@
       {
         "slug": "op-dtt",
         "name_zh": "PM₁₀氧化潜势（DTT，空气体积归一）",
-        "definition": "法国PM10过滤样本AA/DTT反应活性按采样空气体积归一。",
+        "definition": "PM₁₀样品的DTT消耗反应活性，按采样空气体积归一；各来源协议及获取条件分别保留。",
         "type": "measured_assay_conditional_request",
         "theme": "atmosphere-health",
         "sources": [
@@ -25793,9 +28333,42 @@
               "work/REVIEW/D043/source_gate/atm_and_offline.json",
               "work/ATM/D043/weber-paper-extract.json"
             ]
+          },
+          {
+            "canonicalID": "ATM-049",
+            "variantID": "ATM-049",
+            "fields": [
+              {
+                "name": "OPv_DTT (official metadata concept; raw column unverified)",
+                "label": "DTT体积归一氧化潜势（PM₁₀，受限源定义）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "PM₁₀水提取液DTT消耗速率/采样空气体积；来源声明值定义，数值文件未取得。",
+                "period": "2023-05-31 22:00 UTC起，元数据声明13个月",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM10"
+              }
+            ],
+            "source_years": {
+              "values": [
+                2023
+              ],
+              "range": null,
+              "qualifier": "仅确证起始年：2023-05-31 22:00 UTC起，声明13个月；末日与完整有效值年份未由文件核验"
+            },
+            "native_support": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "native_resolution": "站点滤膜样品；44.790286°N、20.417187°E，海拔71米",
+            "source_url": "https://zenodo.org/records/18255336",
+            "access_kind": "author_request_instructions",
+            "verification_scope": "3_RESTRICTED_OFFICIAL_DATASET_METADATA",
+            "evidence_refs": [
+              "work/URB/D045/evidence/webasoop-field/current-record.json",
+              "work/URB/D045/webasoop-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
           }
         ],
-        "limits": "14地点、15条year-round序列在2013–2018，不是15年；申请gaelle.uzu@ird.fr未发送，不保证免费/rawlicense；MLR系数不当OPm。",
+        "limits": "14地点、15条year-round序列在2013–2018，不是15年；申请gaelle.uzu@ird.fr未发送，不保证免费/rawlicense；MLR系数不当OPm。 塞尔维亚来源为受限官方元数据，数值未取得；2023仅已确证起始年，完整有效值年份未核验。",
         "status": "approved_source_metadata"
       },
       {
@@ -27849,6 +30422,505 @@
           }
         ],
         "limits": "每field原单位/方法/原生支持独立；source级不冒充整件。已知许可/qualityhold和partiallocal年份完整保留。",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-dtt-v",
+        "name_zh": "PM₂.₅氧化潜势（DTT，空气体积归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-044",
+            "variantID": "ATM-044",
+            "fields": [
+              {
+                "name": "DTTV",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "按采样空气体积归一的DTT消耗速率；原表DTTV列。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "2018-01-01至01-31，两个站点"
+            },
+            "native_support": "站点24小时滤膜样品",
+            "native_resolution": "站点24小时滤膜样品",
+            "source_url": "https://zenodo.org/records/10791126",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/ATM/D045/yuan_numeric_qc.json",
+              "work/ATM/D045/yuan_file_manifest.json",
+              "work/REVIEW/D045/source_gate/atm_gate_final.json"
+            ]
+          },
+          {
+            "canonicalID": "ATM-045",
+            "variantID": "ATM-045",
+            "fields": [
+              {
+                "name": "DTT depl [nmol/min/m**3] (oxidative potential measure)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅实测）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "DTT消耗速率/采样空气体积；324个有效值，40个缺失。",
+                "period": "2017-01-02至12-31",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "2017-01-02至12-31"
+            },
+            "native_support": "单站滤膜样品；33.776°N、84.413°W",
+            "native_resolution": "单站滤膜样品；33.776°N、84.413°W",
+            "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          {
+            "canonicalID": "ATM-046",
+            "variantID": "ATM-046",
+            "fields": [
+              {
+                "name": "OPvDTT",
+                "label": "DTT体积归一氧化潜势（PM₂.₅在线实测处理值）",
+                "unit": "nmol min⁻¹ m⁻³",
+                "definition": "采样空气体积归一DTT消耗速率；509个有效数值/1560个小时位置，1051缺失；单位由作者机构摘要确认。",
+                "period": "有效OP：2021-01-17至03-20；时区未声明",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2021,
+                "end": 2021
+              },
+              "qualifier": "文件时标2021-01-15至03-20"
+            },
+            "native_support": "在线测量时间序列；具体站点坐标未由文件核实",
+            "native_resolution": "在线测量时间序列；具体站点坐标未由文件核实",
+            "source_url": "https://zenodo.org/records/10969848",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_PROCESSED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/URB/D045/beijing-column-qc.json",
+              "work/URB/D045/beijing-author-extract.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          },
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "DTTv (README concept; raw header unverified)",
+                "label": "DTT体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（DTT，空气体积归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-dtt-m",
+        "name_zh": "PM₂.₅氧化潜势（DTT，质量归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-044",
+            "variantID": "ATM-044",
+            "fields": [
+              {
+                "name": "DTTm",
+                "label": "DTT质量归一氧化潜势（PM₂.₅实测）",
+                "unit": "pmol min⁻¹ µg⁻¹",
+                "definition": "按PM质量归一的DTT消耗速率；方法2.3单位为pmol，与其他来源的nmol单位分别保留。",
+                "period": "2018年1月，两站各31日",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "2018-01-01至01-31，两个站点"
+            },
+            "native_support": "站点24小时滤膜样品",
+            "native_resolution": "站点24小时滤膜样品",
+            "source_url": "https://zenodo.org/records/10791126",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/ATM/D045/yuan_numeric_qc.json",
+              "work/ATM/D045/yuan_file_manifest.json",
+              "work/REVIEW/D045/source_gate/atm_gate_final.json"
+            ]
+          },
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "DTTm (README concept; raw header unverified)",
+                "label": "DTT质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol DTT min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DTT",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（DTT，质量归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-aa-v",
+        "name_zh": "PM₂.₅氧化潜势（AA，空气体积归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "AAv (README concept; raw header unverified)",
+                "label": "AA体积归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（AA，空气体积归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-aa-m",
+        "name_zh": "PM₂.₅氧化潜势（AA，质量归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "AAm (README concept; raw header unverified)",
+                "label": "AA质量归一氧化潜势（PM₂.₅，源定义）",
+                "unit": "nmol AA min⁻¹ µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "AA",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（AA，质量归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-aa-depl-v",
+        "name_zh": "PM₂.₅氧化潜势（AA百分比消耗，体积归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-045",
+            "variantID": "ATM-045",
+            "fields": [
+              {
+                "name": "AA depl [%/m**3] (oxidative potential measure)",
+                "label": "AA百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-AA百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "AA",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "2017-01-02至12-31"
+            },
+            "native_support": "单站滤膜样品；33.776°N、84.413°W",
+            "native_resolution": "单站滤膜样品；33.776°N、84.413°W",
+            "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（AA百分比消耗，体积归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-gsh-depl-v",
+        "name_zh": "PM₂.₅氧化潜势（GSH百分比消耗，体积归一）",
+        "sources": [
+          {
+            "canonicalID": "ATM-045",
+            "variantID": "ATM-045",
+            "fields": [
+              {
+                "name": "GSH depl [%/m**3] (oxidative potential measure)",
+                "label": "GSH百分比消耗（PM₂.₅，体积归一）",
+                "unit": "% m⁻³",
+                "definition": "RTLF-GSH百分比消耗/采样空气体积；346个有效值，18个缺失；不含每分钟因子。",
+                "period": "2017-01-02至12-31",
+                "assay": "GSH",
+                "normalization": "OPv_percent_depletion",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2017,
+                "end": 2017
+              },
+              "qualifier": "2017-01-02至12-31"
+            },
+            "native_support": "单站滤膜样品；33.776°N、84.413°W",
+            "native_resolution": "单站滤膜样品；33.776°N、84.413°W",
+            "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.908043",
+            "access_kind": "source_file_list",
+            "verification_scope": "1_ACQUIRED_MEASURED_NUMERIC",
+            "evidence_refs": [
+              "work/URB/D045/pangaea-numeric-qc.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（GSH百分比消耗，体积归一）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-dcfh-v",
+        "name_zh": "PM₂.₅氧化潜势（DCFH，体积归一H₂O₂当量）",
+        "sources": [
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "DCFHv (README concept; raw header unverified)",
+                "label": "DCFH体积归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq m⁻³",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPv",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（DCFH，体积归一H₂O₂当量）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
+        "status": "approved_source_metadata"
+      },
+      {
+        "slug": "op-pm25-dcfh-m",
+        "name_zh": "PM₂.₅氧化潜势（DCFH，质量归一H₂O₂当量）",
+        "sources": [
+          {
+            "canonicalID": "ATM-047",
+            "variantID": "ATM-047",
+            "fields": [
+              {
+                "name": "DCFHm (README concept; raw header unverified)",
+                "label": "DCFH质量归一H₂O₂当量（PM₂.₅，源定义）",
+                "unit": "nmol H₂O₂ eq µg⁻¹",
+                "definition": "仓库README定义；实际文件列名、数值与完整性尚未核验。",
+                "period": "2018年1—5月（仓库声明）",
+                "assay": "DCFH",
+                "normalization": "OPm",
+                "particle_fraction": "PM2.5"
+              }
+            ],
+            "source_years": {
+              "values": null,
+              "range": {
+                "start": 2018,
+                "end": 2018
+              },
+              "qualifier": "仓库README声明2018年1—5月；原表实际日期未核验"
+            },
+            "native_support": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "native_resolution": "站点样品；坐标和逐样品字段尚未由原件核验",
+            "source_url": "https://datadryad.org/dataset/doi:10.5061/dryad.280gb5mvx",
+            "access_kind": "source_file_list",
+            "verification_scope": "2_PUBLIC_FILES_CONTENT_UNVERIFIED",
+            "evidence_refs": [
+              "work/URB/D045/search-002.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/record.json",
+              "work/URB/D045/evidence/dryad-280gb5mvx/files.json",
+              "work/REVIEW/D045/source_gate/urb_gate_final.json"
+            ]
+          }
+        ],
+        "limits": "各来源测定协议、提取组分、单位和核验层级分别保留；质量归一pmol与nmol未换算；来源定义不等于已取得数值。",
+        "definition": "PM₂.₅氧化潜势（DCFH，质量归一H₂O₂当量）；测定协议与数值取得程度按各来源分别记录。",
+        "type": "source_assay_metadata",
+        "theme": "atmosphere-health",
         "status": "approved_source_metadata"
       }
     ],

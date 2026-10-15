@@ -1,5 +1,5 @@
 {
-  "version": "d043-v1",
+  "version": "d045-v1",
   "products": {
     "ATM-005": {
       "primary": [
@@ -335,6 +335,48 @@
       "primary": [
         "atmosphere-health",
         "satellite-gas-columns"
+      ],
+      "secondary": []
+    },
+    "ATM-044": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
+      ],
+      "secondary": []
+    },
+    "ATM-045": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
+      ],
+      "secondary": []
+    },
+    "ATM-046": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
+      ],
+      "secondary": []
+    },
+    "ATM-047": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
+      ],
+      "secondary": []
+    },
+    "ATM-048": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
+      ],
+      "secondary": []
+    },
+    "ATM-049": {
+      "primary": [
+        "atmosphere-health",
+        "oxidative-potential"
       ],
       "secondary": []
     }
